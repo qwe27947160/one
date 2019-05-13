@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>米谷漫画</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+{include file="public/ico"}
+<meta charset="utf-8">
+<!-- CSS-LINK -->
+
+{include file="public/css-link"}
+<!-- CSS-LINK -->
+{include file="public/js-link"}
+</head>
+<body> 
+<!--header-->
+{include file="public/header"}
+<div class="search_main">
+<!--content-->
+	<div class="row firsee">
+		<div class="panel panel-success">
+		    <div class="panel-heading">
+		        <h3 class="panel-title">搜索结果</h3>
+		    </div>
+		    <div class="panel-body">
+		    	{$msg}
+		       
+		        {volist name="empty" id="vo" empty="$empty" }
+				{/volist}
+				
+		    </div>
+		</div>
+	</div>
+</div>
+{include file="public/footer"}	
+</body>
+
+
+</script>
+</html>

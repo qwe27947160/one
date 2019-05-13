@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>米谷 米谷</title>
+{include file="public/ico"}
+<meta charset="utf-8">
+
+<!-- CSS-LINK -->
+
+{include file="public/css-link"}
+<!-- CSS-LINK -->
+{include file="public/js-link"}
+</head>
+<body> 
+<!--header-->
+{include file="public/header"}
+
+<!--content-->
+	<div class="firsee">
+		
+			<div class="ch_main">
+				<div class="ppanel panel-primary">
+					<div class="panel-heading">
+	        			<h3>漫画章节列表</h3>
+	    			</div>
+    			</div>
+				<div class="Accord_1" id="add_chapter"><ul></ul></div>
+			</div>
+         
+	</div>
+
+{include file="public/footer"}
+<script type="text/javascript">
+
+$(document).ready(function(){
+		load_chapter("<?php echo $name; ?>");
+});
+</script>	
+</body>
+</html>

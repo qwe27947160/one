@@ -1,0 +1,1374 @@
+---------------------------------------------------------------
+[ 2019-05-13T00:57:39+08:00 ] 45.63.15.169 GET /
+[ info ] dm.migu666.net/ [运行时间：0.022149s][吞吐率：45.15req/s] [内存消耗：2,103.77kb] [文件加载：41]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'connection' => 'Keep-Alive',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Ni->index[ /www/web/migu666/application/index/controller/Ni.php ]
+[ info ] [ VIEW ] /www/web/migu666/public/../application/index/view/comic/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T04:00:36+08:00 ] 45.63.15.169 GET /
+[ info ] dm.migu666.net/ [运行时间：0.027579s][吞吐率：36.26req/s] [内存消耗：2,103.77kb] [文件加载：41]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'connection' => 'Keep-Alive',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Ni->index[ /www/web/migu666/application/index/controller/Ni.php ]
+[ info ] [ VIEW ] /www/web/migu666/public/../application/index/view/comic/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:25:55+08:00 ] 61.141.72.135 GET /
+[ info ] dm.migu666.net/ [运行时间：0.028868s][吞吐率：34.64req/s] [内存消耗：2,105.30kb] [文件加载：41]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'purpose' => 'prefetch',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Ni->index[ /www/web/migu666/application/index/controller/Ni.php ]
+[ info ] [ VIEW ] /www/web/migu666/public/../application/index/view/comic/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:25:55+08:00 ] 61.141.72.135 GET /creatPicture
+[ info ] dm.migu666.net/creatPicture [运行时间：0.020530s][吞吐率：48.71req/s] [内存消耗：1,797.76kb] [文件加载：36]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'LoginValidation',
+    2 => 'creatPicture',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'purpose' => 'prefetch',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\LoginValidation->creatPicture[ /www/web/migu666/application/index/controller/LoginValidation.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:25:55+08:00 ] 61.141.72.135 GET /static/imgs/img3.jpg
+[ info ] dm.migu666.net/static/imgs/img3.jpg [运行时间：0.017868s][吞吐率：55.97req/s] [内存消耗：1,811.31kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'purpose' => 'prefetch',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:25:55+08:00 ] 61.141.72.135 GET /static/imgs/img1.jpg
+[ info ] dm.migu666.net/static/imgs/img1.jpg [运行时间：0.043364s][吞吐率：23.06req/s] [内存消耗：1,811.31kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'purpose' => 'prefetch',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:25:55+08:00 ] 61.141.72.135 GET /static/imgs/img2.jpg
+[ info ] dm.migu666.net/static/imgs/img2.jpg [运行时间：0.036136s][吞吐率：27.67req/s] [内存消耗：1,811.31kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'purpose' => 'prefetch',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:25:55+08:00 ] 61.141.72.135 GET /static/imgs/ad/1.jpg
+[ info ] dm.migu666.net/static/imgs/ad/1.jpg [运行时间：0.033935s][吞吐率：29.47req/s] [内存消耗：1,811.31kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'purpose' => 'prefetch',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:25:55+08:00 ] 61.141.72.135 GET /creatPicture
+[ info ] dm.migu666.net/creatPicture [运行时间：0.022761s][吞吐率：43.94req/s] [内存消耗：1,797.80kb] [文件加载：36]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'LoginValidation',
+    2 => 'creatPicture',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\LoginValidation->creatPicture[ /www/web/migu666/application/index/controller/LoginValidation.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:25:56+08:00 ] 61.141.72.135 GET /static/imgs/ad/1.jpg
+[ info ] dm.migu666.net/static/imgs/ad/1.jpg [运行时间：0.022540s][吞吐率：44.37req/s] [内存消耗：1,811.47kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:25:56+08:00 ] 61.141.72.135 GET /static/imgs/footer/footer.jpg
+[ info ] dm.migu666.net/static/imgs/footer/footer.jpg [运行时间：0.029012s][吞吐率：34.47req/s] [内存消耗：1,811.40kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/static/css/same.css',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:25:56+08:00 ] 61.141.72.135 GET /load_comic?_=1557757556123
+[ info ] dm.migu666.net/load_comic?_=1557757556123 [运行时间：0.044470s][吞吐率：22.49req/s] [内存消耗：3,236.08kb] [文件加载：45]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Ni',
+    2 => 'load_comic',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1557757556123',
+)
+[ info ] [ RUN ] app\index\controller\Ni->load_comic[ /www/web/migu666/application/index/controller/Ni.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001194s ] mysql:host=172.19.0.7;port=3306;dbname=cummanhua;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comic` [ RunTime:0.001341s ]
+[ sql ] [ SQL ] SELECT * FROM `comic` [ RunTime:0.000804s ]
+---------------------------------------------------------------
+[ 2019-05-13T22:25:56+08:00 ] 61.141.72.135 GET /Load_Animations_Cover?_=1557757556124
+[ info ] dm.migu666.net/Load_Animations_Cover?_=1557757556124 [运行时间：0.049717s][吞吐率：20.11req/s] [内存消耗：3,289.30kb] [文件加载：46]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Ni',
+    2 => 'Load_Animations_Cover',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1557757556124',
+)
+[ info ] [ RUN ] app\index\controller\Ni->Load_Animations_Cover[ /www/web/migu666/application/index/controller/Ni.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001908s ] mysql:host=172.19.0.7;port=3306;dbname=cummanhua;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `animationscover` [ RunTime:0.001035s ]
+[ sql ] [ SQL ] SELECT * FROM `animationscover` [ RunTime:0.001450s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `animationsdir` [ RunTime:0.002037s ]
+[ sql ] [ SQL ] SELECT COUNT(cvdirid) AS tp_count FROM `animationsdir` WHERE  `cvdirid` = 1 LIMIT 1 [ RunTime:0.001106s ]
+[ sql ] [ SQL ] SELECT COUNT(cvdirid) AS tp_count FROM `animationsdir` WHERE  `cvdirid` = 2 LIMIT 1 [ RunTime:0.000697s ]
+---------------------------------------------------------------
+[ 2019-05-13T22:25:56+08:00 ] 61.141.72.135 GET /static/imgs/ico/ico.jpg
+[ info ] dm.migu666.net/static/imgs/ico/ico.jpg [运行时间：0.019387s][吞吐率：51.58req/s] [内存消耗：1,811.12kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:25:56+08:00 ] 61.141.72.135 GET /static/VideoCover/ruyizhuan.jpg
+[ info ] dm.migu666.net/static/VideoCover/ruyizhuan.jpg [运行时间：0.018377s][吞吐率：54.42req/s] [内存消耗：1,811.37kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:25:56+08:00 ] 61.141.72.135 GET /static/VideoCover/haizeiwang.jpg
+[ info ] dm.migu666.net/static/VideoCover/haizeiwang.jpg [运行时间：0.021228s][吞吐率：47.11req/s] [内存消耗：1,811.37kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:26:40+08:00 ] 61.141.72.135 GET /
+[ info ] dm.migu666.net/ [运行时间：0.026712s][吞吐率：37.44req/s] [内存消耗：2,105.88kb] [文件加载：41]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Ni->index[ /www/web/migu666/application/index/controller/Ni.php ]
+[ info ] [ VIEW ] /www/web/migu666/public/../application/index/view/comic/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:26:40+08:00 ] 61.141.72.135 GET /static/imgs/img1.jpg
+[ info ] dm.migu666.net/static/imgs/img1.jpg [运行时间：0.018335s][吞吐率：54.54req/s] [内存消耗：1,811.47kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:26:40+08:00 ] 61.141.72.135 GET /creatPicture
+[ info ] dm.migu666.net/creatPicture [运行时间：0.020127s][吞吐率：49.68req/s] [内存消耗：1,797.80kb] [文件加载：36]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'LoginValidation',
+    2 => 'creatPicture',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\LoginValidation->creatPicture[ /www/web/migu666/application/index/controller/LoginValidation.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:26:41+08:00 ] 61.141.72.135 GET /static/imgs/img3.jpg
+[ info ] dm.migu666.net/static/imgs/img3.jpg [运行时间：0.021540s][吞吐率：46.43req/s] [内存消耗：1,811.47kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:26:41+08:00 ] 61.141.72.135 GET /static/imgs/img2.jpg
+[ info ] dm.migu666.net/static/imgs/img2.jpg [运行时间：0.028859s][吞吐率：34.65req/s] [内存消耗：1,811.47kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:26:41+08:00 ] 61.141.72.135 GET /static/imgs/ad/1.jpg
+[ info ] dm.migu666.net/static/imgs/ad/1.jpg [运行时间：0.029453s][吞吐率：33.95req/s] [内存消耗：1,811.47kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:26:41+08:00 ] 61.141.72.135 GET /static/imgs/footer/footer.jpg
+[ info ] dm.migu666.net/static/imgs/footer/footer.jpg [运行时间：0.018045s][吞吐率：55.42req/s] [内存消耗：1,811.40kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/static/css/same.css',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:26:41+08:00 ] 61.141.72.135 GET /load_comic?_=1557757601132
+[ info ] dm.migu666.net/load_comic?_=1557757601132 [运行时间：0.035819s][吞吐率：27.92req/s] [内存消耗：3,236.08kb] [文件加载：45]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Ni',
+    2 => 'load_comic',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1557757601132',
+)
+[ info ] [ RUN ] app\index\controller\Ni->load_comic[ /www/web/migu666/application/index/controller/Ni.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001107s ] mysql:host=172.19.0.7;port=3306;dbname=cummanhua;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comic` [ RunTime:0.001152s ]
+[ sql ] [ SQL ] SELECT * FROM `comic` [ RunTime:0.000710s ]
+---------------------------------------------------------------
+[ 2019-05-13T22:26:41+08:00 ] 61.141.72.135 GET /Load_Animations_Cover?_=1557757601133
+[ info ] dm.migu666.net/Load_Animations_Cover?_=1557757601133 [运行时间：0.038164s][吞吐率：26.20req/s] [内存消耗：3,289.30kb] [文件加载：46]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Ni',
+    2 => 'Load_Animations_Cover',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1557757601133',
+)
+[ info ] [ RUN ] app\index\controller\Ni->Load_Animations_Cover[ /www/web/migu666/application/index/controller/Ni.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001810s ] mysql:host=172.19.0.7;port=3306;dbname=cummanhua;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `animationscover` [ RunTime:0.001718s ]
+[ sql ] [ SQL ] SELECT * FROM `animationscover` [ RunTime:0.001124s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `animationsdir` [ RunTime:0.000912s ]
+[ sql ] [ SQL ] SELECT COUNT(cvdirid) AS tp_count FROM `animationsdir` WHERE  `cvdirid` = 1 LIMIT 1 [ RunTime:0.000704s ]
+[ sql ] [ SQL ] SELECT COUNT(cvdirid) AS tp_count FROM `animationsdir` WHERE  `cvdirid` = 2 LIMIT 1 [ RunTime:0.000577s ]
+---------------------------------------------------------------
+[ 2019-05-13T22:26:41+08:00 ] 61.141.72.135 GET /static/VideoCover/haizeiwang.jpg
+[ info ] dm.migu666.net/static/VideoCover/haizeiwang.jpg [运行时间：0.021138s][吞吐率：47.31req/s] [内存消耗：1,811.37kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:26:41+08:00 ] 61.141.72.135 GET /static/VideoCover/ruyizhuan.jpg
+[ info ] dm.migu666.net/static/VideoCover/ruyizhuan.jpg [运行时间：0.021174s][吞吐率：47.23req/s] [内存消耗：1,811.37kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:27:08+08:00 ] 61.141.72.135 GET /creatPicture
+[ info ] dm.migu666.net/creatPicture [运行时间：0.022688s][吞吐率：44.08req/s] [内存消耗：1,797.80kb] [文件加载：36]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'LoginValidation',
+    2 => 'creatPicture',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\LoginValidation->creatPicture[ /www/web/migu666/application/index/controller/LoginValidation.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:31:51+08:00 ] 61.141.72.135 GET /creatPicture
+[ info ] dm.migu666.net/creatPicture [运行时间：0.019091s][吞吐率：52.38req/s] [内存消耗：1,797.80kb] [文件加载：36]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'LoginValidation',
+    2 => 'creatPicture',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\LoginValidation->creatPicture[ /www/web/migu666/application/index/controller/LoginValidation.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:31:55+08:00 ] 61.141.72.135 GET /creatPicture
+[ info ] dm.migu666.net/creatPicture [运行时间：0.021568s][吞吐率：46.36req/s] [内存消耗：1,797.80kb] [文件加载：36]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'LoginValidation',
+    2 => 'creatPicture',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\LoginValidation->creatPicture[ /www/web/migu666/application/index/controller/LoginValidation.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:32:07+08:00 ] 61.141.72.135 GET /creatPicture
+[ info ] dm.migu666.net/creatPicture [运行时间：0.020794s][吞吐率：48.09req/s] [内存消耗：1,797.80kb] [文件加载：36]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'LoginValidation',
+    2 => 'creatPicture',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\LoginValidation->creatPicture[ /www/web/migu666/application/index/controller/LoginValidation.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:32:13+08:00 ] 61.141.72.135 GET /creatPicture
+[ info ] dm.migu666.net/creatPicture [运行时间：0.022553s][吞吐率：44.34req/s] [内存消耗：1,797.80kb] [文件加载：36]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'LoginValidation',
+    2 => 'creatPicture',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\LoginValidation->creatPicture[ /www/web/migu666/application/index/controller/LoginValidation.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:36:22+08:00 ] 61.141.72.135 GET /
+[ info ] dm.migu666.net/ [运行时间：0.032357s][吞吐率：30.91req/s] [内存消耗：2,105.34kb] [文件加载：41]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'purpose' => 'prefetch',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Ni->index[ /www/web/migu666/application/index/controller/Ni.php ]
+[ info ] [ VIEW ] /www/web/migu666/public/../application/index/view/comic/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:36:22+08:00 ] 61.141.72.135 GET /creatPicture
+[ info ] dm.migu666.net/creatPicture [运行时间：0.019598s][吞吐率：51.03req/s] [内存消耗：1,798.06kb] [文件加载：36]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'LoginValidation',
+    2 => 'creatPicture',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'purpose' => 'prefetch',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\LoginValidation->creatPicture[ /www/web/migu666/application/index/controller/LoginValidation.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:36:22+08:00 ] 61.141.72.135 GET /static/imgs/img3.jpg
+[ info ] dm.migu666.net/static/imgs/img3.jpg [运行时间：0.020726s][吞吐率：48.25req/s] [内存消耗：1,811.69kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'purpose' => 'prefetch',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:36:22+08:00 ] 61.141.72.135 GET /static/imgs/img1.jpg
+[ info ] dm.migu666.net/static/imgs/img1.jpg [运行时间：0.050077s][吞吐率：19.97req/s] [内存消耗：1,811.69kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'purpose' => 'prefetch',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:36:22+08:00 ] 61.141.72.135 GET /static/imgs/img2.jpg
+[ info ] dm.migu666.net/static/imgs/img2.jpg [运行时间：0.039637s][吞吐率：25.23req/s] [内存消耗：1,811.69kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'purpose' => 'prefetch',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:36:22+08:00 ] 61.141.72.135 GET /static/imgs/ad/1.jpg
+[ info ] dm.migu666.net/static/imgs/ad/1.jpg [运行时间：0.030921s][吞吐率：32.34req/s] [内存消耗：1,811.69kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'purpose' => 'prefetch',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:36:23+08:00 ] 61.141.72.135 GET /creatPicture
+[ info ] dm.migu666.net/creatPicture [运行时间：0.027378s][吞吐率：36.53req/s] [内存消耗：1,797.80kb] [文件加载：36]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'LoginValidation',
+    2 => 'creatPicture',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\LoginValidation->creatPicture[ /www/web/migu666/application/index/controller/LoginValidation.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:36:23+08:00 ] 61.141.72.135 GET /static/imgs/footer/footer.jpg
+[ info ] dm.migu666.net/static/imgs/footer/footer.jpg [运行时间：0.018154s][吞吐率：55.08req/s] [内存消耗：1,811.40kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/static/css/same.css',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:36:23+08:00 ] 61.141.72.135 GET /static/imgs/ad/1.jpg
+[ info ] dm.migu666.net/static/imgs/ad/1.jpg [运行时间：0.028252s][吞吐率：35.40req/s] [内存消耗：1,811.47kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:36:23+08:00 ] 61.141.72.135 GET /Load_Animations_Cover?_=1557758183183
+[ info ] dm.migu666.net/Load_Animations_Cover?_=1557758183183 [运行时间：0.035922s][吞吐率：27.84req/s] [内存消耗：3,289.30kb] [文件加载：46]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Ni',
+    2 => 'Load_Animations_Cover',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1557758183183',
+)
+[ info ] [ RUN ] app\index\controller\Ni->Load_Animations_Cover[ /www/web/migu666/application/index/controller/Ni.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000999s ] mysql:host=172.19.0.7;port=3306;dbname=cummanhua;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `animationscover` [ RunTime:0.001036s ]
+[ sql ] [ SQL ] SELECT * FROM `animationscover` [ RunTime:0.000732s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `animationsdir` [ RunTime:0.001178s ]
+[ sql ] [ SQL ] SELECT COUNT(cvdirid) AS tp_count FROM `animationsdir` WHERE  `cvdirid` = 1 LIMIT 1 [ RunTime:0.001042s ]
+[ sql ] [ SQL ] SELECT COUNT(cvdirid) AS tp_count FROM `animationsdir` WHERE  `cvdirid` = 2 LIMIT 1 [ RunTime:0.000583s ]
+---------------------------------------------------------------
+[ 2019-05-13T22:36:23+08:00 ] 61.141.72.135 GET /load_comic?_=1557758183182
+[ info ] dm.migu666.net/load_comic?_=1557758183182 [运行时间：0.040124s][吞吐率：24.92req/s] [内存消耗：3,236.08kb] [文件加载：45]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Ni',
+    2 => 'load_comic',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1557758183182',
+)
+[ info ] [ RUN ] app\index\controller\Ni->load_comic[ /www/web/migu666/application/index/controller/Ni.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001165s ] mysql:host=172.19.0.7;port=3306;dbname=cummanhua;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comic` [ RunTime:0.001898s ]
+[ sql ] [ SQL ] SELECT * FROM `comic` [ RunTime:0.003066s ]
+---------------------------------------------------------------
+[ 2019-05-13T22:36:23+08:00 ] 61.141.72.135 GET /static/VideoCover/haizeiwang.jpg
+[ info ] dm.migu666.net/static/VideoCover/haizeiwang.jpg [运行时间：0.025488s][吞吐率：39.23req/s] [内存消耗：1,811.37kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-13T22:36:23+08:00 ] 61.141.72.135 GET /static/VideoCover/ruyizhuan.jpg
+[ info ] dm.migu666.net/static/VideoCover/ruyizhuan.jpg [运行时间：0.025788s][吞吐率：38.78req/s] [内存消耗：1,811.37kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=9hucpicp5guti0350vb3mveml6',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File

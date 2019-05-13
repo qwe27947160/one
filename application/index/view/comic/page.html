@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>米谷 漫画</title>
+{include file="public/ico"}
+<meta charset="utf-8">
+<!-- CSS-LINK -->
+{include file="public/css-link"}
+<!-- CSS-LINK -->
+{include file="public/js-link"}
+
+</head>
+<body> 
+<!--header-->	
+{include file="public/header"}
+<!--content-->
+	<div id="page_main" ><ul id="page_ul"></ul>	</div>
+<!---->
+	<div class="nextmain">
+		<ul class="nextlist">
+			<li class="">
+				<a style id="mexta" class="mextaa">点击进入下一话
+			</li>
+		</ul>
+	</div>
+
+</body>
+{include file="public/footer"}
+<script type="text/javascript">
+
+$(document).ready(function(){
+		load_page("<?php echo $comicid; ?>" ,"<?php echo $pagenum; ?>");
+});
+
+</script>
+</html>

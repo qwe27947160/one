@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+{include file="public/meta"}	
+<title>米谷 米谷</title>
+<!-- CSS-LINK -->
+{include file="public/css-link"}
+<link href="/static/css/forgetpwd.css" rel="stylesheet" type="text/css" media="all" />
+<!-- JS-LINK -->
+{include file="public/js-link"}
+</head>
+<body class="user_body"> 
+<div class="container">
+	<div class="row">
+		<div class="user_form modal-dialog clearfix">
+			<div class="user_title">
+				<h2 class="text_h2">找回密码</h2>
+			</div>
+			<div class="col-md-10 col-md-offset-1">
+				<div class="col-md-12 mt20">
+					<form class="form-horizontal" onsubmit="return false;">
+						<div class="form-group mt20">
+							<span class="col-md-3 control-label hidden-xs">您的Email:</span>
+							<div class="col-md-8 col-sm-12 col-xs-12">
+								<input type="text"  class="form-control" placeholder="注册使用的邮箱"  id="forgetEmail">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<span class="col-md-3 control-label hidden-xs">验证码:</span>
+							<div class="col-md-4 col-sm-4 col-xs-6">
+								<input type="text" id="forgetCaptcha" class="form-control txt" placeholder="验证码" >
+							</div>
+
+							<div class="col-md-3 col-sm-4 col-xs-2">
+								<img src="/creatPicture"  onclick="this.src='/creatPicture?'+new Date().getTime();" >
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-md-3 hidden-xs"></div>
+							<div class="col-md-8 col-xs-12">
+								<button type="submit" class="btn btn-success btn-block" id="submit">找回</button>
+							</div>
+						</div>
+					</form>
+				</div>	
+			</div>
+		</div>	
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+	layui.use('layer', function(){
+		var layer = layui.layer;
+		$('#submit').click(function(){
+			var myReg=/^[a-zA-Z0-9_-]+@([a-zA-Z0-9]+\.)+(com|cn|net|org)$/;
+			if(!myReg.test($('#forgetEmail').val())){
+				layer.msg("邮箱格式不对!");
+		　　　　return false;
+			}
+			
+			$.ajax({
+				url:'/findPassword',
+				async:true,
+				cache:false,
+				type:"POST",
+				dataType:'json',
+				data:{
+					email:$('#forgetEmail').val(),
+					VerificationCode:$('#forgetCaptcha').val()
+				},
+				success:function(data){
+					layer.msg(data.msg);
+				}
+			});
+		});
+	});	
+</script>	
+</html>

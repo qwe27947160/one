@@ -1,0 +1,367 @@
+---------------------------------------------------------------
+[ 2019-05-10T00:10:42+08:00 ] 119.123.73.92 GET /creatPicture?1557418239935
+[ info ] dm.migu666.net/creatPicture?1557418239935 [运行时间：0.021396s][吞吐率：46.74req/s] [内存消耗：1,791.12kb] [文件加载：36]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'LoginValidation',
+    2 => 'creatPicture',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'https://dm.migu666.net/forgetpwd',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=fcqmeoh2iu4jj6dm8e2ml6uig3',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  0 => '',
+)
+[ info ] [ RUN ] app\index\controller\LoginValidation->creatPicture[ /www/web/migu666/application/index/controller/LoginValidation.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-10T00:10:48+08:00 ] 119.123.73.92 POST /findPassword
+[ info ] dm.migu666.net/findPassword [运行时间：2.738617s][吞吐率：0.37req/s] [内存消耗：2,861.23kb] [文件加载：44]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'LoginValidation',
+    2 => 'findPassword',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'content-length' => '46',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'https://dm.migu666.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'https://dm.migu666.net/forgetpwd',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=fcqmeoh2iu4jj6dm8e2ml6uig3',
+)
+[ info ] [ PARAM ] array (
+  'email' => '398207902@qq.com',
+  'VerificationCode' => 'w96z',
+)
+[ info ] [ RUN ] app\index\controller\LoginValidation->findPassword[ /www/web/migu666/application/index/controller/LoginValidation.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001136s ] mysql:host=172.19.0.7;port=3306;dbname=cummanhua;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_msg` [ RunTime:0.001208s ]
+[ sql ] [ SQL ] SELECT * FROM `user_msg` WHERE  `email` = '398207902@qq.com'  AND `status` = 1 LIMIT 1 [ RunTime:0.000730s ]
+[ sql ] [ SQL ] SELECT * FROM `user_msg` WHERE  `email` = '398207902@qq.com' LIMIT 1 [ RunTime:0.000699s ]
+[ sql ] [ SQL ] UPDATE `user_msg`  SET `find_exptime`='1557504646'  WHERE  `email` = '398207902@qq.com' [ RunTime:0.000903s ]
+---------------------------------------------------------------
+[ 2019-05-10T00:10:58+08:00 ] 119.123.73.92 GET /findPass?verify=1557504646&email=398207902@qq.com
+[ info ] dm.migu666.net/findPass?verify=1557504646&email=398207902@qq.com [运行时间：0.024755s][吞吐率：40.40req/s] [内存消耗：2,318.10kb] [文件加载：47]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'LoadView',
+    2 => 'findPass',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'https://mail.qq.com/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=fcqmeoh2iu4jj6dm8e2ml6uig3',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'verify' => '1557504646',
+  'email' => '398207902@qq.com',
+)
+[ info ] [ RUN ] app\index\controller\LoadView->findPass[ /www/web/migu666/application/index/controller/LoadView.php ]
+[ info ] [ VIEW ] /www/web/migu666/public/../application/index/view/comic/findPass.html [ array (
+  0 => 'email',
+  1 => 'verify',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: find_exptime[/www/web/migu666/runtime/temp/eabb937935d727758bb9a3a2756b12e1.php:103]
+---------------------------------------------------------------
+[ 2019-05-10T00:11:55+08:00 ] 119.123.73.92 GET /findPass?verify=1557504646&email=398207902@qq.com
+[ info ] dm.migu666.net/findPass?verify=1557504646&email=398207902@qq.com [运行时间：0.022486s][吞吐率：44.47req/s] [内存消耗：2,235.73kb] [文件加载：43]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'LoadView',
+    2 => 'findPass',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=fcqmeoh2iu4jj6dm8e2ml6uig3',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'verify' => '1557504646',
+  'email' => '398207902@qq.com',
+)
+[ info ] [ RUN ] app\index\controller\LoadView->findPass[ /www/web/migu666/application/index/controller/LoadView.php ]
+[ info ] [ VIEW ] /www/web/migu666/public/../application/index/view/comic/findPass.html [ array (
+  0 => 'email',
+  1 => 'verify',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-10T00:12:22+08:00 ] 119.123.73.92 POST /resetPassword
+[ info ] dm.migu666.net/resetPassword [运行时间：0.023209s][吞吐率：43.09req/s] [内存消耗：1,809.98kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'resetPassword',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'content-length' => '81',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'https://dm.migu666.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'https://dm.migu666.net/findPass?verify=1557504646&email=398207902@qq.com',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=fcqmeoh2iu4jj6dm8e2ml6uig3',
+)
+[ info ] [ PARAM ] array (
+  'pass' => '27947160',
+  'passAgain' => '27947160',
+  'email' => '398207902@qq.com',
+  'find_exptime' => '1557504646',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-10T00:12:22+08:00 ] 119.123.73.92 GET /resetPassword
+[ info ] dm.migu666.net/resetPassword [运行时间：0.017313s][吞吐率：57.76req/s] [内存消耗：1,809.39kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'content-length' => '81',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'https://dm.migu666.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'https://dm.migu666.net/findPass?verify=1557504646&email=398207902@qq.com',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=fcqmeoh2iu4jj6dm8e2ml6uig3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-10T00:12:24+08:00 ] 119.123.73.92 POST /resetPassword
+[ info ] dm.migu666.net/resetPassword [运行时间：0.020441s][吞吐率：48.92req/s] [内存消耗：1,809.98kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'resetPassword',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'content-length' => '81',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'https://dm.migu666.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'https://dm.migu666.net/findPass?verify=1557504646&email=398207902@qq.com',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=fcqmeoh2iu4jj6dm8e2ml6uig3',
+)
+[ info ] [ PARAM ] array (
+  'pass' => '27947160',
+  'passAgain' => '27947160',
+  'email' => '398207902@qq.com',
+  'find_exptime' => '1557504646',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-10T00:12:24+08:00 ] 119.123.73.92 GET /resetPassword
+[ info ] dm.migu666.net/resetPassword [运行时间：0.017450s][吞吐率：57.31req/s] [内存消耗：1,809.39kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'content-length' => '81',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'https://dm.migu666.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'https://dm.migu666.net/findPass?verify=1557504646&email=398207902@qq.com',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=fcqmeoh2iu4jj6dm8e2ml6uig3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-10T00:12:28+08:00 ] 119.123.73.92 POST /resetPassword
+[ info ] dm.migu666.net/resetPassword [运行时间：0.021216s][吞吐率：47.13req/s] [内存消耗：1,809.98kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'resetPassword',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'content-length' => '81',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'https://dm.migu666.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'https://dm.migu666.net/findPass?verify=1557504646&email=398207902@qq.com',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=fcqmeoh2iu4jj6dm8e2ml6uig3',
+)
+[ info ] [ PARAM ] array (
+  'pass' => '27947160',
+  'passAgain' => '27947160',
+  'email' => '398207902@qq.com',
+  'find_exptime' => '1557504646',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-10T00:12:28+08:00 ] 119.123.73.92 GET /resetPassword
+[ info ] dm.migu666.net/resetPassword [运行时间：0.018726s][吞吐率：53.40req/s] [内存消耗：1,809.39kb] [文件加载：38]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '404',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'content-length' => '81',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'https://dm.migu666.net',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'https://dm.migu666.net/findPass?verify=1557504646&email=398207902@qq.com',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=fcqmeoh2iu4jj6dm8e2ml6uig3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-10T01:54:58+08:00 ] 209.17.96.18 GET /
+[ info ] dm.migu666.net/ [运行时间：0.025341s][吞吐率：39.46req/s] [内存消耗：2,100.86kb] [文件加载：41]
+[ info ] [ LANG ] /www/web/migu666/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dm.migu666.net',
+  'user-agent' => 'Mozilla/5.0 (compatible; Nimbostratus-Bot/v1.3.2; http://cloudsystemnetworks.com)',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Ni->index[ /www/web/migu666/application/index/controller/Ni.php ]
+[ info ] [ VIEW ] /www/web/migu666/public/../application/index/view/comic/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
