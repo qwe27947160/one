@@ -1,0 +1,236 @@
+
+.bgpt{
+	height: 430px;
+	width: 100%;
+	position: absolute;
+	overflow: hidden;
+	left: 0;
+	transition: translate3d(0,0,0);
+}
+
+.bgpt::before{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+
+}
+
+.bgpt_info{
+	position: absolute;
+	background-size: 100%;
+	background-position: center;
+	width: 110%;
+	height: 430px;
+	top: 50%;
+	left: 50%;
+	margin: -215px -55%;
+	background-repeat: no-repeat;
+	-webkit-filter: blur(40px); /* Chrome, Opera */
+       -moz-filter: blur(40px);
+        -ms-filter: blur(40px);    
+            filter: blur(40px);    
+}
+
+.bgpt_info::before{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.3);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 11;
+}
+
+.bgpt_info::after{
+	content: '';
+	display: both;
+	height: 0;
+	visibility: hidden;
+}
+
+.bgms_top{
+	padding: 0 0 20px;
+	position: relative;
+	height: 430px;
+}
+
+.bgms_con{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.v_path{
+	zoom:1;
+	line-height: 50px;
+	padding: 5px 0;
+	font-size: 14px;
+	color: #FFF;
+	display: inline;
+}
+
+.v_path a{
+	color: #FFF;
+	display: inline;
+}
+
+.v_path a.current{
+	color: #f90
+}
+
+.msgpt{
+	width: 246px;
+	float: left;
+}
+
+.msgpt .v_pic{
+	border: 3px solid#efecef;
+	width: 240px;
+	height: 334px;
+	overflow: hidden;
+}
+
+.msgpt .v_pic img{
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+	display: block;
+}
+
+.cvtxt{
+	width: 924px;
+	float: right;
+}
+
+.cvtxt .titxt{
+	padding: 0 180px 5px 0;
+}
+
+.cvtxt .titxt h1{
+	display: inline-block;
+	line-height: 40px
+	height:40px;
+	overflow: hidden;
+	font-size: 30px;
+	font-weight: 400;
+	padding-right: 20px;
+	color: #fff;
+}
+
+.cvtxt .titxt .ptxt{
+	display: inline-block;
+	line-height: 40px;
+	height: 40px;
+	overflow: hidden;
+	color: #fff;
+	font-size: 16px;
+}
+
+.in_list li{
+	height: auto;
+	line-height: 30px;
+	float:left;
+	width: 100%;
+	overflow: hidden;
+	color: #fff;
+	font-size: 14px;
+}
+
+.in_list li em{
+	color: #f90;
+	font-style: normal;
+}
+
+.in_list li p{
+	display: inline;
+	margin-right: 8px;
+}
+
+.listmain{
+	width: 1200px;
+
+	margin: 20px auto 0px auto;
+}
+
+.lslay .lshead{
+	height: 40px;
+
+}
+
+.lslay .lshead .lsheadtab{
+	line-height: 40px;
+	overflow: hidden;
+	color: #222;
+	position: relative;
+	font-size: 16px;
+}
+
+.lslay .lshead .lsheadtab:before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	bottom: 0;
+	left: 0;
+	background: #eee;
+}
+
+.lslay .lshead .lsheadtab span{
+	float: left;
+}
+
+.lslay .lshead .lsheadtab span:before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	bottom: 0;
+	left: 0;
+	background: #ffb400;
+}
+
+.player_list{
+	max-height: 280px;
+	overflow: auto;
+	overflow-x: hidden;
+	clear: both;
+	position: relative;
+	margin-top: 20px;
+	margin-bottom: 8px;
+	font-size: 13px;
+	padding-left: 0px;
+}
+
+.player_list a{
+	display: block;
+	float: left;
+	line-height: 29px;
+	height: 29px;
+	margin-right: 19px;
+	white-space: nowrap;
+	position: relative;
+	margin-bottom: 10px;
+	text-align: center;
+	padding-right: 4px;
+	padding-left: 4px;
+	border:1px solid #e0e0e0;
+	background: #fff;
+	min-width: 89px;
+	color: #333;
+}
+
+div:after, ul:after, dl:after{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+
+.video_main{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}

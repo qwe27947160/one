@@ -1,0 +1,183 @@
+.containmain{
+	background-color: #fff;
+	width: 1200px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin: 0 auto;
+}
+
+
+.ulstyle{
+	width: 1200px;
+}
+
+
+
+.cover span{
+	background-color: rgba(0,0,0,0.6);
+	color: #fff;
+	display: block;
+	text-align: center;
+}	
+
+.cmcover li{
+	width: 170px;
+	position: relative;
+	margin: 0 30px 30px 0;
+	float: left;
+	list-style:none;
+}
+
+.cmcover li .pic{
+	height: 224px;
+	display: block;
+}
+
+.cmcover li a img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.cmcover li p{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 170px;
+	line-height: 26px;
+	overflow: hidden;
+}
+
+.cmcover li p a{
+	padding: 0 10px !important;
+	border: none;
+	text-align: center;
+}
+
+.cmcover li p a span{
+	background-color: rgba(0,0,0,0.6);
+	color: #fff;
+	display: block;
+}
+
+#myCarousel{
+	width: 452px;
+	height: 260px;
+	margin-left: 0;
+}
+
+#myCarousel img{
+	width: 100%;
+	height: 100%;
+
+}
+
+.item{
+	width: 100%;
+	height: 100%;
+}
+
+.carousel-inner{
+	width: 100%;
+	height: 100%;
+}
+
+.serach_font{
+	font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+}
+
+.row1{
+	padding-top: 10px;
+}
+
+.row1:after{
+	content: "";
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+.lunbo_div{
+	width: 452px;
+	height: 260px;
+	float:left;
+}
+
+
+.ad_menu{
+	width: 344px;
+	height: 260px;
+	float: left;
+	margin-bottom: 50px;
+
+}
+
+.ad_menu li{
+	position: relative;
+	float: left;
+	width: 226px;
+	height: 120px;
+	margin: 0 0 20px 20px;
+	list-style:none;
+}
+
+.ad_menu li img{
+	width: 100%;
+	height: 100%;
+	border-radius: 3px;
+}
+
+.carousel-control{
+	opacity: 0 !important;
+}
+
+.headicon{
+	clear: both;
+	position: relative;
+}
+
+.headicon b{
+	font-size: 18px;
+	color: #112;
+	margin-left: 8px;
+	position: relative;
+	top: -6px;
+}
+
+ul{
+	padding-left: 0px;
+}
+
+@media (max-width: 1000px){
+	.containmain{
+		width: 100%;
+	}
+
+	.ulstyle{
+		width: 100%;
+	}
+
+	.lunbo_div{
+		width: 100%;
+		height: 160px;
+	}
+
+	#myCarousel{
+		width: 100%;
+		height: 160px;
+	}
+
+	.ad_menu{
+		display: none;
+	}
+
+	html{
+		font-size: 50px;
+	}
+
+	.headicon b{
+		font-size: 1.5rem;
+	}
+
+}

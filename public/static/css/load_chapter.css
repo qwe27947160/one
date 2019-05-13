@@ -1,0 +1,38 @@
+
+
+.ch_main{
+	border:1px solid #9FB7D4;
+	width: 978px;
+	margin: 50px auto;
+}
+
+
+.Accord_1{
+	font-size: 12px;
+	margin: 0.8px;
+	clear: both;
+	height: 500px;
+	overflow: auto;
+}
+
+.Accord_1 ul li{
+	width: 90px;
+	display: inline-block;
+	background-color: #F0F0F0;
+	height: 29px;
+	border: 1px solid #CCC;
+	margin-top: 5px;
+	margin-left: 5px;
+	text-align: center; 
+}
+
+.Accord_1 li a{
+	display: block;
+	height: 27px;
+	font-size: 14px;
+	color: #036;
+	text-decoration: none;
+	overflow: hidden;
+	border:1px solid #FFF;
+}
+

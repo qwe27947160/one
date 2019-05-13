@@ -1,0 +1,26 @@
+.search_box{
+	right: 0px;
+	position: absolute;
+	top:0px;
+}
+
+.search_box .form_ms{
+	width: 220px;
+	height: 32px;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,0.88);
+	border: 1px solid #f25d8e;
+	padding-left:20px;
+}
+
+.search_box .serch_buttom{
+	position: absolute;
+	margin-top: 8px;
+	background: url("/static/imgs/ico/page_icons.png") no-repeat -663px -728px;
+	cursor: pointer;
+	right: 0;
+	width: 36px;
+	height: 32px;
+	top:-2px;
+	border:none;
+}

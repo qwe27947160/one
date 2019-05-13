@@ -1,0 +1,48 @@
+#page_ul li{
+	margin:10px auto 40px;
+}
+
+
+
+.comic-sp{
+	display: inline-block;
+	width: 100%;
+	text-align: right;
+	padding-top: 10px;
+	font-size: 17px;
+	font-weight: bold;
+	color: #000;
+}
+
+.nextmain{
+	font-family: 'Microsoft Yahei';
+}
+
+.nextmain ul{
+	font-size: 0;
+	width: 921px;
+	margin: 45px auto 0;
+	position: relative;
+	text-align: center;
+}
+
+.nextmain ul li{
+	width: 399px;
+	margin: 0 auto;
+	float: left;
+	position: relative;
+}
+
+.nextmain ul li a{
+	width: 100%;
+	margin-top: 40px;
+	font-size: 26px;
+	line-height: 50px;
+	height: 50px;
+	z-index: 4;
+}
+
+#mexta:hover{
+	color: #FF7F24;
+	cursor:pointer;
+}

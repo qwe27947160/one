@@ -1,0 +1,75 @@
+body{
+	background: #efefef;
+	cursor: url("/static/imgs/ico/cursor.ico"),auto;
+}
+
+.top-hd{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	height: 80px;
+	line-height: 50px;
+	background-color:#FFF;
+	box-shadow: 1px 1px 3px 0 #FE7357; 
+	width: 100%;
+}
+
+.con-ten{
+	width: 1060px;
+	padding: 0 10px;
+	margin:0 auto;
+	position: relative;
+}
+
+.left{
+	float: left;
+}
+
+#top-logo{
+	position: relative;
+	float: left;
+	height: 52px;
+	width: 180px;
+	margin-top: 10px;
+	margin-right: 15px; 
+}
+
+#lunbo-main{
+	position: relative;
+	width: 1170px;
+	margin: auto;
+	background-color: #FFF;
+}
+
+.footer{
+	height: 250px;
+	clear: both;
+	margin:5px 0 0 0;
+	text-align: center;
+	line-height: 22px;
+	overflow: hidden;
+	background: url(/static/imgs/footer/footer.jpg);
+}
+
+.footer:after{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+
+#biaoti .btn {
+	margin-top: 20px;
+}
+
+#biaoti .SOU{
+	margin-top: 20px;
+	width: 300px;
+}
+
+.search_main{
+	width: 1200px;
+	margin: 50px auto;
+}
