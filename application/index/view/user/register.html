@@ -75,21 +75,38 @@
 	layui.use('layer', function(){
 		var layer = layui.layer;
 		$('#submit').click(function(){
-			var myReg=/^[a-zA-Z0-9_-]+@([a-zA-Z0-9]+\.)+(com|cn|net|org)$/;
-			if(!myReg.test($('#forgetEmail').val())){
-				layer.msg("邮箱格式不对!");
-		　　　　return false;
+			var emailReg=/^[a-zA-Z0-9_-]+@([a-zA-Z0-9]+\.)+(com|cn|net|org)$/;
+			var regularFormula  = /^[a-zA-Z0-9_]{6,10}$/; 
+			if(!$('#Account').val().match(regularFormula)){
+				layer.msg('帐号不能为空，且长度为6至10位的数字和英文字母');
+				$('#Account').focus();
+				return false;	
+			}else if(!$('#password').val().match(regularFormula)){
+				layer.msg('密码不能为空，且长度为6至10位的数字和英文字母');
+				$('#password').focus();
+				return false;
+			}else if($('#password').val() != $('#passwordAgain').val()){
+				layer.msg('两次密码不一样');
+				$('#passwordAgain').focus();
+				return false;
+			}else if(!emailReg.test($('#Email').val())){
+				layer.msg('email格式不正确');
+				$('#Email').focus();
+				return false;
 			}
+
 			
 			$.ajax({
-				url:'/findPassword',
+				url:'/register',
 				async:true,
 				cache:false,
 				type:"POST",
 				dataType:'json',
 				data:{
-					email:$('#forgetEmail').val(),
-					VerificationCode:$('#forgetCaptcha').val()
+					acc:$('#Account').val(),
+					pass:$('#password').val(),
+					email:$('#Email').val(),
+					Verification:$('#forgetCaptcha').val()
 				},
 				success:function(data){
 					layer.msg(data.msg);
