@@ -6,7 +6,7 @@ use think\Db;
 
 class LoadView {
 	public function forgetpwd(){
-        echo (new View()) -> fetch('comic/forgetpwd');
+        echo (new View()) -> fetch('user/forgetpwd');
 	}
 
 	public function findPass() {
@@ -17,7 +17,7 @@ class LoadView {
 		if($nowTime > $dbResult['find_exptime']) {
 			echo '此链接已经超过24小时，请重新发送';		
 		}else {
-			echo (new View()) -> fetch('comic/findPass', ['email' => $email]);
+			echo (new View()) -> fetch('user/findPass', ['email' => $email]);
 		}
 	}
 
