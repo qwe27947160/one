@@ -14,15 +14,36 @@
 	<div class="row">
 		<div class="user_form modal-dialog clearfix">
 			<div class="user_title">
-				<h2 class="text_h2">找回密码</h2>
+				<h2 class="text_h2">注册账号</h2>
 			</div>
 			<div class="col-md-10 col-md-offset-1">
 				<div class="col-md-12 mt20">
 					<form class="form-horizontal" onsubmit="return false;">
 						<div class="form-group mt20">
+							<span class="col-md-3 control-label hidden-xs">账号</span>
+							<div class="col-md-8 col-sm-12 col-xs-12">
+								<input type="text"  class="form-control" placeholder="账号"  id="Account">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<span class="col-md-3 control-label hidden-xs">密码</span>
+							<div class="col-md-8 col-sm-12 col-xs-12">
+								<input type="text"  class="form-control" placeholder="密码"  id="password">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<span class="col-md-3 control-label hidden-xs">再次输入密码</span>
+							<div class="col-md-8 col-sm-12 col-xs-12">
+								<input type="text"  class="form-control" placeholder="再次输入密码"  id="passwordAgain">
+							</div>
+						</div>
+
+						<div class="form-group ">
 							<span class="col-md-3 control-label hidden-xs">您的Email:</span>
 							<div class="col-md-8 col-sm-12 col-xs-12">
-								<input type="text"  class="form-control" placeholder="注册使用的邮箱"  id="forgetEmail">
+								<input type="text"  class="form-control" placeholder="邮箱"  id="Email">
 							</div>
 						</div>
 
@@ -40,7 +61,7 @@
 						<div class="form-group">
 							<div class="col-md-3 hidden-xs"></div>
 							<div class="col-md-8 col-xs-12">
-								<button type="submit" class="btn btn-success btn-block" id="submit">找回</button>
+								<button type="submit" class="btn btn-success btn-block" id="submit">注册</button>
 							</div>
 						</div>
 					</form>
