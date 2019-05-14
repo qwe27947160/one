@@ -15,7 +15,7 @@
 					</ul>
 				</div>
 				<div class="loginBox">
-					<a class="logBtn" id='logBtn'>登录</a>
+					<a class="logBtn" id='/user/login'>登录</a>
 					<span></span>
 					<a class="regBtn" href="/user/register">注册</a>
 				</div>
@@ -26,34 +26,6 @@
 
 <div class="go_top"></div>
 
-<div id="loginHtml">
-	<div class="layui-form-item">
-	   <label class="layui-form-label">帐号</label>
-	   <div class="layui-input-block">
-	    	<input type="text" name="username" lay-verify="title" autocomplete="off" placeholder="请输入帐号" class="layui-input" id="lgAcc" />
-	   </div>
-	</div>
-
-	<div class="layui-form-item">
-		<label class="layui-form-label">密码</label>
-		<div class="layui-input-block">
-			<input type="password" name="password" placeholder="请输入密码" autocomplete="off" class="layui-input" id="lgPass" />
-		</div>
-	</div>
-	
-	<div class="layui-form-item">
-		<img src="/creatPicture"  onclick="this.src='/creatPicture?'+new Date().getTime();" width="200" height="40">
-		<input type="text" id="regCaptcha" placeholder="请输入图片中的验证码">
-	</div>
-
-	<div class="layui-form-item">
-		<button class="layui-btn headButton" lay-filter="demo2" id="lgButton">登录</button>
-	</div>
-
-	<div class="layui-form-item">
-		<a href="/forgetpwd" style="margin-left: 27%;" target="_black">忘记密码？</a>
-	</div>
-</div>
 
 <script type="text/javascript" src="https://npmcdn.com/headroom.js@0.9.3/dist/headroom.min.js"></script>
 <script>
@@ -99,73 +71,6 @@
 			$(".gotop.gotopDown").css('top',topheight);
 			$(".gotop.gotopUp").css('top','-900px');
 		}
-	});
-
-    var loginHtml = $('#loginHtml').html();
-    $('#loginHtml').html('');
-
-	//注册格式验证
-	function regEvent(){
-		var emailReg=/^[a-zA-Z0-9_-]+@([a-zA-Z0-9]+\.)+(com|cn|net|org)$/;
-		var regularFormula  = /^[a-zA-Z0-9_]{6,10}$/; 
-		if(!$('#regAcc').val().match(regularFormula)){
-			layer.msg('帐号不能为空，且长度为6至10位的数字和英文字母');
-			$('#regAcc').focus();
-			return false;	
-		}else if(!$('#regPass').val().match(regularFormula)){
-			layer.msg('密码不能为空，且长度为6至10位的数字和英文字母');
-			$('#regPass').focus();
-			return false;
-		}else if($('#regPass').val() != $('#regPass2').val()){
-			layer.msg('两次密码不一样');
-			$('#regPass2').focus();
-			return false;
-		}else if(!emailReg.test($('#regEmail').val())){
-			layer.msg('email格式不正确');
-			$('#regEmail').focus();
-			return false;
-		}
-
-		$.ajax({
-			url:'/register',
-			async:true,
-			cache:false,
-			type:"POST",
-			dataType:'json',
-			data:{
-				acc:$('#regAcc').val(),
-				pass:$('#regPass').val(),
-				email:$('#regEmail').val(),
-				Verification:$('#regCaptcha').val()
-			},
-			success:function(data){
-				layer.msg(data.msg);
-			}
-		});
-	}
-
-    layui.use('layer', function(){
-		$('#logBtn').click(function(){
-			var layer = layui.layer;
-			layer.open({
-				type:1
-				,title:'登录'
-				,area:['400px', '400px']
-				,content:loginHtml
-			});
-		});
-
-		$('#regBtn').click(function(){
-			var layer = layui.layer;
-			layer.open({
-				type:1
-				,title:'注册'
-				,area:['400px', '500px']
-				,content:'<div class="layui-form-item"><label class="layui-form-label">帐号</label><div class="layui-input-block"><input type="text" name="username" lay-verify="title" autocomplete="off" placeholder="请输入帐号" class="layui-input" id="regAcc"></div></div> <div class="layui-form-item"><label class=layui-form-label>密码</label><div class="layui-input-block"><input type=password name=password placeholder=请输入密码 autocomplete=off class=layui-input id="regPass"></div></div> <div class="layui-form-item"><label class=layui-form-label id="pass2Lab">验证密码</label><div class="layui-input-block"><input type=password name=password placeholder=请再次输入密码 autocomplete=off class=layui-input id="regPass2"></div></div><div class="layui-form-item"><label class="layui-form-label">邮箱</label><div class="layui-input-block"><input type="text" name="username" lay-verify="title" autocomplete="off" placeholder="请输入邮箱" class="layui-input" id="regEmail"></div></div><div class="layui-form-item"><img src="/creatPicture"  onclick="this.src=\'/creatPicture?\'+new Date().getTime();" width="200" height="40"><input type="text" id="regCaptcha" placeholder="请输入图片中的验证码"></div><div class="layui-form-item"><button class="layui-btn headButton" lay-submit="" lay-filter="demo2" id="regButton" onclick=regEvent()>注册</button></div>'
-			});
-		});
-
-
 	});
 
 	
