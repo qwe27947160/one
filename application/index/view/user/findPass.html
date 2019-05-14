@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+{include file="public/meta"}	
+<title>米谷 米谷</title>
+<!-- CSS-LINK -->
+{include file="public/css-link"}
+<link href="/static/css/forgetpwd.css" rel="stylesheet" type="text/css" media="all" />
+<!-- JS-LINK -->
+{include file="public/js-link"}
+</head>
+<body class="user_body"> 
+<div class="container">
+	<div class="row">
+		<div class="user_form modal-dialog clearfix">
+			<div class="user_title">
+				<h2 class="text_h2">重置密码</h2>
+			</div>
+			<div class="col-md-10 col-md-offset-1">
+				<div class="col-md-12 mt20">
+					<form class="form-horizontal" onsubmit="return false;">
+						<div class="form-group mt20">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<input type="password"  class="form-control" placeholder="新密码"  id="pass">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<input type="password" id="passAgain" class="form-control txt" placeholder="再次输入新密码">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-md-12 col-xs-12">
+								<button type="submit" class="btn btn-success btn-block" id="submit">重置</button>
+							</div>
+						</div>
+					</form>
+				</div>	
+			</div>
+		</div>	
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+	layui.use('layer', function() {
+		var layer = layui.layer;
+		$('#submit').click(function() {
+			var regularFormula  = /^[a-zA-Z0-9_]{6,10}$/;
+			if(!$('#pass').val().match(regularFormula)) {
+				layer.msg('密码不能为空，且长度为6至10位的数字和英文字母');
+				$('#pass').focus();
+				return false;
+			} 
+			if($('#pass').val() != $('#passAgain').val()){
+				layer.msg("2次输入密码不一样");
+				$('#passAgain').focus();
+				return false;
+			}
+			
+			$.ajax({
+				url:'/resetPassword',
+				async:true,
+				cache:false,
+				type:"POST",
+				dataType:'json',
+				data:{
+					passAgain:$('#passAgain').val(),
+					email:"<?php echo $email; ?>",
+				},
+				success:function(data){
+					layer.msg(data.msg);
+				}
+			});
+		});
+	});	
+</script>	
+</html>
