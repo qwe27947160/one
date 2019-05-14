@@ -20,4 +20,8 @@ class LoadView {
 			echo (new View()) -> fetch('comic/findPass', ['email' => $email]);
 		}
 	}
+
+	public function register() {
+		echo (new View()) -> fetch('user/register');
+	}
 }

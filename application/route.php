@@ -33,3 +33,4 @@ Route::rule('resetPassword', 'index/LoginValidation/resetPassword');
 /********** loadview **********/
 Route::rule('forgetpwd', 'index/LoadView/forgetpwd');
 Route::rule('findPass', 'index/LoadView/findPass');
+Route::rule('/user/register', 'inxex/LoadView/register');
