@@ -24,4 +24,8 @@ class LoadView {
 	public function register() {
 		echo (new View()) -> fetch('user/register');
 	}
+
+	public function login() {
+		echo (new View()) -> fetch('user/login');
+	}
 }
