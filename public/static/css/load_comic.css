@@ -150,3 +150,9 @@
 ul{
 	padding-left: 0px;
 }
+
+.newhd{
+	box-shadow: 0 2px 8px 0 rgba(7,17,27,.06);
+	padding-top: 20px;
+	padding-bottom: 36px;
+}
