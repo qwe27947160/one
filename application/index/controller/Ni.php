@@ -23,7 +23,7 @@ class Ni
     }
 
     public function load_comic(){
-    	$result = (new Comic)  -> order('rand()') -> limit(6) ->select();
+    	$result = (new Comic)  -> order('rand()') -> limit(12) ->select();
         $L = array();
     	foreach ($result as $data){
             array_push($L,array("cd" => $data -> getData()["ComicChapter"], "cn" => $data -> getData()["urlname"],"cv" => $data -> getData()["cover"] ,"ti" => $data -> getData()["title"]));
