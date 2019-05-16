@@ -35,3 +35,4 @@ Route::rule('forgetpwd', 'index/LoadView/forgetpwd');
 Route::rule('findPass', 'index/LoadView/findPass');
 Route::rule('/user/register', 'index/LoadView/register');
 Route::rule('/user/login', 'index/LoadView/login');
+Route::rule('allcomic', 'index/LoadView/allcomic');

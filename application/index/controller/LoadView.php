@@ -28,4 +28,8 @@ class LoadView {
 	public function login() {
 		echo (new View()) -> fetch('user/login');
 	}
+
+	public function allcomic() {
+		echo (new View()) -> fetch('comic/allcomic');
+	}
 }
