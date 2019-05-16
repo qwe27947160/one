@@ -17,19 +17,13 @@ class Ni
     }
 
     public function load_chapter($name){
-        //Config::set('default_ajax_return','json');
-        //return view('comic/chapter',['name' => $name]);
-        //header('X-PJAX-Version: v100');
-        
         $view = new View();
         $view->assign('name',$name);
         echo $view->fetch('comic/chapter');
-        
-
     }
 
     public function load_comic(){
-    	$result = (new Comic)  -> select();
+    	$result = (new Comic)  -> order('rand()') -> limit(6) ->select();
         $L = array();
     	foreach ($result as $data){
             array_push($L,array("cd" => $data -> getData()["ComicChapter"], "cn" => $data -> getData()["urlname"],"cv" => $data -> getData()["cover"] ,"ti" => $data -> getData()["title"]));
@@ -181,7 +175,6 @@ class Ni
         $Serch_Msg = ' ';
     	if(empty($SearchResult)){
     		$RandResult = (new Animationscover) -> order('rand()') -> limit(1) -> select();
-
     		foreach ($RandResult as $data) {
     			$cotdir = (new Animationsdir) -> where('cvdirid',$data->getData()["associated"]) -> count('cvdirid');
     			$h5_statements .= '<ul class=vdcv id=vdcv><li class=vdcvli><a data-pjax href=' . $data -> getData()["src"] . ' title=' . $data -> getData()["title"] . ' target=_self class=vdcvimg><img class=vdcvloading data-original=' .  $data -> getData()["cover"] . 'alt=' . $data -> getData()["title"] . 'style=display:inline src=' . $data -> getData()["cover"] . '><span class=vdcvmask style=opacity:0;><i class=glyphicon glyphicon-play-circle glyphiconL></i></span></a><div class=vdcvinfo><a data-pjax href=' . $data -> getData()["src"] . '>' . $data -> getData()["title"] . '</a><p><span class=vdcvf1>更新至' . $cotdir . '集</span></p></div></li></ul>';
