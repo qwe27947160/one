@@ -160,3 +160,10 @@ ul{
 .mt20{
 	margin-top: 20px;
 }
+
+.more{
+	float: right;
+	right: 0;
+	margin-right: 8px;
+	color: #fd4c5d;
+}
