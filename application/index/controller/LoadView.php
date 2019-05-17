@@ -37,6 +37,7 @@ class LoadView {
 		$h5_statements = '';
 		foreach ($result as $data) {
 			var_dump($data);
+			echo $data['urlname'];
 			break;
 		}
 
