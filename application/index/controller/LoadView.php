@@ -30,7 +30,7 @@ class LoadView {
 	}
 
 	public function allcomic() {
-		$result = (new Comic) -> select();
+		$result = Db::table('comic') -> select();
 		$h5_statements = '';
 		foreach ($result as $data) {
 			$h5_statements .= '<li><a href=chapter/' . $data -> getData()["urlname"] . ' class=pic><img src=' .$data -> getData()["cover"] . ' alt=' . $data -> getData()["title"] . '></a><p class=cover><a href=chapter/' . $data -> getData()["urlname"] . ' class=pic2><span>' .  $data -> getData()["title"] . '</span></a></p></li>';
