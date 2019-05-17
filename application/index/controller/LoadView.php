@@ -34,13 +34,12 @@ class LoadView {
 
 	public function allcomic() {
 		$result = Db::table('comic') -> select();
-		var_dump($result);
-		/*
+
+		
 		$h5_statements = '';
 		foreach ($result as $data) {
 			$h5_statements .= '<li><a href=chapter/' . $data["urlname"] . ' class=pic><img src=' .$data["cover"] . ' alt=' . $data["title"] . '></a><p class=cover><a href=chapter/' . $data["urlname"] . ' class=pic2><span>' .  $data["title"] . '</span></a></p></li>';
 		}
 		echo (new View()) -> fetch('comic/allcomic', ['h5_statements' => $h5_statements]);
-		*/
 	}
 }
