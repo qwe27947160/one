@@ -36,14 +36,7 @@ class LoadView {
 		$result = Db::table('comic') -> select();
 		$h5_statements = '';
 		foreach ($result as $data) {
-			var_dump($data);
-			echo $data['urlname'];
-			break;
-		}
-
-
-		foreach ($result as $data) {
-			$h5_statements .= '<li><a href=chapter/' . $data -> getData()["urlname"] . ' class=pic><img src=' .$data -> getData()["cover"] . ' alt=' . $data -> getData()["title"] . '></a><p class=cover><a href=chapter/' . $data -> getData()["urlname"] . ' class=pic2><span>' .  $data -> getData()["title"] . '</span></a></p></li>';
+			$h5_statements .= '<li><a href=chapter/' . $data["urlname"] . ' class=pic><img src=' .$data["cover"] . ' alt=' . $data["title"] . '></a><p class=cover><a href=chapter/' . $data["urlname"] . ' class=pic2><span>' .  $data["title"] . '</span></a></p></li>';
 		}
 		echo (new View()) -> fetch('comic/allcomic', ['h5_statements' => $h5_statements]);
 	}
