@@ -4,10 +4,10 @@ use think\View;
 use think\Db;
 use \think\Request;
 use \think\Config;
-use think\Model;
 
 
-class LoadView extends Model{
+
+class LoadView {
 	public function forgetpwd(){
         echo (new View()) -> fetch('user/forgetpwd');
 	}
@@ -35,6 +35,12 @@ class LoadView extends Model{
 	public function allcomic() {
 		$result = Db::table('comic') -> select();
 		$h5_statements = '';
+		foreach ($result as $data) {
+			var_dump($data);
+			break;
+		}
+
+
 		foreach ($result as $data) {
 			$h5_statements .= '<li><a href=chapter/' . $data -> getData()["urlname"] . ' class=pic><img src=' .$data -> getData()["cover"] . ' alt=' . $data -> getData()["title"] . '></a><p class=cover><a href=chapter/' . $data -> getData()["urlname"] . ' class=pic2><span>' .  $data -> getData()["title"] . '</span></a></p></li>';
 		}
