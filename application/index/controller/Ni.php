@@ -80,14 +80,14 @@ class Ni
     	if(empty($SearchResult)){
     		$RandResult = (new Comic) -> order('rand()') -> limit(4) -> select();
     		foreach ($RandResult as $data) {
-    			$h5_statements .= '<ul id="ccover" class="cmcover"><li><a href=chapter/' . $data -> getData()["urlname"] . ' class=pic><img src=' .$data -> getData()["cover"] . ' alt=' . $data -> getData()["title"] . '></a><p class=cover><a href=chapter/' . $data -> getData()["urlname"] . ' class=pic2><span>' .  $data -> getData()["title"] . '</span></a></p></li></ul>';
+    			$h5_statements .= '<ul id="ccover" class="cmcover"><li><a href=chapter/' . $data -> getData()["urlname"] . ' class=pic><img src="' .$data -> getData()["cover"] . '" alt=' . $data -> getData()["title"] . '></a><p class=cover><a href=chapter/' . $data -> getData()["urlname"] . ' class=pic2><span>' .  $data -> getData()["title"] . '</span></a></p></li></ul>';
 
     			$Serch_Msg = '<h3 class=serach_font>找不到您需要的动漫，为您推荐下面的动漫:</h3>';
     		}
     	}else{
     		foreach ($SearchResult as $data) {
     			//var_dump($data);
-    			$h5_statements .= '<ul id="ccover" class="cmcover"><li><a href=chapter/' . $data -> getData()["urlname"] . ' class=pic><img src=' .$data -> getData()["cover"] . ' alt=' . $data -> getData()["title"] . '></a><p class=cover><a href=chapter/' . $data -> getData()["urlname"] . ' class=pic2><span>' .  $data -> getData()["title"] . '</span></a></p></li></ul>';
+    			$h5_statements .= '<ul id="ccover" class="cmcover"><li><a href=chapter/' . $data -> getData()["urlname"] . ' class=pic><img src="' .$data -> getData()["cover"] . '" alt=' . $data -> getData()["title"] . '></a><p class=cover><a href=chapter/' . $data -> getData()["urlname"] . ' class=pic2><span>' .  $data -> getData()["title"] . '</span></a></p></li></ul>';
 
     			$Serch_Msg = '<h3 class=serach_font>为您找到如下动漫:</h3>';
     		}
