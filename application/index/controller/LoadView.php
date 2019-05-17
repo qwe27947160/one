@@ -4,9 +4,10 @@ use think\View;
 use think\Db;
 use \think\Request;
 use \think\Config;
+use think\Model;
 
 
-class LoadView {
+class LoadView extends Model{
 	public function forgetpwd(){
         echo (new View()) -> fetch('user/forgetpwd');
 	}
