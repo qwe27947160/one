@@ -20,28 +20,19 @@
 {include file="public/header"}
 
 <!--轮播-->
-
-
-
-
-
-
-
-	<div class="row1 mt20">
-		<div class="headicon">
-			<span class="glyphicon glyphicon-book" style="color: rgb(0, 223, 255); font-size: 30px;"></span>
-			<b>全部在线漫画</b>
-			{include file="public/inputbox" argument1="/search_video" argument2="搜索影片时可不要多字哦"}
-		</div>
-		
-		<div id="cmmain" class="ulstyle">
-			<ul id="ccover" class="cmcover">
-			 	
-			</ul>
-		</div> 
+<div class="row1 mt20">
+	<div class="headicon">
+		<span class="glyphicon glyphicon-book" style="color: rgb(0, 223, 255); font-size: 30px;"></span>
+		<b>全部在线漫画</b>
+		{include file="public/inputbox" argument1="/search_video" argument2="搜索影片时可不要多字哦"}
 	</div>
-
 	
+	<div id="cmmain" class="ulstyle">
+		<ul id="ccover" class="cmcover">
+		 	{$h5_statements}
+		</ul>
+	</div> 
+</div>
 
 {include file="public/footer"}
 <script type="text/javascript">
