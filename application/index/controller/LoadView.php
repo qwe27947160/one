@@ -2,6 +2,7 @@
 namespace app\index\controller;
 use think\View;
 use think\Db;
+use \think\Request;
 
 
 class LoadView {
