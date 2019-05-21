@@ -24,7 +24,7 @@ class Ni
 
     public function load_comic(){
     	$result = (new Comic)  -> order('rand()') -> limit(12) ->select();
-        print($result);
+        print_r($result);
         exit();
         $L = array();
     	foreach ($result as $data){
