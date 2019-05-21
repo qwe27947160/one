@@ -116,10 +116,10 @@ function Load_Animations_Cover(){
 }
 
 function VdBind(name){
-	$("a[title="+name+"]").hover(function(){
-		$("a[title=" + name + "] .vdcvmask").css("opacity","1");
+	$("a[title='"+name+"']").hover(function(){
+		$("a[title='" + name + "'] .vdcvmask").css("opacity","1");
 	},function(){
-    	$("a[title=" + name + "] .vdcvmask").css("opacity","0");
+    	$("a[title='" + name + "'] .vdcvmask").css("opacity","0");
 	}); 
 }
 
