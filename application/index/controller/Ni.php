@@ -27,8 +27,6 @@ class Ni
         $L = array();
     	foreach ($results as $data){
             $data = $data -> getData();
-            print_r($data);
-            break;
             array_push($L,array("cd" => $data["ComicChapter"], "cn" => $data["urlname"],"cv" => $data["cover"] ,"ti" => $data["title"]));
     	}
         echo json_encode($L);
