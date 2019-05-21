@@ -118,9 +118,6 @@ class Ni
         $title2 = $query_bg->getData()['title'];
         $introduction = $query_bg->getData()['introduction'];
         $associated = $query_bg->getData()["associated"];
-
-        echo $title;
-        echo $title2;
         
         $view = new View();
         $view->assign('name',$name);
