@@ -117,9 +117,9 @@ function Load_Animations_Cover(){
 
 function VdBind(obj){
 	obj.hover(function(){
-		this.children(".vdcvmask").css("opacity","1");
+		$(this).children(".vdcvmask").css("opacity","1");
 	},function(){
-    	this.children(".vdcvmask").css("opacity","0");
+    	$(this).children(".vdcvmask").css("opacity","0");
 	}); 
 }
 
