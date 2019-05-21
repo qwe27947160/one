@@ -26,9 +26,7 @@ class Ni
     	$results = (new Comic)  -> order('rand()') -> limit(12) ->select();
         $L = array();
     	foreach ($results as $data){
-             
             array_push($L,array("cd" => $data["ComicChapter"], "cn" => $data["urlname"],"cv" => $data["cover"] ,"ti" => $data["title"]));
-            
     	}
         echo json_encode($L);
     }    
@@ -41,7 +39,6 @@ class Ni
         $L = array();
      
         foreach($query_chapter as $data){
-            //var_dump($data ->getData());
             array_push($L,array("id" => $data -> getData()["ComicChapter"] ,"pagenum" => $data ->getData()["ChapterPage"] ,"pn" => $data -> getData()["ChapterName"]));
         }
         echo json_encode($L);
@@ -104,7 +101,6 @@ class Ni
         $L = array();
     	foreach ($result as $data){
             $cotdir = (new Animationsdir) -> where('cvdirid',$data->getData()["associated"]) -> count('cvdirid');
-            
             array_push($L,array("as" => $data -> getData()["associated"], "cv" => $data -> getData()["cover"] ,"ti" => $data -> getData()["title"], "src" => $data -> getData()["src"], "cotdir" => $cotdir));
     	}
         echo json_encode($L);
