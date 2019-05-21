@@ -40,7 +40,8 @@ class Ni
         $L = array();
      
         foreach($query_chapter as $data){
-            array_push($L,array("id" => $data -> getData()["ComicChapter"] ,"pagenum" => $data ->getData()["ChapterPage"] ,"pn" => $data -> getData()["ChapterName"]));
+            $data = $data -> getData();
+            array_push($L,array("id" => $data["ComicChapter"] ,"pagenum" => $data["ChapterPage"] ,"pn" => $data["ChapterName"]));
         }
         echo json_encode($L);
         
@@ -79,14 +80,15 @@ class Ni
     	if(empty($SearchResult)){
     		$RandResult = (new Comic) -> order('rand()') -> limit(4) -> select();
     		foreach ($RandResult as $data) {
-    			$h5_statements .= '<ul id="ccover" class="cmcover"><li><a href=chapter/' . $data -> getData()["urlname"] . ' class=pic><img src="' .$data -> getData()["cover"] . '" alt=' . $data -> getData()["title"] . '></a><p class=cover><a href=chapter/' . $data -> getData()["urlname"] . ' class=pic2><span>' .  $data -> getData()["title"] . '</span></a></p></li></ul>';
+                $data = $data -> getData();
+    			$h5_statements .= '<ul id="ccover" class="cmcover"><li><a href=chapter/' . $data["urlname"] . ' class=pic><img src="' .$dat["cover"] . '" alt=' . $data["title"] . '></a><p class=cover><a href=chapter/' . $data["urlname"] . ' class=pic2><span>' .  $data["title"] . '</span></a></p></li></ul>';
 
     			$Serch_Msg = '<h3 class=serach_font>找不到您需要的动漫，为您推荐下面的动漫:</h3>';
     		}
     	}else{
     		foreach ($SearchResult as $data) {
-    			//var_dump($data);
-    			$h5_statements .= '<ul id="ccover" class="cmcover"><li><a href=chapter/' . $data -> getData()["urlname"] . ' class=pic><img src="' .$data -> getData()["cover"] . '" alt=' . $data -> getData()["title"] . '></a><p class=cover><a href=chapter/' . $data -> getData()["urlname"] . ' class=pic2><span>' .  $data -> getData()["title"] . '</span></a></p></li></ul>';
+    			$data = $data -> getData();
+    			$h5_statements .= '<ul id="ccover" class="cmcover"><li><a href=chapter/' . $data["urlname"] . ' class=pic><img src="' .$dat["cover"] . '" alt=' . $data["title"] . '></a><p class=cover><a href=chapter/' . $data["urlname"] . ' class=pic2><span>' .  $data["title"] . '</span></a></p></li></ul>';
 
     			$Serch_Msg = '<h3 class=serach_font>为您找到如下动漫:</h3>';
     		}
@@ -101,8 +103,9 @@ class Ni
         $result = (new Animationscover)  -> select();
         $L = array();
     	foreach ($result as $data){
-            $cotdir = (new Animationsdir) -> where('cvdirid',$data->getData()["associated"]) -> count('cvdirid');
-            array_push($L,array("as" => $data -> getData()["associated"], "cv" => $data -> getData()["cover"] ,"ti" => $data -> getData()["title"], "src" => $data -> getData()["src"], "cotdir" => $cotdir));
+            $data = $data -> getData();
+            $cotdir = (new Animationsdir) -> where('cvdirid',$data["associated"]) -> count('cvdirid');
+            array_push($L,array("as" => $data["associated"], "cv" => $data["cover"] ,"ti" => $data["title"], "src" => $data["src"], "cotdir" => $cotdir));
     	}
         echo json_encode($L);
     }
