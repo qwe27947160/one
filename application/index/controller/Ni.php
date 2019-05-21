@@ -114,7 +114,7 @@ class Ni
         $cotdir = (new Animationsdir) -> where('cvdirid',$query_bg->getData()["associated"]) -> count('cvdirid');
         $cover = $query_bg->getData()['cover'];
         $src =  $query_bg->getData()['src'];
-        $title = '"' . $query_bg->getData()['title'] . '"';
+        $title = $query_bg->getData()['title'];
         $title2 = $query_bg->getData()['title'];
         $introduction = $query_bg->getData()['introduction'];
         $associated = $query_bg->getData()["associated"];
