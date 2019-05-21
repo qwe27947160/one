@@ -59,8 +59,8 @@ class Ni
         $querypg = (new Chapter)->Loadpage($map)->  select();
         $L = array();
         foreach($querypg as $data){
-            //var_dump($data ->getData());
-            array_push($L,array("ad" => $data -> getData()["Imgpath"] ));
+            $data = $data -> getData();
+            array_push($L,array("ad" => $data["Imgpath"] ));
         }
         echo json_encode($L);
     }
