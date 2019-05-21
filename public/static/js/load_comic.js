@@ -92,7 +92,7 @@ function Load_Animations_Cover(){
 			for(var x=0; x<rsdata.length; x++){
 				var li = $("<li class=vdcvli></li>");
 				var a1 = $("<a data-pjax href=" + rsdata[x].src + " title="+'"'+rsdata[x].ti+'"'+" target=_self class=vdcvimg></a>");
-				var img = $("<img class=vdcvloading data-original="+rsdata[x].cv+" alt="+rsdata[x].ti+" style=display:inline;>");
+				var img = $("<img class=vdcvloading data-original="+rsdata[x].cv+" alt="+'"'+rsdata[x].ti+'"'+" style=display:inline;>");
 				var div = $("<div class=vdcvinfo></div>");
 				var a2 = $("<a data-pjax href="+rsdata[x].src+">"+rsdata[x].ti+"</a>");
 				var p = $("<p></p>");
