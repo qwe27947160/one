@@ -26,7 +26,6 @@ class Ni
     	$results = (new Comic)  -> order('rand()') -> limit(12) ->select();
         $L = array();
     	foreach ($results as $data){
-            $data = getData($data);
             array_push($L,array("cd" => $data["ComicChapter"], "cn" => $data["urlname"],"cv" => $data["cover"] ,"ti" => $data["title"]));
     	}
         echo json_encode($L);
