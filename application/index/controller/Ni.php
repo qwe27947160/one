@@ -121,7 +121,7 @@ class Ni
 
         echo $title;
         echo $title2;
-        /*
+        
         $view = new View();
         $view->assign('name',$name);
         $view->assign('cover',$cover);
@@ -131,7 +131,7 @@ class Ni
         $view->assign('cotdir',$cotdir);
         $view->assign('associated',$associated);
         echo $view->fetch('comic/video_directory');
-        */
+        
     }
 
     public function query_vdir($name){
