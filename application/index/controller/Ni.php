@@ -104,7 +104,7 @@ class Ni
     	foreach ($result as $data){
             $cotdir = (new Animationsdir) -> where('cvdirid',$data->getData()["associated"]) -> count('cvdirid');
             
-            array_push($L,array("as" => $data -> getData()["associated"], "cv" => '"'. $data -> getData()["cover"] . '"',"ti" => '"' . $data -> getData()["title"] . '"' ,"src" => '"' . $data -> getData()["src"] . '"' ,"cotdir" => $cotdir));
+            array_push($L,array("as" => $data -> getData()["associated"], "cv" => $data -> getData()["cover"] ,"ti" => $data -> getData()["title"], "src" => $data -> getData()["src"], "cotdir" => $cotdir));
     	}
         echo json_encode($L);
     }
