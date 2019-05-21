@@ -91,7 +91,7 @@ function Load_Animations_Cover(){
 		success:function(rsdata){
 			for(var x=0; x<rsdata.length; x++){
 				var li = $("<li class=vdcvli></li>");
-				var a1 = $("<a data-pjax href=" + rsdata[x].src + " title="+'"'+rsdata[x].ti+'"'+" target=_self class=vdcvimg></a>");
+				var a1 = $("<a data-pjax id=\"" + rsdata[x].id + "\" href=\"" + rsdata[x].src + "\" title="+'"'+rsdata[x].ti+'"'+" target=_self class=vdcvimg></a>");
 				var img = $("<img class=vdcvloading data-original="+rsdata[x].cv+" alt="+'"'+rsdata[x].ti+'"'+" style=display:inline;>");
 				var div = $("<div class=vdcvinfo></div>");
 				var a2 = $("<a data-pjax href="+rsdata[x].src+">"+rsdata[x].ti+"</a>");
@@ -107,7 +107,7 @@ function Load_Animations_Cover(){
 				li.append(a1);
 				li.append(div);
 				$("#vdcv").append(li);
-				VdBind(rsdata[x].ti);
+				VdBind(a1);
 			}
 			$("img[data-original]").lazyload({effect: "fadeIn"});
 			$(document).pjax('a[data-pjax]', 'body',{timeout:5000,fragment:'body'});
@@ -115,11 +115,11 @@ function Load_Animations_Cover(){
 	});
 }
 
-function VdBind(name){
-	$("a[title='"+name+"']").hover(function(){
-		$("a[title='" + name + "'] .vdcvmask").css("opacity","1");
+function VdBind(obj){
+	obj.hover(function(){
+		obj.children(".vdcvmask").css("opacity","1");
 	},function(){
-    	$("a[title='" + name + "'] .vdcvmask").css("opacity","0");
+    	obj.children(".vdcvmask").css("opacity","0");
 	}); 
 }
 

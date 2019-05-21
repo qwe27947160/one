@@ -23,12 +23,11 @@ class Ni
     }
 
     public function load_comic(){
-    	$result = (new Comic)  -> order('rand()') -> limit(12) ->select() -> getData();
-        print_r($result);
-        exit();
+    	$results = (new Comic)  -> order('rand()') -> limit(12) ->select();
         $L = array();
-    	foreach ($result as $data){
-            array_push($L,array("id" => 1,"cd" => $data -> getData()["ComicChapter"], "cn" => $data -> getData()["urlname"],"cv" => $data -> getData()["cover"] ,"ti" => $data -> getData()["title"]));
+    	foreach ($results as $data){
+             
+            array_push($L,array("cd" => $data["ComicChapter"], "cn" => $data["urlname"],"cv" => $data["cover"] ,"ti" => $data["title"]));
             
     	}
         echo json_encode($L);
@@ -106,7 +105,7 @@ class Ni
     	foreach ($result as $data){
             $cotdir = (new Animationsdir) -> where('cvdirid',$data->getData()["associated"]) -> count('cvdirid');
             
-            array_push($L,array("as" => $data -> getData()["associated"], "cv" => $data -> getData()["cover"] ,"ti" => $data -> getData()["title"], "src" => $data -> getData()["src"], "cotdir" => $cotdir));
+            array_push($L,array("id" => $data -> getData()["ID"], "as" => $data -> getData()["associated"], "cv" => $data -> getData()["cover"] ,"ti" => $data -> getData()["title"], "src" => $data -> getData()["src"], "cotdir" => $cotdir));
     	}
         echo json_encode($L);
     }
