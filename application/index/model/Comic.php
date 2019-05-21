@@ -7,6 +7,6 @@ class Comic extends Model{
 	function LoadChapter($map){
 		return $this->hasMany('chapter')
 					->where($map)
-					->field('ChapterPage ,ComicChapter ,ChapterName' );
+					->field('ID, ChapterPage ,ComicChapter ,ChapterName' );
 	}
 }

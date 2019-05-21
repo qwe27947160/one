@@ -24,9 +24,11 @@ class Ni
 
     public function load_comic(){
     	$result = (new Comic)  -> order('rand()') -> limit(12) ->select();
+        print($result);
+        exit();
         $L = array();
     	foreach ($result as $data){
-            array_push($L,array("cd" => $data -> getData()["ComicChapter"], "cn" => $data -> getData()["urlname"],"cv" => $data -> getData()["cover"] ,"ti" => $data -> getData()["title"]));
+            array_push($L,array("id" => 1,"cd" => $data -> getData()["ComicChapter"], "cn" => $data -> getData()["urlname"],"cv" => $data -> getData()["cover"] ,"ti" => $data -> getData()["title"]));
             
     	}
         echo json_encode($L);
