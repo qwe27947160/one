@@ -112,14 +112,12 @@ class Ni
     public function load_vdir($name){
         $query_bg = (new Animationscover) -> where('src','/video/'.$name) ->field('cover,src,title,introduction,associated') ->find();
         $cotdir = (new Animationsdir) -> where('cvdirid',$query_bg->getData()["associated"]) -> count('cvdirid');
-        $cover = '"' . $query_bg->getData()['cover'] . '"';
-        $src = '"' . $query_bg->getData()['src'] . '"';
-        $title = '"' . $query_bg->getData()['title'] . '"';
+        $cover => '"' . $query_bg->getData()['cover'] . '"';
+        $src => '"' . $query_bg->getData()['src'] . '"';
+        $title => '"' . $query_bg->getData()['title'] . '"';
         $introduction = $query_bg->getData()['introduction'];
         $associated = $query_bg->getData()["associated"];
-        /*
-        return view('comic/video_directory',['name' => $name,'cover' => $cover ,'src' => $src ,'title' => $title,'introduction' => $introduction ,'cotdir' => $cotdir ,'associated' => $associated]);
-        */
+     
         $view = new View();
         $view->assign('name',$name);
         $view->assign('cover',$cover);
