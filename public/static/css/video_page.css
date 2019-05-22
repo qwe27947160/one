@@ -21,3 +21,8 @@
 	margin-bottom: 50px;
 	margin-top: 50px;
 }
+
+.vjs-paused .vjs-big-play-button,
+.vjs-paused.vjs-has-started .vjs-big-play-button {
+    display: block;
+}
