@@ -29,5 +29,5 @@
     display: block;
 }
 
-.video-js .vjs-time-control{display:block}
+.video-js .vjs-time-control{display:block!important;}
 .video-js .vjs-remaining-time{display: none;}
