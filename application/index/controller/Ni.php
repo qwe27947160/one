@@ -113,8 +113,7 @@ class Ni
     public function load_vdir($name){
         $query_bg = (new animationscover) -> where('src','/video/'.$name) ->field('cover,src,title,introduction,associated') ->find();
         $query_bg = $query_bg -> getData();
-        $cotdir = (new animationsdir) -> where('cvdirid',$query_bg->getData()["associated"]) -> count('cvdirid');
-       
+        $cotdir = (new animationsdir) -> where('cvdirid',$query_bg["associated"]) -> count('cvdirid');
         
         $view = new View();
         $view -> assign(['name' => $name, 'cover' => $query_bg['cover'], 'src' => $query_bg['src'], 'title' => $query_bg['title'], 'introduction' => $query_bg['introduction'], 'cotdir' =>  $cotdir, 'associated' => $query_bg["associated"]]);
