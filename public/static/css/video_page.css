@@ -2,7 +2,7 @@
 	overflow: hidden;
 	min-width: 1180px;
 	background-color: #181818;
-	background: url(/static/BackPicture/video_page.jpg) no-repeat;
+	background: url(/static/imgs/BackPicture/video_page.jpg) no-repeat;
 	background-size: cover;
 	background-position: center;
 }
