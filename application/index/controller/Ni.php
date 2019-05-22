@@ -81,7 +81,7 @@ class Ni
     		$RandResult = (new Comic) -> order('rand()') -> limit(4) -> select();
     		foreach ($RandResult as $data) {
                 $data = $data -> getData();
-    			$h5_statements .= '<ul id="ccover" class="cmcover"><li><a href=chapter/' . $data["urlname"] . ' class=pic><img src="' .$dat["cover"] . '" alt=' . $data["title"] . '></a><p class=cover><a href=chapter/' . $data["urlname"] . ' class=pic2><span>' .  $data["title"] . '</span></a></p></li></ul>';
+    			$h5_statements .= '<ul id="ccover" class="cmcover"><li><a href=chapter/' . $data["urlname"] . ' class=pic><img src="' .$data["cover"] . '" alt=' . $data["title"] . '></a><p class=cover><a href=chapter/' . $data["urlname"] . ' class=pic2><span>' .  $data["title"] . '</span></a></p></li></ul>';
 
     			$Serch_Msg = '<h3 class=serach_font>找不到您需要的动漫，为您推荐下面的动漫:</h3>';
     		}
