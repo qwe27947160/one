@@ -94,15 +94,14 @@ class Ni
     		}
     	}
     	$view = new View();
-		$view->assign('msg',$Serch_Msg);
-		$view->assign('empty' ,$h5_statements);
+		$view->assign(['msg' => $Serch_Msg, 'empty' => $h5_statements]);
 		echo $view->fetch('comic/search');
     }
 
     public function Load_Animations_Cover(){
         $result = (new Animationscover)  -> select();
         $L = array();
-    	foreach ($result as $data){
+    	foreach ($result as $data) {
             $data = $data -> getData();
             $cotdir = (new Animationsdir) -> where('cvdirid',$data["associated"]) -> count('cvdirid');
             array_push($L,array("as" => $data["associated"], "cv" => $data["cover"] ,"ti" => $data["title"], "src" => $data["src"], "cotdir" => $cotdir));
@@ -110,23 +109,20 @@ class Ni
         echo json_encode($L);
     }
 
-    public function load_vdir($name){
+    public function load_vdir($name) {
         $query_bg = (new animationscover) -> where('src','/video/'.$name) ->field('cover,src,title,introduction,associated') ->find();
         $query_bg = $query_bg -> getData();
         $cotdir = (new animationsdir) -> where('cvdirid',$query_bg["associated"]) -> count('cvdirid');
-        
         $view = new View();
         $view -> assign(['name' => $name, 'cover' => $query_bg['cover'], 'src' => $query_bg['src'], 'title' => $query_bg['title'], 'introduction' => $query_bg['introduction'], 'cotdir' =>  $cotdir, 'associated' => $query_bg["associated"]]);
-       
         echo $view->fetch('comic/video_directory');
-        
     }
 
     public function query_vdir($name){
         $query_vdir = (new Animationsdir) -> where('cvdirid' ,$name) -> order('id desc') -> select();
         $L = array();
-        foreach ($query_vdir as $data){
-            array_push($L,array("cvid" => $data -> getData()["cvdirid"], "dirid" => $data -> getData()["dirbluesid"],"dirname" => $data -> getData()["dirname"]));
+        foreach ($query_vdir as $data) {
+            array_push($L,array("cvid" => $data -> getData()["cvdirid"], "dirid" => $data -> getData()["dirbluesid"], "dirname" => $data -> getData()["dirname"]));
         }
         echo json_encode($L);
     }
