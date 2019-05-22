@@ -21,7 +21,7 @@
 		<div class="aretit">
 			<div class="v_path">
 				<a href="http://ci.migu666.net" title="首页">首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;
-				<a class="current" href="{$data.src}" title="{$data.title}第{$data.dirbluesid}集">{$data.title}第{$data.dirbluesid}集</a>
+				<a class="current" href="{$src}" title="{$title}第{$dirbluesid}集">{$title}第{$dirbluesid}集</a>
 			</div>
 		</div>
 
@@ -29,7 +29,7 @@
 			<section id="videoPlayer">
 		        <video id="example-video" width="1200px" height="650px" class="video-js vjs-default-skin vjs-big-play-centered" poster="">
 		          <source
-		             src={$data.src}
+		             src={$src}
 		             type="application/x-mpegURL" id="target">
 		        </video> 
 		    </section>
