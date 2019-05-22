@@ -11,18 +11,18 @@ use \think\Request;
 use \think\Config;
 class Ni 
 {
-    public function index(){
+    public function index() {
     	$view = new View();
         echo $view->fetch('comic/index');
     }
 
-    public function load_chapter($name){
+    public function load_chapter($name) {
         $view = new View();
         $view->assign('name',$name);
         echo $view->fetch('comic/chapter');
     }
 
-    public function load_comic(){
+    public function load_comic() {
     	$results = (new Comic)  -> order('rand()') -> limit(12) ->select();
         $L = array();
     	foreach ($results as $data){
@@ -32,7 +32,7 @@ class Ni
         echo json_encode($L);
     }    
 
-    public function query_chapter(){
+    public function query_chapter() {
         $Qychapter = isset($_POST['qy'])? $_POST['qy'] : ''; 
         $query_comic = (new Comic) -> where('urlname',$Qychapter) ->field('ComicChapter') ->find();
         $map['ComicChapter'] = $query_comic->getData('ComicChapter');
@@ -47,7 +47,7 @@ class Ni
         
     }
 
-    public function load_page($comicid ,$pagenum){
+    public function load_page($comicid ,$pagenum) {
     	return view('comic/page',['comicid' => $comicid ,'pagenum' => $pagenum]);
     }
 
@@ -65,7 +65,7 @@ class Ni
         echo json_encode($L);
     }
 
-    public function search(){
+    public function search() {
         $SearchName = isset($_GET['name'])? $_GET['name'] : '';
         $Test = new \L\Font();
         // 简体转繁体
@@ -82,7 +82,6 @@ class Ni
     		foreach ($RandResult as $data) {
                 $data = $data -> getData();
     			$h5_statements .= '<ul id="ccover" class="cmcover"><li><a href=chapter/' . $data["urlname"] . ' class=pic><img src="' .$data["cover"] . '" alt=' . $data["title"] . '></a><p class=cover><a href=chapter/' . $data["urlname"] . ' class=pic2><span>' .  $data["title"] . '</span></a></p></li></ul>';
-
     			$Serch_Msg = '<h3 class=serach_font>找不到您需要的动漫，为您推荐下面的动漫:</h3>';
     		}
     	}else{
@@ -119,7 +118,7 @@ class Ni
     }
 
     public function query_vdir($name){
-        $query_vdir = (new Animationsdir) -> where('cvdirid' ,$name) -> order('id desc') -> select();
+        $query_vdir = (new Animationsdir) -> where('cvdirid' ,$name) -> order('dirbluesid desc') -> select();
         $L = array();
         foreach ($query_vdir as $data) {
             array_push($L,array("cvid" => $data -> getData()["cvdirid"], "dirid" => $data -> getData()["dirbluesid"], "dirname" => $data -> getData()["dirname"]));
