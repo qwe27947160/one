@@ -111,23 +111,14 @@ class Ni
     }
 
     public function load_vdir($name){
-        $query_bg = (new Animationscover) -> where('src','/video/'.$name) ->field('cover,src,title,introduction,associated') ->find();
-        $cotdir = (new Animationsdir) -> where('cvdirid',$query_bg->getData()["associated"]) -> count('cvdirid');
-        $cover = $query_bg->getData()['cover'];
-        $src =  $query_bg->getData()['src'];
-        $title = $query_bg->getData()['title'];
-        $title2 = $query_bg->getData()['title'];
-        $introduction = $query_bg->getData()['introduction'];
-        $associated = $query_bg->getData()["associated"];
+        $query_bg = (new animationscover) -> where('src','/video/'.$name) ->field('cover,src,title,introduction,associated') ->find();
+        $query_bg = $query_bg -> getData();
+        $cotdir = (new animationsdir) -> where('cvdirid',$query_bg->getData()["associated"]) -> count('cvdirid');
+       
         
         $view = new View();
-        $view->assign('name',$name);
-        $view->assign('cover',$cover);
-        $view->assign('src',$src);
-        $view->assign('title',$title);
-        $view->assign('introduction',$introduction);
-        $view->assign('cotdir',$cotdir);
-        $view->assign('associated',$associated);
+        $view -> assign(['name' => $name, 'cover' => $query_bg['cover'], 'src' => $query_bg['src'], 'title' => $query_bg['title'], 'introduction' => $query_bg['introduction'], 'cotdir' =>  $cotdir, 'associated' => $query_bg["associated"]]);
+       
         echo $view->fetch('comic/video_directory');
         
     }
