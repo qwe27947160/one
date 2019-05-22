@@ -131,11 +131,13 @@ class Ni
     	$map['cvdirid'] = $cvdirid;
     	$map['dirbluesid'] = $dirbluesid;
     	$query_src = (new Animationspath) -> where($map) ->field('animationspath') -> find();
+        $query_src = $query_src -> getData();
+        /*
         $data['cvdirid'] = $cvdirid;
         $data['dirbluesid'] = $dirbluesid;
-        $data['src'] = $query_src->getData()['animationspath'];
-        $data['title'] = $query_bg->getData()['title'];
-
+        $data['src'] = $query_src['animationspath'];
+        $data['title'] = $query_bg['title'];
+        */
         $QuVpage = (new Animationsdir) -> where('cvdirid' ,$cvdirid) -> order('dirbluesid desc') -> select();
         $h5_statements = ' ';
         foreach ($QuVpage as $data2){
@@ -143,8 +145,11 @@ class Ni
         }
 
         $view = new View();
+        $view -> assign(['empty' => $h5_statements, 'cvdirid' => $cvdirid, 'dirbluesid' => $dirbluesid, 'src' => $query_src['animationspath'], 'title' => $query_bg['title']]);
+        /*
         $view -> assign('empty' ,$h5_statements);
         $view -> assign('data',$data);
+        */
         echo $view -> fetch('comic/video_page');
     }
 
