@@ -29,5 +29,16 @@
     display: block;
 }
 
-.video-js .vjs-time-control{display:block!important;}
+.video-js .vjs-time-control {
+	display:block!important;
+
+}
 .video-js .vjs-remaining-time{display: none!important;}
+
+.video-js .vjs-current-time, .vjs-no-flex .vjs-current-time{
+	padding-right: 0!important;
+}
+
+.video-js .vjs-duration, .vjs-no-flex .vjs-duration{
+	padding-left: 0!important;
+}
