@@ -114,7 +114,7 @@ class Ni
         $query_bg = $query_bg -> getData();
         $cotdir = (new animationsdir) -> where('cvdirid',$query_bg["ID"]) -> count('cvdirid');
         $view = new View();
-        $view -> assign(['name' => $name, 'cover' => $query_bg['cover'], 'src' => $query_bg['src'], 'title' => $query_bg['title'], 'introduction' => $query_bg['introduction'], 'cotdir' =>  $cotdir, 'ID' => $query_bg["ID"]]);
+        $view -> assign(['name' => $name, 'cover' => $query_bg['cover'], 'src' => $query_bg['src'], 'title' => $query_bg['title'], 'introduction' => $query_bg['introduction'], 'cotdir' =>  $cotdir, 'associated' => $query_bg["ID"]]);
         echo $view->fetch('comic/video_directory');
     }
 
