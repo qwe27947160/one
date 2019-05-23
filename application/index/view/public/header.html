@@ -75,8 +75,9 @@
 
 window.onload = function()
 {
-    var urlArr = window.location.href;
-     $("#href1").attr("href",urlArr);
+	var urlArr = window.location.href.split('/');
+    
+     $("#href1").attr("href",urlArr[2]);
 };
 	
 </script>
