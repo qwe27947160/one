@@ -98,12 +98,6 @@ class Ni
     }
 
     public function Load_Animations_Cover(){
-        $result = Db::table('animationsdir') -> alias('a') -> join('animationscover b', 'b.ID = a.cvdirid') -> select();
-        var_dump($result);
-
-
-
-        /*
         $result = (new Animationscover)  -> select();
         $L = array();
     	foreach ($result as $data) {
@@ -112,15 +106,15 @@ class Ni
             array_push($L,array("as" => $data["ID"], "cv" => $data["cover"] ,"ti" => $data["title"], "src" => $data["src"], "cotdir" => $cotdir));
     	}
         echo json_encode($L);
-        */
+        
     }
 
     public function load_vdir($name) {
-        $query_bg = (new animationscover) -> where('src','/video/'.$name) ->field('cover,src,title,introduction,associated') ->find();
+        $query_bg = (new animationscover) -> where('src','/video/'.$name) ->field('cover,src,title,introduction,ID') ->find();
         $query_bg = $query_bg -> getData();
-        $cotdir = (new animationsdir) -> where('cvdirid',$query_bg["associated"]) -> count('cvdirid');
+        $cotdir = (new animationsdir) -> where('cvdirid',$query_bg["ID"]) -> count('cvdirid');
         $view = new View();
-        $view -> assign(['name' => $name, 'cover' => $query_bg['cover'], 'src' => $query_bg['src'], 'title' => $query_bg['title'], 'introduction' => $query_bg['introduction'], 'cotdir' =>  $cotdir, 'associated' => $query_bg["associated"]]);
+        $view -> assign(['name' => $name, 'cover' => $query_bg['cover'], 'src' => $query_bg['src'], 'title' => $query_bg['title'], 'introduction' => $query_bg['introduction'], 'cotdir' =>  $cotdir, 'ID' => $query_bg["ID"]]);
         echo $view->fetch('comic/video_directory');
     }
 
@@ -128,13 +122,14 @@ class Ni
         $query_vdir = (new Animationsdir) -> where('cvdirid' ,$name) -> order('dirbluesid desc') -> select();
         $L = array();
         foreach ($query_vdir as $data) {
-            array_push($L,array("cvid" => $data -> getData()["cvdirid"], "dirid" => $data -> getData()["dirbluesid"], "dirname" => $data -> getData()["dirname"]));
+            $data  = $data -> getData();
+            array_push($L,array("cvid" => $data["cvdirid"], "dirid" => $data["dirbluesid"], "dirname" => $data["dirname"]));
         }
         echo json_encode($L);
     }
 
     public function load_vpath($cvdirid ,$dirbluesid){
-    	$query_bg = (new Animationscover) -> where('associated' ,$cvdirid) -> field('title') -> find();
+    	$query_bg = (new Animationscover) -> where('ID' ,$cvdirid) -> field('title') -> find();
     	$map['cvdirid'] = $cvdirid;
     	$map['dirbluesid'] = $dirbluesid;
     	$query_src = (new Animationspath) -> where($map) ->field('animationspath') -> find();
