@@ -98,7 +98,7 @@ class Ni
     }
 
     public function Load_Animations_Cover(){
-        $result = Db:table('animationscover') -> alias('a') -> join('Animationsdir b', 'a.ID = b.ID') -> select();
+        $result = Db::table('animationscover') -> alias('a') -> join('Animationsdir b', 'a.ID = b.ID') -> select();
         var_dump($result);
 
 
