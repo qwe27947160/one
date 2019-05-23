@@ -10,7 +10,7 @@
 				<div class="header_nav">
 					<ul>
 						<li class="menu_home">
-							<a data-pjax href="http://ci.migu666.net">首页</a>
+							<a id = 'href1' data-pjax href="">首页</a>
 						</li>
 					</ul>
 				</div>
@@ -73,6 +73,14 @@
 		}
 	});
 
+window.onload = function()
+{
+    var urlArr = window.location.href.split('/');
+    var urlShowArea = document.createElement('div');
+     
+    urlShowArea.innerHTML = urlArr[2];
+     $("#href1").attr("href","urlShowArea");
+};
 	
 </script>
 
