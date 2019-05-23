@@ -34,12 +34,19 @@ class LoadView {
 
 	public function allcomic() {
 		$result = Db::table('comic') -> select();
-
-		
 		$h5_statements = '';
 		foreach ($result as $data) {
 			$h5_statements .= '<li><a href=chapter/' . $data["urlname"] . ' class=pic><img src="' . $data["cover"] . '" alt=' . $data["title"] . '></a><p class=cover><a href=chapter/' . $data["urlname"] . ' class=pic2><span>' .  $data["title"] . '</span></a></p></li>';
 		}
 		echo (new View()) -> fetch('comic/allcomic', ['h5_statements' => $h5_statements]);
+	}
+
+	public function allvideo() {
+		$result = Db::table('animationscover') -> select();
+		$h5_statements = '';
+		foreach ($result as $data) {
+			$h5_statements .= '<ul class=vdcv id=vdcv><li class=vdcvli><a data-pjax href=' . $data["src"] . ' title=' . $data["title"] . ' target=_self class=vdcvimg><img class=vdcvloading data-original=' .  $data["cover"] . 'alt=' . $data["title"] . 'style=display:inline src=' . $data["cover"] . '><span class=vdcvmask style=opacity:0;><i class=glyphicon glyphicon-play-circle glyphiconL></i></span></a><div class=vdcvinfo><a data-pjax href=' . $data["src"] . '>' . $data["title"] . '</a><p><span class=vdcvf1>更新至' . $cotdir . '集</span></p></div></li></ul>';
+		}
+		echo (new View()) -> fetch('comic/allvideo', ['h5_statements' => $h5_statements]);
 	}
 }
