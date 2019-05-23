@@ -98,6 +98,12 @@ class Ni
     }
 
     public function Load_Animations_Cover(){
+        $result = Db:table('animationscover') -> alias('a') -> join('Animationsdir b', 'a.ID = b.ID') -> select();
+        var_dump($result);
+
+
+
+        /*
         $result = (new Animationscover)  -> select();
         $L = array();
     	foreach ($result as $data) {
@@ -106,6 +112,7 @@ class Ni
             array_push($L,array("as" => $data["ID"], "cv" => $data["cover"] ,"ti" => $data["title"], "src" => $data["src"], "cotdir" => $cotdir));
     	}
         echo json_encode($L);
+        */
     }
 
     public function load_vdir($name) {
