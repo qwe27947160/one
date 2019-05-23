@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>米谷 米谷</title>
+{include file="public/meta2"}
+<meta http-equiv="x-pjax-version" content="v123">
+<style type="text/css">
+.animated {position: fixed;top: 0;left: 0;right: 0;transition: all .2s ease-in-out;}
+.animated.slideDown {top: -100px;}
+.animated.slideUp {top: 0;}
+</style>
+{include file="public/ico"}
+<!-- CSS-LINK -->
+{include file="public/css-link"}
+<!-- CSS-LINK -->
+{include file="public/js-link"}
+</head>
+<body> 
+<!--header-->
+{include file="public/header"}
+
+<!--轮播-->
+<div class="row1 mt20 bt40">
+	<div class="headicon">
+		<span class="glyphicon glyphicon-book" style="color: rgb(0, 223, 255); font-size: 30px;"></span>
+		<b>全部在线动画</b>
+		{include file="public/inputbox" argument1="/search_video" argument2="搜索动画时可不要多字哦"}
+	</div>
+	
+	<div id="cmmain" class="ulstyle mt40">
+		<ul id="ccover" class="cmcover">
+		 	{$h5_statements}
+		</ul>
+	</div> 
+</div>
+
+{include file="public/footer"}
+<script type="text/javascript">
+</script>
+</body>
+</html>
