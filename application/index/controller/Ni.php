@@ -102,8 +102,8 @@ class Ni
         $L = array();
     	foreach ($result as $data) {
             $data = $data -> getData();
-            $cotdir = (new Animationsdir) -> where('cvdirid',$data["associated"]) -> count('cvdirid');
-            array_push($L,array("as" => $data["associated"], "cv" => $data["cover"] ,"ti" => $data["title"], "src" => $data["src"], "cotdir" => $cotdir));
+            $cotdir = (new Animationsdir) -> where('cvdirid',$data["ID"]) -> count('cvdirid');
+            array_push($L,array("as" => $data["ID"], "cv" => $data["cover"] ,"ti" => $data["title"], "src" => $data["src"], "cotdir" => $cotdir));
     	}
         echo json_encode($L);
     }
@@ -131,26 +131,21 @@ class Ni
     	$map['cvdirid'] = $cvdirid;
     	$map['dirbluesid'] = $dirbluesid;
     	$query_src = (new Animationspath) -> where($map) ->field('animationspath') -> find();
-        $query_src = $query_src -> getData();
+
+
         /*
-        $data['cvdirid'] = $cvdirid;
-        $data['dirbluesid'] = $dirbluesid;
-        $data['src'] = $query_src['animationspath'];
-        $data['title'] = $query_bg['title'];
-        */
+        $query_src = $query_src -> getData();
         $QuVpage = (new Animationsdir) -> where('cvdirid' ,$cvdirid) -> order('dirbluesid desc') -> select();
         $h5_statements = ' ';
         foreach ($QuVpage as $data2){
-        	$h5_statements .= '<a target=_blank href=/animation/' . $data2 -> getData()["cvdirid"] . '/'. $data2 -> getData()["dirbluesid"] . ' title=' . $data2 -> getData()["dirname"] . '>' . $data2 -> getData()["dirname"] . '</a>';
+            $data2 = $data2 -> getData();
+        	$h5_statements .= '<a target=_blank href=/animation/' . $data2["cvdirid"] . '/'. $data2["dirbluesid"] . ' title=' . $data2["dirname"] . '>' . $data2"dirname"] . '</a>';
         }
 
         $view = new View();
         $view -> assign(['empty' => $h5_statements, 'cvdirid' => $cvdirid, 'dirbluesid' => $dirbluesid, 'src' => $query_src['animationspath'], 'title' => $query_bg['title']]);
-        /*
-        $view -> assign('empty' ,$h5_statements);
-        $view -> assign('data',$data);
-        */
         echo $view -> fetch('comic/video_page');
+        */
     }
 
     public function search_video(){
