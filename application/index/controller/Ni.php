@@ -132,6 +132,7 @@ class Ni
     	$query_bg = (new animationscover) -> where('ID' ,$cvdirid) -> field('title') -> find();
     	$map = array('cvdirid' => $cvdirid, 'dirbluesid' => $dirbluesid);
     	$query_src = (new animationsdir) -> where($map) ->field('videopath') -> find();
+        $query_src = $query_src -> getData();
         var_dump($query_src);
 
         /*
