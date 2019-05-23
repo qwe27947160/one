@@ -137,7 +137,7 @@ class Ni
         $h5_statements = ' ';
         foreach ($QuVpage as $data2){
             $data2 = $data2 -> getData();
-        	$h5_statements .= '<a target=_blank href=/animation/' . $data2["cvdirid"] . '/'. $data2["dirbluesid"] . ' title=' . $data2["dirname"] . '>' . $data2"dirname"] . '</a>';
+        	$h5_statements .= '<a target=_blank href=/animation/' . $data2["cvdirid"] . '/'. $data2["dirbluesid"] . ' title=' . $data2["dirname"] . '>' . $data2["dirname"] . '</a>';
         }
 
         $view = new View();
