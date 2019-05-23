@@ -98,7 +98,7 @@ class Ni
     }
 
     public function Load_Animations_Cover(){
-        $result = (new Animationscover)  -> select();
+        $result = (new Animationscover)  -> limit(12) -> select();
         $L = array();
     	foreach ($result as $data) {
             $data = $data -> getData();
