@@ -133,7 +133,7 @@ class Ni
     	$map = array('cvdirid' => $cvdirid, 'dirbluesid' => $dirbluesid);
     	$query_src = (new animationsdir) -> where($map) ->field('videopath') -> find();
         $query_src = $query_src -> getData();
-        $QuVpage = (new Animationsdir) -> where('cvdirid' ,$cvdirid) -> order('dirbluesid desc') -> select();
+        $QuVpage = (new animationsdir) -> where('cvdirid' ,$cvdirid) -> order('dirbluesid desc') -> select();
         $h5_statements = ' ';
         foreach ($QuVpage as $data2){
             $data2 = $data2 -> getData();
@@ -160,22 +160,23 @@ class Ni
     	if(empty($SearchResult)){
     		$RandResult = (new Animationscover) -> order('rand()') -> limit(1) -> select();
     		foreach ($RandResult as $data) {
-    			$cotdir = (new Animationsdir) -> where('cvdirid',$data->getData()["associated"]) -> count('cvdirid');
-    			$h5_statements .= '<ul class=vdcv id=vdcv><li class=vdcvli><a data-pjax href=' . $data -> getData()["src"] . ' title=' . $data -> getData()["title"] . ' target=_self class=vdcvimg><img class=vdcvloading data-original=' .  $data -> getData()["cover"] . 'alt=' . $data -> getData()["title"] . 'style=display:inline src=' . $data -> getData()["cover"] . '><span class=vdcvmask style=opacity:0;><i class=glyphicon glyphicon-play-circle glyphiconL></i></span></a><div class=vdcvinfo><a data-pjax href=' . $data -> getData()["src"] . '>' . $data -> getData()["title"] . '</a><p><span class=vdcvf1>更新至' . $cotdir . '集</span></p></div></li></ul>';
+                $data = $data -> getData();
+    			$cotdir = (new Animationsdir) -> where('cvdirid',$data["ID"]) -> count('cvdirid');
+    			$h5_statements .= '<ul class=vdcv id=vdcv><li class=vdcvli><a data-pjax href=' . $data["src"] . ' title=' . $data["title"] . ' target=_self class=vdcvimg><img class=vdcvloading data-original=' .  $data["cover"] . 'alt=' . $data["title"] . 'style=display:inline src=' . $data["cover"] . '><span class=vdcvmask style=opacity:0;><i class=glyphicon glyphicon-play-circle glyphiconL></i></span></a><div class=vdcvinfo><a data-pjax href=' . $data["src"] . '>' . $data["title"] . '</a><p><span class=vdcvf1>更新至' . $cotdir . '集</span></p></div></li></ul>';
 
     			$Serch_Msg = '<h3 class=serach_font>找不到您需要的影视，为您推荐下面的影视 :</h3>';
     		}
     	}else{
     		foreach ($SearchResult as $data) {
-    			$cotdir = (new Animationsdir) -> where('cvdirid',$data->getData()["associated"]) -> count('cvdirid');
-    			$h5_statements .= '<ul class=vdcv id=vdcv><li class=vdcvli><a data-pjax href=' . $data -> getData()["src"] . ' title=' . $data -> getData()["title"] . ' target=_self class=vdcvimg><img class=vdcvloading data-original=' .  $data -> getData()["cover"] . 'alt=' . $data -> getData()["title"] . 'style=display:inline src=' . $data -> getData()["cover"] . '><span class=vdcvmask style=opacity:0;><i class=glyphicon glyphicon-play-circle glyphiconL></i></span></a><div class=vdcvinfo><a data-pjax href=' . $data -> getData()["src"] . '>' . $data -> getData()["title"] . '</a><p><span class=vdcvf1>更新至' . $cotdir . '集</span></p></div></li></ul>';
+                 $data = $data -> getData();
+    			$cotdir = (new Animationsdir) -> where('cvdirid',$data["ID"]) -> count('cvdirid');
+    			$h5_statements .= '<ul class=vdcv id=vdcv><li class=vdcvli><a data-pjax href=' . $data["src"] . ' title=' . $data["title"] . ' target=_self class=vdcvimg><img class=vdcvloading data-original=' .  $data["cover"] . 'alt=' . $data["title"] . 'style=display:inline src=' . $data["cover"] . '><span class=vdcvmask style=opacity:0;><i class=glyphicon glyphicon-play-circle glyphiconL></i></span></a><div class=vdcvinfo><a data-pjax href=' . $data["src"] . '>' . $data["title"] . '</a><p><span class=vdcvf1>更新至' . $cotdir . '集</span></p></div></li></ul>';
 
     			$Serch_Msg = '<h3 class=serach_font>为您找到如下影视 :</h3>';
     		}
     	}
     	$view = new View();
-		$view->assign('msg',$Serch_Msg);
-		$view->assign('empty' ,$h5_statements);
+        $View -> assign(['msg' => $Serch_Msg, 'empty' => $h5_statements]);
 		echo $view->fetch('comic/search');
     }
 }
