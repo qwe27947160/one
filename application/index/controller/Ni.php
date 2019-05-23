@@ -129,10 +129,9 @@ class Ni
     }
 
     public function load_vpath($cvdirid ,$dirbluesid){
-    	$query_bg = (new Animationscover) -> where('ID' ,$cvdirid) -> field('title') -> find();
-    	$map['cvdirid'] = $cvdirid;
-    	$map['dirbluesid'] = $dirbluesid;
-    	$query_src = (new Animationspath) -> where($map) ->field('animationspath') -> find();
+    	$query_bg = (new animationscover) -> where('ID' ,$cvdirid) -> field('title') -> find();
+    	$map = array('cvdirid' => $cvdirid, 'dirbluesid' => $dirbluesid);
+    	$query_src = (new animationsdir) -> where($map) ->field('animationspath') -> find();
 
 
         /*
