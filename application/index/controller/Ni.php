@@ -133,10 +133,6 @@ class Ni
     	$map = array('cvdirid' => $cvdirid, 'dirbluesid' => $dirbluesid);
     	$query_src = (new animationsdir) -> where($map) ->field('videopath') -> find();
         $query_src = $query_src -> getData();
-        var_dump($query_src);
-
-        /*
-        $query_src = $query_src -> getData();
         $QuVpage = (new Animationsdir) -> where('cvdirid' ,$cvdirid) -> order('dirbluesid desc') -> select();
         $h5_statements = ' ';
         foreach ($QuVpage as $data2){
@@ -145,9 +141,9 @@ class Ni
         }
 
         $view = new View();
-        $view -> assign(['empty' => $h5_statements, 'cvdirid' => $cvdirid, 'dirbluesid' => $dirbluesid, 'src' => $query_src['animationspath'], 'title' => $query_bg['title']]);
+        $view -> assign(['empty' => $h5_statements, 'cvdirid' => $cvdirid, 'dirbluesid' => $dirbluesid, 'src' => $query_src['videopath'], 'title' => $query_bg['title']]);
         echo $view -> fetch('comic/video_page');
-        */
+        
     }
 
     public function search_video(){
