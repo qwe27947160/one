@@ -161,7 +161,7 @@ class Ni
     		$RandResult = (new Animationscover) -> order('rand()') -> limit(1) -> select();
     		foreach ($RandResult as $data) {
                 $data = $data -> getData();
-    			$cotdir = (new Animationsdir) -> where('cvdirid',$data["ID"]) -> count('cvdirid');
+    			$cotdir = (new animationsdir) -> where('cvdirid',$data["ID"]) -> count('cvdirid');
     			$h5_statements .= '<ul class=vdcv id=vdcv><li class=vdcvli><a data-pjax href=' . $data["src"] . ' title=' . $data["title"] . ' target=_self class=vdcvimg><img class=vdcvloading data-original=' .  $data["cover"] . 'alt=' . $data["title"] . 'style=display:inline src=' . $data["cover"] . '><span class=vdcvmask style=opacity:0;><i class=glyphicon glyphicon-play-circle glyphiconL></i></span></a><div class=vdcvinfo><a data-pjax href=' . $data["src"] . '>' . $data["title"] . '</a><p><span class=vdcvf1>更新至' . $cotdir . '集</span></p></div></li></ul>';
 
     			$Serch_Msg = '<h3 class=serach_font>找不到您需要的影视，为您推荐下面的影视 :</h3>';
