@@ -76,10 +76,9 @@
 window.onload = function()
 {
     var urlArr = window.location.href.split('/');
-    var urlShowArea = document.createElement('div');
-     
-    urlShowArea.innerHTML = urlArr[2];
-     $("#href1").attr("href","urlShowArea");
+    
+   
+     $("#href1").attr("href",urlArr);
 };
 	
 </script>
