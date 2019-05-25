@@ -56,22 +56,11 @@
 </body>
 
 <script type="text/javascript">
-	var dplayer = new DPlayer({
-	    element: document.getElementById('dplayer'),
-	    autoplay: false,
-	    theme: '#FADFA3',
-	    loop: false,
-	    screenshot: true, //截屏
-	    hotkey: false,
-	    video: {  //视频源 包含不同分辨率源
-	        quality: [{
-	            name: '高清',
-	            url: '{$src}',
-	            type: 'hls'
-	        }, ],
-	        defaultQuality: 0,
-	        pic: '',
-	        type: 'auto'
+	const dp = new DPlayer({
+	    container: document.getElementById('dplayer'),
+	    video: {
+	        url: '{$src}',
+	        type: 'hls'
 	    }
 	});
 
