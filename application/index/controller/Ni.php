@@ -14,7 +14,6 @@ class Ni
     public function index() {
         $host = $_SERVER['HTTP_HOST'];
         preg_match('/(.*\.)?\w+\.\w+$/', $host, $matches);
-        echo $matches[1];
     	$view = new View();
         if($matches[1] == 'dm.') {
             echo $view->fetch('comic/index');
