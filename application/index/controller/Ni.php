@@ -12,8 +12,11 @@ use \think\Config;
 class Ni 
 {
     public function index() {
+        echo $_SERVER['HTTP_HOST'];
+        /*
     	$view = new View();
         echo $view->fetch('comic/index');
+        */
     }
 
     public function load_chapter($name) {
