@@ -15,7 +15,7 @@ class Ni
         $ss = $_SERVER['HTTP_HOST'];
         $match = array();
         preg_match("#http://(.*?)\.#i",$ss,$match);
-        var_dump($match[1]) ;
+        var_dump($match) ;
 
         /*
     	$view = new View();
