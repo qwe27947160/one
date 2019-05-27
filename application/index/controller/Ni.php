@@ -15,7 +15,7 @@ class Ni
         $ss = $_SERVER['HTTP_HOST'];
         $match = array();
         $n = preg_match('/(.*\.)?\w+\.\w+$/', $ss, $matches);
-        print_r($matches);
+        echo $matches[1];
 
         /*
     	$view = new View();
