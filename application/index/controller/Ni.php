@@ -12,7 +12,10 @@ use \think\Config;
 class Ni 
 {
     public function index() {
-        echo $_SERVER['HTTP_HOST'];
+        $ss = $_SERVER['HTTP_HOST'];
+        preg_match("#http://(.*?)\.#i",$ss,$match);
+        echo $match[1];
+
         /*
     	$view = new View();
         echo $view->fetch('comic/index');
