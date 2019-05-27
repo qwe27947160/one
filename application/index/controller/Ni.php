@@ -14,7 +14,7 @@ class Ni
     public function index() {
         $ss = $_SERVER['HTTP_HOST'];
         preg_match("#http://(.*?)\.#i",$ss,$match);
-        echo $match[0];
+        echo $match;
 
         /*
     	$view = new View();
