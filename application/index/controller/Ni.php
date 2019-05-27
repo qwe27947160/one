@@ -12,15 +12,15 @@ use \think\Config;
 class Ni 
 {
     public function index() {
-        $ss = $_SERVER['HTTP_HOST'];
-        $match = array();
-        $n = preg_match('/(.*\.)?\w+\.\w+$/', $ss, $matches);
+        $host = $_SERVER['HTTP_HOST'];
+        preg_match('/(.*\.)?\w+\.\w+$/', $host, $matches);
         echo $matches[1];
-
-        /*
     	$view = new View();
-        echo $view->fetch('comic/index');
-        */
+        if($matches[1] == 'dm.') {
+            echo $view->fetch('comic/index');
+        } else {
+            echo $view->fetch('mobile/main');
+        }
     }
 
     public function load_chapter($name) {
