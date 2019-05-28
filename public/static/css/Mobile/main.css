@@ -31,7 +31,7 @@ header .head{
 	font-size: .28rem;
 }
 
-.mod-head-title{
+.mod-head .mod-head-title{
 	float: left;
 	text-indent: .2rem;
 }
