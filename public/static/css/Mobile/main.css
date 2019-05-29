@@ -49,3 +49,13 @@ header .head{
 	font-size: .24rem;
 	line-height: .84rem;
 }
+
+.modMain{
+	position: relative;
+	background: #FFF;
+}
+
+.modRow{
+	padding: 0 .2rem;
+	position: relative;
+}
