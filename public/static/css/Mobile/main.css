@@ -34,3 +34,9 @@ header .head{
 	float: left;
 	text-indent: .2rem;
 }
+
+.mod-head-name{
+	float: left;
+	font-size: .3rem;
+	font-weight: 700;
+}
