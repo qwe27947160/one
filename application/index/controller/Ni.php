@@ -18,10 +18,9 @@ class Ni
         if($matches[1] == 'dm.') {
             echo $view->fetch('comic/index');
         } else {
+            $comicH5 = '';
             $result = Db::table('comic')  -> order('rand()') -> limit(6) ->select();
             foreach ($result as $data) {
-               
-                print_r($data);
                 $comicH5 .= '<li class=comicItem><a href=' . $data['urlname'] . 'class="comicLink title=' . $data['title'] . '><div class=_item-pic _item-lazy data-echo=' . $data['cover'] . 'style=background-image: url(' . $data['cover'] . ');><div class=video-duration>HD1280高清国语中字版</div></div><div class=video-con><h2 class=video-con-tit ellipsis-1>'. $data['title'] . '</h2></div></a></li>';
             }
             $view->assign(['comicH5' => $comicH5]);
