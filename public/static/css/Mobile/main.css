@@ -40,3 +40,12 @@ header .head{
 	font-size: .3rem;
 	font-weight: 700;
 }
+
+.headMore{
+	position: absolute;
+	display: block;
+	right: 10px;
+	color: #FA474B;
+	font-size: .24rem;
+	line-height: .84rem;
+}
