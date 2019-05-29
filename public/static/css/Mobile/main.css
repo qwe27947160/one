@@ -65,7 +65,7 @@ header .head{
 }
 
 .comicItem{
-	width: 2.23333rem;
+	width: 2.13333rem;
 	margin-right: .2rem;
 	float: left;
 	margin-bottom: .3rem;
@@ -76,7 +76,7 @@ header .head{
 }
 
 .itemPic{
-	width: 2.23333rem;
+	width: 2.13333rem;
 	height: 3.12rem;
 	background-color: #eee;
 	position: relative;
