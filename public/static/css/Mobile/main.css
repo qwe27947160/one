@@ -63,3 +63,49 @@ header .head{
 .comicList{
 	
 }
+
+.comicItem{
+	width: 2.3333rem;
+	margin-right: .2rem;
+}
+
+.comicLink{
+	display: block;
+}
+
+.itemPic{
+	width: 2.33333rem;
+	height: 3.12rem;
+	background-color: #eee;
+	position: relative;
+	background-size: 100% 100%;
+}
+
+.videoDuration{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	line-height: .36rem;
+	padding: 0 .08rem;
+	font-size: .24rem;
+	color: #fff;
+	background: rgba(0,0,0,.6);
+	overflow: hidden;
+}
+
+.videoCon{
+	margin-top: .16rem;
+}
+
+.videotit{
+	color: #333;
+	font-size: .28rem;
+	height: .36rem;
+	line-height: .36rem
+}
+
+.ellipsis1{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
