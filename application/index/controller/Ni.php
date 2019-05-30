@@ -22,7 +22,7 @@ class Ni
             try {
                 $result = Db::table('comic')  -> order('rand()') -> limit(6) ->select();
                 foreach ($result as $data) {
-                    $lastChapter = Db::table('chapter') -> where('ComicChapter', $data['ComicChapter']) -> order('') ->limit(6)
+                    //$lastChapter = Db::table('chapter') -> where('ComicChapter', $data['ComicChapter']) -> order('') ->limit(6);
                     $comicH5 .= '<li class="comicItem"><a href="' . $data['urlname'] . '" class="comicLink" title="' . $data['title'] . '"><div class="itemPic _item-lazy" data-original="' . $data['cover'] . '" style="background-image:url("' . urlencode($data['cover']) . '");"><div class="videoDuration">更新到</div></div><div class="videoCon"><h2 class="videotit ellipsis1">'. $data['title'] . '</h2></div></a></li>';
                 }
                 $view->assign(['comicH5' => $comicH5]);
