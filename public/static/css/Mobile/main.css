@@ -60,9 +60,6 @@ header .head{
 	position: relative;
 }
 
-.comicList:nth-child(3n){
-	margin-right: 0;
-}
 
 .comicItem{
 	width: 2.23333rem;
@@ -70,6 +67,11 @@ header .head{
 	float: left;
 	margin-bottom: .3rem;
 }
+
+.comicItem:nth-child(3n){
+	margin-right: 0;
+}
+
 
 .comicLink{
 	display: block;
