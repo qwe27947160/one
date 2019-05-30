@@ -111,3 +111,11 @@ header .head{
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
+
+.clearfix:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
