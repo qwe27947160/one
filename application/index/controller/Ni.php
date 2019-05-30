@@ -18,7 +18,7 @@ class Ni
         if($matches[1] == 'dm.') {
             echo $view->fetch('comic/index');
         } else {
-            $comicH5 = '';
+            //$comicH5 = '';
             try {
                 $result = Db::table('comic')  -> order('rand()') -> limit(6) ->select();
                 foreach ($result as $data) {
