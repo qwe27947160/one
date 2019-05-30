@@ -20,13 +20,20 @@ class Ni
         } else {
             $comicH5 = '';
             try {
-                $result = Db::table('comic')  -> order('rand()') -> limit(6) ->select();
-                foreach ($result as $data) {
+                $comicResult = Db::table('comic')  -> order('rand()') -> limit(6) ->select();
+                foreach ($comicResult as $data) {
                     $lastChapter = Db::table('chapter') -> where('ComicChapter', $data['ComicChapter']) -> field('ChapterName') -> order('ID desc') -> limit(1) -> find();
 
                     $comicH5 .= '<li class="comicItem"><a href="' . $data['urlname'] . '" class="comicLink" title="' . $data['title'] . '"><div class="itemPic" data-original="' . $data['cover'] . '" style="background-image:url(\'' . $data['cover'] . '\');"><div class="videoDuration">更新到' . $lastChapter['ChapterName'] . '</div></div><div class="videoCon"><h2 class="videotit ellipsis1" style="text-align:center;">'. $data['title'] . '</h2></div></a></li>';
                 }
-                $view->assign(['comicH5' => $comicH5]);
+                $videoH5 = '';
+                $videoResult = Db::table('animationscover') -> order('rand()') -> limit (6) -> select();
+                foreach ($videoResult as $data) {
+                    $lastChapter = Db::table('animationsdir') -> where('cvdirid', $data['ID']) -> field('dirname') -> order('dirbluesid desc') -> limit(1) -> find();
+                    $videoH5 .= '<li class="comicItem"><a href="' . $data['src'] . '" class="comicLink" title="' . $data['title'] . '"><div class="itemPic" data-original="' . $data['cover'] . '" style="background-image:url(\'' . $data['cover'] . '\');"><div class="videoDuration">更新到' . $lastChapter['dirname'] . '</div></div><div class="videoCon"><h2 class="videotit ellipsis1" style="text-align:center;">'. $data['title'] . '</h2></div></a></li>';
+                }
+
+                $view->assign(['comicH5' => $comicH5, 'videoH5' => $videoH5]);
                 echo $view->fetch('mobile/main');
             } catch(\Exception $e){
                 echo '数据库操作有误'.$e;
