@@ -19,7 +19,7 @@ class Ni
         if($matches[1] == 'dm.') {
             echo $view->fetch('comic/index');
         } else {
-            //$comicH5 = '';
+            $comicH5 = '';
             try {
                 $result = Db::table('comic')  -> order('rand()') -> limit(6) ->select();
                 foreach ($result as $data) {
@@ -28,8 +28,7 @@ class Ni
                 $view->assign(['comicH5' => $comicH5]);
                 echo $view->fetch('mobile/main');
             } catch(\Exception $e){
-                //echo '数据库操作有误'.$e;
-                $this->error('执行错误');
+                echo '数据库操作有误'.$e;
             }    
             
         }
