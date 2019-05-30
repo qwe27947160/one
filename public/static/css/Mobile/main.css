@@ -121,3 +121,9 @@ header .head{
 	clear: both;
 	visibility: hidden;
 }
+
+.mobileFooter{
+	width: 100%;
+	height: 2rem;
+	background-size: 100% 100%;
+}
