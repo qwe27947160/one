@@ -46,3 +46,16 @@
 	height: 100%;
 	display: block;
 }
+
+.deatilMedia{
+	margin-left: 2.6rem;
+	height: 3.4rem;
+	position: relative;
+	z-index: 9;
+}
+
+.mediaTitle{
+	line-height: .48rem;
+	font-size: .35rem;
+	color: #FFF;
+}
