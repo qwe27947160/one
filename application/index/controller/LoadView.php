@@ -53,6 +53,7 @@ class LoadView {
 
 	public function comicChapter($name) {
 		$imgPath = Db::table('comic') -> where('urlname', $name) -> select();
-		echo (new View()) -> fetch('mobile/comicChatper', ['imgPath' => $imgPath['cover']]);
+		var_dump($imgPath);
+		//echo (new View()) -> fetch('mobile/comicChatper', ['imgPath' => $imgPath['cover']]);
 	}
 }
