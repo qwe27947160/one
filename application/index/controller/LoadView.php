@@ -51,9 +51,8 @@ class LoadView {
 		echo (new View()) -> fetch('comic/allvideo', ['h5_statements' => $h5_statements]);
 	}
 
-	public function comicChapter() {
-		var_dump(input('post.name'));
-		$imgPath = Db::table('comic') -> where('urlname', input('post.name')) -> select();
+	public function comicChapter($name) {
+		$imgPath = Db::table('comic') -> where('urlname', $name) -> select();
 		var_dump($imgPath);
 		//echo (new View()) -> fetch('mobile/comicChatper');
 	}
