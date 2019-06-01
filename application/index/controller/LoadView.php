@@ -52,8 +52,8 @@ class LoadView {
 	}
 
 	public function comicChapter() {
-		var_dump(input('get.name'));
-		$imgPath = Db::table('comic') -> where('urlname', input('get.name')) -> select();
+		var_dump(input('post.name'));
+		$imgPath = Db::table('comic') -> where('urlname', input('post.name')) -> select();
 		var_dump($imgPath);
 		//echo (new View()) -> fetch('mobile/comicChatper');
 	}
