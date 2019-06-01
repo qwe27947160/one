@@ -50,4 +50,8 @@ class LoadView {
 		}
 		echo (new View()) -> fetch('comic/allvideo', ['h5_statements' => $h5_statements]);
 	}
+
+	public function comicChapter() {
+		
+	}
 }

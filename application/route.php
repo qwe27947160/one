@@ -37,3 +37,6 @@ Route::rule('/user/register', 'index/LoadView/register');
 Route::rule('/user/login', 'index/LoadView/login');
 Route::rule('/allcomic', 'index/LoadView/allcomic');
 Route::rule('/allvideo', 'index/LoadView/allvideo');
+
+/******************mobileview*********************/
+Route::rule('/mobile/comicChapter/:name', 'index/LoadView/comicChapter');
