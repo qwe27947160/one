@@ -59,3 +59,13 @@
 	font-size: .5rem;
 	color: #FFF;
 }
+
+.desc{
+	margin-top: .2rem;
+}
+
+.desc>li{
+	font-size: .26rem;
+	line-height: .44rem;
+	color: #fff;
+}

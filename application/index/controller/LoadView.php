@@ -54,7 +54,6 @@ class LoadView {
 	public function comicChapter($name) {
 		$imgPath = Db::table('comic') -> where('urlname', $name) -> find();
 		$lastChapter = Db::table('chapter') -> where('ComicChapter', $imgPath['ComicChapter']) -> field('ChapterName') -> order('ID desc') -> limit(1) -> find();
-		var_dump($lastChapter);
 		echo (new View()) -> fetch('mobile/comicChatper', ['imgPath' => "'".$imgPath['cover']."'", 'title' => $imgPath['title'], 'lastChapter' => $lastChapter['ChapterName']]);
 	}
 }
