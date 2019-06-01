@@ -52,6 +52,6 @@ class LoadView {
 	}
 
 	public function comicChapter() {
-		
+		echo (new View()) -> fetch('mobile/comicChatper');
 	}
 }
