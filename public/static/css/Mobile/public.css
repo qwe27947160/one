@@ -25,3 +25,7 @@ body{
 	clear: both;
 	visibility: hidden;
 }
+
+.mgt-3rem{
+	margin-top: .3rem;
+}
