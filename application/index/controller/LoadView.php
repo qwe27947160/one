@@ -76,6 +76,6 @@ class LoadView {
 		$imgPath = Db::table('animationscover') -> where('src', '/video/'.$name) -> find();
 		$lastChapter = Db::table('animationsdir') -> where('cvdirid', $imgPath['ID']) -> field('dirname') -> order('dirbluesid desc') ->limit(1) -> find();
 
-		echo(new View()) -> fetch('mobile/videoChapter', ['imgPath' => $imgPath['cover'], 'title' => $imgPath['title'], 'lastChapter' => $lastChapter['dirname'], 'p' => $lastChapter['introduction']]);
+		echo(new View()) -> fetch('mobile/videoChapter', ['imgPath' => $imgPath['cover'], 'title' => $imgPath['title'], 'lastChapter' => $lastChapter['dirname'], 'p' => $imgPath['introduction']]);
 	}
 }
