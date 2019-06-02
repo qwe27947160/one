@@ -73,6 +73,8 @@ class LoadView {
 	}
 
 	public function videoChapter($name) {
-		echo(new View()) -> fetch('mobile/videoChapter');
+		$imgPath = Db::table('animationscover') -> where('src', '/video/'.$name) -> find();
+		var_dump($imgPath);
+		//echo(new View()) -> fetch('mobile/videoChapter');
 	}
 }
