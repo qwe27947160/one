@@ -55,6 +55,7 @@ class LoadView {
 		$imgPath = Db::table('comic') -> where('urlname', $name) -> find();
 		$lastChapter = Db::table('chapter') -> where('ComicChapter', $imgPath['ComicChapter']) -> field('ChapterName') -> order('ID desc') -> limit(1) -> find();
 		$queryChapter = Db::table('chapter') -> where('ComicChapter', $imgPath['ComicChapter']) -> order('ChapterPage asc') -> select();
+		$comicChapterH5 = '';
 		foreach ($queryChapter as $data) {
 			$comicChapterH5 .= '<li><a href="/mobileComic/page/' . $data['ComicChapter'] . '/' . $data['ChapterPage'] . '" target="_self" title="' . $data['ChapterName'] . '>' . $data['ChapterName'] . '</a></li>';
 		}
