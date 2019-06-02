@@ -69,6 +69,7 @@ class LoadView {
 		foreach ($queryComicPage as $data) {
 			$comicPgaeH5 .= '<li><img data-original="' . $data['Imgpath'] . '" src="' . $data['Imgpath'] . '"></li>';
 		}
+		$comicPgaeH5 .= '<script type="text/javascript">$("img[data-original]").lazyload({threshold:200});</script>';
 		echo (new View()) -> fetch('mobile/comicPage', ['comicPgaeH5' => $comicPgaeH5]);	
 	}
 }
