@@ -90,9 +90,11 @@
 
 .listUl>li>a {
 	line-height: .8rem;
-	background-color: #FAFAFA;
+	background-color: #d0c9c9;
 	font-weight: 700;
-	border-radius: .2rem;
+	border-radius: .08rem;
 	padding-left: .2rem;
 	display: block;
+	text-align: center;
+	padding-right:.2rem;
 }
