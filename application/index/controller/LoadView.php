@@ -55,8 +55,11 @@ class LoadView {
 		$imgPath = Db::table('comic') -> where('urlname', $name) -> find();
 		$lastChapter = Db::table('chapter') -> where('ComicChapter', $imgPath['ComicChapter']) -> field('ChapterName') -> order('ID desc') -> limit(1) -> find();
 		$queryChapter = Db::table('chapter') -> where('ComicChapter', $imgPath['ComicChapter']) -> order('ChapterPage asc') -> select();
-		var_dump($queryChapter);
-		//$comicChapterH5 .= "<li><a href="" target="_self" title="特别篇">特别篇</a></li>
-		//echo (new View()) -> fetch('mobile/comicChatper', ['imgPath' => "'".$imgPath['cover']."'", 'title' => $imgPath['title'], 'lastChapter' => $lastChapter['ChapterName']]);
+		foreach ($queryChapter as $data) {
+			$comicChapterH5 .= '<li><a href="/mobileComic/page/' . $data['ComicChapter'] . '/' . $data['ChapterPage'] . '" target="_self" title="' . $data['ChapterName'] . '>' . $data['ChapterName'] . '</a></li>'
+		}
+
+
+		echo (new View()) -> fetch('mobile/comicChatper', ['imgPath' => "'".$imgPath['cover']."'", 'title' => $imgPath['title'], 'lastChapter' => $lastChapter['ChapterName'], 'comicChapterH5' => $comicChapterH5]);
 	}
 }
