@@ -65,7 +65,7 @@ class LoadView {
 	public function comicPage($chapterId, $pageId) {
 		$map = array('ChapterPage' => $pageId, 'Comicid' => $chapterId);
 		$queryComicPage = Db::table('page') -> where($map) -> field('Imgpath') -> select();
-		var_dump($queryComicPage)
+		var_dump($queryComicPage);
 		//echo (new View()) -> fetch('mobile/comicPage');	
 	}
 }
