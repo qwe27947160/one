@@ -18,6 +18,9 @@
 		<ul class="comicList">
 			{$comicPgaeH5}
 		</ul>
+		<script type="text/javascript">
+			$("img[data-original]").lazyload({threshold:200});
+		</script>
 	</section>
 
 	<!--底部-->
@@ -26,7 +29,7 @@
 
 
 <script type="text/javascript">
-	$("img[data-original]").lazyload({threshold:200});
+	
 	(function (designW) {
 		var docEl = document.documentElement,
 			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
