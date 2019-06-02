@@ -71,4 +71,8 @@ class LoadView {
 		}
 		echo (new View()) -> fetch('mobile/comicPage', ['comicPgaeH5' => $comicPgaeH5]);	
 	}
+
+	public function videoChapter($name) {
+		echo(new View()) -> fetch('mobile/videoChapter');
+	}
 }

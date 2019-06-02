@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+{include file="public/meta"}	
+<title>米谷 米谷</title>
+<!-- CSS-LINK -->
+{include file="public/css-link"}
+<link href="/static/css/Mobile/public.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/static/css/Mobile/comicChatper.css" rel="stylesheet" type="text/css" media="all" />
+<!-- JS-LINK -->
+{include file="public/js-link"}
+</head>
+
+<body>
+	<!--导航栏--> 
+	{include file="public/mobile/header"}
+	<!--标题-->
+	<div class="detail mgt-3rem">
+		<div class="detailWrap">
+			<div class="detailCover">
+				<img src={$imgPath}>
+			</div>
+			<div class="detailImg">
+				<img src={$imgPath} alt={$title}>
+			</div>
+			<div class="deatilMedia">
+				<h1 class="mediaTitle">{$title}</h1>
+				<ul class="desc">
+					<li>状态: 更新至 </li>
+				</ul>
+			</div>			
+		</div>
+	</div>
+	
+	<!--章节-->
+	<section class="mgt-3rem">
+		<div class="padd">
+			<div class="listMain">
+				<ul class="clearfix listUl">
+					
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<!--底部-->
+	{include file="public/mobile/footer"}
+</body>
+
+
+<script type="text/javascript">
+	(function (designW) {
+		var docEl = document.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function () {
+				var clientWidth = docEl.clientWidth;
+				if (!clientWidth) return;
+				docEl.style.fontSize = 100 * (clientWidth / designW) + 'px';
+			};
+		if (!document.addEventListener) return;
+	        recalc();
+		window.addEventListener(resizeEvt, recalc, false);
+		document.addEventListener('DOMContentLoaded', recalc, false);
+	})(750);
+
+	$("img[data-original]").lazyload({effect: "fadeIn"});
+</script>	
+</html>
