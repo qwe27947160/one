@@ -74,3 +74,24 @@
 	position: relative;
 	background: #fff;
 }
+
+.listMain>ul{
+	overflow: hidden;
+	padding-left: .2rem;
+}
+
+.listMain>li{
+	overflow: hidden;
+	float: left;
+	margin-right: .2rem;
+	margin-bottom: .2rem;
+	position: relative;
+}
+
+.listMain>li>a {
+	line-height: .8rem;
+	background-color: #FAFAFA;
+	font-weight: 700;
+	border-radius: .2rem;
+	padding-left: .2rem;
+}
