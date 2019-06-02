@@ -98,3 +98,8 @@
 	text-align: center;
 	padding-right:.2rem;
 }
+
+.padd {
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+}
