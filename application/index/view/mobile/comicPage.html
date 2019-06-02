@@ -27,6 +27,7 @@
 
 
 <script type="text/javascript">
+	$("img[data-original]").lazyload({threshold:200});
 	(function (designW) {
 		var docEl = document.documentElement,
 			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
@@ -40,9 +41,5 @@
 		window.addEventListener(resizeEvt, recalc, false);
 		document.addEventListener('DOMContentLoaded', recalc, false);
 	})(750);
-
-	$(function(){
-		$("img[data-original]").lazyload({threshold:200});
-	});
 </script>	
 </html>
