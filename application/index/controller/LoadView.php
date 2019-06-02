@@ -59,6 +59,7 @@ class LoadView {
 		foreach ($queryChapter as $data) {
 			$comicChapterH5 .= '<li><a href="/mobileComic/page/' . $data['ComicChapter'] . '/' . $data['ChapterPage'] . '" target="_self" title="' . $data['ChapterName'] . '>' . $data['ChapterName'] . '</a></li>';
 		}
+		var_dump($comicChapterH5);
 		echo (new View()) -> fetch('mobile/comicChatper', ['imgPath' => "'".$imgPath['cover']."'", 'title' => $imgPath['title'], 'lastChapter' => $lastChapter['ChapterName'], 'comicChapterH5' => $comicChapterH5]);
 	}
 }
