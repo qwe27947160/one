@@ -4,7 +4,7 @@
 
 .comicList>li {
 	width: 100%;
-	margin-top: .2rem;
+	padding: .2rem;
 }
 
 .comicList>li>img {
