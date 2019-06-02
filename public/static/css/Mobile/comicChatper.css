@@ -69,3 +69,8 @@
 	line-height: .44rem;
 	color: #fff;
 }
+
+.listMain{
+	position: relative;
+	background: #fff;
+}
