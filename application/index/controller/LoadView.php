@@ -67,7 +67,7 @@ class LoadView {
 		$queryComicPage = Db::table('page') -> where('ChapterPage', $pageId) -> field('Imgpath') -> select();
 		$comicPgaeH5 = '';
 		foreach ($queryComicPage as $data) {
-			$comicPgaeH5 .= '<li><img data-original="' . $data['Imgpath'] . '" src="' . $data['Imgpath'] . '"></li>'
+			$comicPgaeH5 .= '<li><img data-original="' . $data['Imgpath'] . '" src="' . $data['Imgpath'] . '"></li>';
 		}
 		echo (new View()) -> fetch('mobile/comicPage', ['comicPgaeH5' => $comicPgaeH5]);	
 	}
