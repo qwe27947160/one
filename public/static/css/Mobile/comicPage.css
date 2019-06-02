@@ -1,3 +1,7 @@
 .comicList {
 	width: 100%;
 }
+
+.comicList>li{
+	width: 100%;
+}
