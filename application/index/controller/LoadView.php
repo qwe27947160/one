@@ -63,10 +63,13 @@ class LoadView {
 	}
 
 	public function comicPage($chapterId, $pageId) {
+		print $chapterId;
+		print $pageId;
 		$map = array('Comicid' => $chapterId, 'ChapterPage' => $pageId);
 		$queryComicPage = Db::table('page') -> where('ChapterPage', $pageId) -> field('Imgpath') -> select();
 		$comicPgaeH5 = '';
-		var_dump($queryComicPage);
+		//var_dump($queryComicPage);
+
 		foreach ($queryComicPage as $data) {
 			$comicPgaeH5 .= '<li><img data-original="' . $data['Imgpath'] . '" src="' . $data['Imgpath'] . '"></li>';
 		}
