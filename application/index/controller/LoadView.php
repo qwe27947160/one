@@ -61,4 +61,8 @@ class LoadView {
 		}
 		echo (new View()) -> fetch('mobile/comicChatper', ['imgPath' => "'".$imgPath['cover']."'", 'title' => $imgPath['title'], 'lastChapter' => $lastChapter['ChapterName'], 'comicChapterH5' => $comicChapterH5]);
 	}
+
+	public function comicPage($chapterId, $pageId) {
+		echo (new View()) -> fetch('mobile/comicPage');	
+	}
 }
