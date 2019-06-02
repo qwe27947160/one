@@ -75,12 +75,12 @@
 	background: #fff;
 }
 
-.listMain>ul{
+.listUl{
 	overflow: hidden;
 	padding-left: .2rem;
 }
 
-.listMain>li{
+.listUl>li{
 	overflow: hidden;
 	float: left;
 	margin-right: .2rem;
@@ -88,7 +88,7 @@
 	position: relative;
 }
 
-.listMain>li>a {
+.listUl>li>a {
 	line-height: .8rem;
 	background-color: #FAFAFA;
 	font-weight: 700;
