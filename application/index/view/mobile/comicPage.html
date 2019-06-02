@@ -41,6 +41,8 @@
 		document.addEventListener('DOMContentLoaded', recalc, false);
 	})(750);
 
-	$("img[data-original]").lazyload({effect: "fadeIn"});
+	$(document).ready(function(){
+		$("img[data-original]").lazyload({effect: "fadeIn"});
+	});
 </script>	
 </html>
