@@ -18,8 +18,8 @@ class Ni
         if($matches[1] == 'dm.') {
             echo $view->fetch('comic/index');
         } else {
-            $comicH5 = '';
             try {
+                $comicH5 = '';
                 $comicResult = Db::table('comic')  -> order('rand()') -> limit(6) ->select();
                 foreach ($comicResult as $data) {
                     $lastChapter = Db::table('chapter') -> where('ComicChapter', $data['ComicChapter']) -> field('ChapterName') -> order('ID desc') -> limit(1) -> find();
