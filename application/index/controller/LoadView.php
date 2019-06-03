@@ -84,6 +84,6 @@ class LoadView {
 	}
 
 	public function videoPage($chapter, $page) {
-
+		echo(new View()) -> fetch('mobile/videoPage');
 	}
 }
