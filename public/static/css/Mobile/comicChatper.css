@@ -120,3 +120,9 @@
 	-webkit-line-clamp:2;
 	-webkit-box-orient:vertical;
 }
+
+.pdiv{
+	background: #fff;
+	padding: .2rem;
+	padding-bottom: 0;
+}
