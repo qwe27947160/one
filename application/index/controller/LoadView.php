@@ -94,4 +94,15 @@ class LoadView {
 		}
 		echo(new View()) -> fetch('mobile/videoPage', ['p' => $imgPath['introduction'], 'videoChapterH5' => $videoChapterH5, 'src' => $src['videopath'], 'title' => $imgPath['title'], 'name' => $src['dirname']]);
 	}
+
+	public function allcomic() {
+		$comicResult = Db::table('comic') -> select();
+		$comicH5 = '';
+		foreach ($comicResult as $data) {
+		    $lastChapter = Db::table('chapter') -> where('ComicChapter', $data['ComicChapter']) -> field('ChapterName') -> order('ID desc') -> limit(1) -> find();
+
+		    $comicH5 .= '<li class="comicItem"><a href="/mobile/comicChapter/' . $data['urlname'] . '" class="comicLink" title="' . $data['title'] . '"><div class="itemPic" data-original="' . $data['cover'] . '" style="background-image:url(\'' . $data['cover'] . '\');"><div class="videoDuration">更新到' . $lastChapter['ChapterName'] . '</div></div><div class="videoCon"><h2 class="videotit ellipsis1" style="text-align:center;">'. $data['title'] . '</h2></div></a></li>';
+		}
+		echo(new View()) -> fetch('mobile/allComic', ['comicH5' => $comicH5]);
+	}
 }
