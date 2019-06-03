@@ -77,9 +77,11 @@
 
 	$("#more").click(function(){
 		if($('.intro').hasClass("eslips")) {
-			alert('1');
+			$('.intro').removeClass('eslips');
+			$('#more>i').removeClass('icon-unfold').addClass('icon-fold');
 		}else {
-			alert('2');
+			$('.intro').addClass('eslips');
+			$('#more>i').addClass('icon-unfold').removeClass('icon-fold');
 		}
 	});
 </script>	
