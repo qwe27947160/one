@@ -121,12 +121,21 @@
 	-webkit-box-orient:vertical;
 }
 
-.pdiv{
+.pdiv {
 	background: #fff;
 	padding: .2rem;
 	padding-bottom: 0;
 }
 
-.morea2{
+.morea2 {
+	height: .52rem;
+	line-height: .52rem;
+	text-align: center;
+	font-size: 0;
+}
 
+.morea2>i {
+	display: inline-block;
+	font-size: .32rem;
+	color: #999;
 }
