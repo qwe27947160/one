@@ -86,12 +86,12 @@ class LoadView {
 	public function videoPage($chapter, $page) {
 		$imgPath = Db::table('animationscover') -> where('ID', $chapter) -> find();
 		$map = array('cvdirid' => $chapter, 'dirbluesid' => $page);
-    	$src = Db::table('animationsdir') -> where($map) ->field('videopath') -> find(); 
+    	$src = Db::table('animationsdir') -> where($map) ->field('videopath, dirname') -> find(); 
 		$queryChapter = Db::table('animationsdir') -> where('cvdirid', $chapter) -> order('dirbluesid ASC') -> select();
 		$videoChapterH5 = '';
 		foreach ($queryChapter as $data) {
 			$videoChapterH5 .= '<li><a href="/mobilevideo/page/' . $data['cvdirid'] . '/' . $data['dirbluesid'] . '" target="_self" title="' . $data['dirname'] . '">' . $data['dirname'] . '</a></li>';
 		}
-		echo(new View()) -> fetch('mobile/videoPage', ['p' => $imgPath['introduction'], 'videoChapterH5' => $videoChapterH5, 'src' => $src['videopath']]);
+		echo(new View()) -> fetch('mobile/videoPage', ['p' => $imgPath['introduction'], 'videoChapterH5' => $videoChapterH5, 'src' => $src['videopath'], 'title' => $imgPath['title'], 'name' => $src['dirname']]);
 	}
 }
