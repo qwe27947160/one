@@ -8,6 +8,10 @@
 <link href="/static/css/Mobile/public.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/static/css/Mobile/comicChatper.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/static/css/Mobile/icon.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://cdn.staticfile.org/dplayer/1.25.0/DPlayer.min.css" rel="stylesheet" type="text/css" media="all" />
+
+<script src="https://cdn.staticfile.org/dplayer/1.25.0/DPlayer.min.js"></script>
+<script src="https://cdn.staticfile.org/hls.js/8.0.0-beta.3/hls.js"></script>
 <!-- JS-LINK -->
 {include file="public/js-link"}
 </head>
@@ -16,7 +20,7 @@
 	<!--导航栏--> 
 	{include file="public/mobile/header"}
 	<!--视频-->
-	
+	<div id="dplayer"></div> 
 
 	<section class="mod clearfix">
 		<div class="pdiv">
@@ -68,6 +72,14 @@
 			$('.intro').addClass('eslips');
 			$('#more>i').addClass('icon-unfold').removeClass('icon-fold');
 		}
+	});
+
+	const dp = new DPlayer({
+	    container: document.getElementById('dplayer'),
+	    video: {
+	        url: '{$src}',
+	        type: 'hls'
+	    }
 	});
 </script>	
 </html>
