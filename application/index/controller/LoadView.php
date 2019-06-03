@@ -82,4 +82,8 @@ class LoadView {
 		}
 		echo(new View()) -> fetch('mobile/videoChapter', ['imgPath' => $imgPath['cover'], 'title' => $imgPath['title'], 'lastChapter' => $lastChapter['dirname'], 'p' => $imgPath['introduction'], 'videoChapterH5' => $videoChapterH5]);
 	}
+
+	public function videoPage($chapter, $page) {
+
+	}
 }
