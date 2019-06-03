@@ -90,6 +90,6 @@ class LoadView {
 		foreach ($queryChapter as $data) {
 			$videoChapterH5 .= '<li><a href="/mobilevideo/page/' . $data['cvdirid'] . '/' . $data['dirbluesid'] . '" target="_self" title="' . $data['dirname'] . '">' . $data['dirname'] . '</a></li>';
 		}
-		echo(new View()) -> fetch('mobile/videoPage', ['P' => $imgPath['introduction'], 'videoChapterH5' => $videoChapterH5]);
+		echo(new View()) -> fetch('mobile/videoPage', ['p' => $imgPath['introduction'], 'videoChapterH5' => $videoChapterH5]);
 	}
 }
