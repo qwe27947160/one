@@ -108,7 +108,7 @@ class LoadView {
 
 	public function allMobileVideo() {
 	    $videoH5 = '';
-        $videoResult = Db::table('animationscover') -> order('rand()') -> limit (6) -> select();
+        $videoResult = Db::table('animationscover') -> select();
         foreach ($videoResult as $data) {
             $lastChapter = Db::table('animationsdir') -> where('cvdirid', $data['ID']) -> field('dirname') -> order('dirbluesid desc') -> limit(1) -> find();
             $videoH5 .= '<li class="comicItem"><a href="/mobile' . $data['src'] . '" class="comicLink" title="' . $data['title'] . '"><div class="itemPic" data-original="' . $data['cover'] . '" style="background-image:url(\'' . $data['cover'] . '\');"><div class="videoDuration">更新到' . $lastChapter['dirname'] . '</div></div><div class="videoCon"><h2 class="videotit ellipsis1" style="text-align:center;">'. $data['title'] . '</h2></div></a></li>';
