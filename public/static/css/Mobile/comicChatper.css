@@ -104,3 +104,19 @@
 	padding-bottom: .5rem;
 	background: #fff;
 }
+
+.intro {
+	line-height: .36rem;
+	color: #999;
+	font-size: .24rem
+}
+
+.eslips {
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-all;
+	white-space: normal;
+	-webkit-line-clamp:2;
+	-webkit-box-orient:vertical;
+}
