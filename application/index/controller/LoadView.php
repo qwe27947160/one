@@ -76,7 +76,7 @@ class LoadView {
 		$imgPath = Db::table('animationscover') -> where('src', '/video/'.$name) -> find();
 		$lastChapter = Db::table('animationsdir') -> where('cvdirid', $imgPath['ID']) -> field('dirname') -> order('dirbluesid desc') ->limit(1) -> find();
 		$queryChapter = Db::table('animationsdir') -> where('cvdirid', $imgPath['ID']) -> order('dirbluesid ASC') -> select();
-		$video = '';
+		$videoChapterH5 = '';
 		foreach ($queryChapter as $data) {
 			$videoChapterH5 .= '<li><a href="/mobilevideo/page/' . $data['cvdirid'] . '/' . $data['dirbluesid'] . '" target="_self" title="' . $data['dirname'] . '">' . $data['dirname'] . '</a></li>';
 		}
