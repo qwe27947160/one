@@ -148,3 +148,9 @@
 	line-height: .48rem;
 	font-weight: 700;
 }
+
+.videoName{
+	color: #fff;
+	margin-top: .2rem;
+	margin-left: .2rem;
+}
