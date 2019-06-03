@@ -95,7 +95,7 @@ class LoadView {
 		echo(new View()) -> fetch('mobile/videoPage', ['p' => $imgPath['introduction'], 'videoChapterH5' => $videoChapterH5, 'src' => $src['videopath'], 'title' => $imgPath['title'], 'name' => $src['dirname']]);
 	}
 
-	public function allcomic() {
+	public function allmobilecomic() {
 		$comicResult = Db::table('comic') -> select();
 		$comicH5 = '';
 		foreach ($comicResult as $data) {

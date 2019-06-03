@@ -43,4 +43,4 @@ Route::rule('/mobile/comicChapter/:name', 'index/LoadView/comicChapter');
 Route::rule('/mobileComic/page/:chapterId/:pageId', 'index/LoadView/comicPage');
 Route::rule('/mobile/video/:name', 'index/LoadView/videoChapter');
 Route::rule('/mobilevideo/page/:chapter/:page', 'index/LoadView/videoPage');
-Route::rule('/mobile/allcomic', 'index/LoadView/allcomic');
+Route::rule('allmobilecomic', 'index/LoadView/allmobilecomic');
