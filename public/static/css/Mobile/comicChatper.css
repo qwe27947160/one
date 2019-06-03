@@ -147,10 +147,11 @@
 	font-size: .36rem;
 	line-height: .48rem;
 	font-weight: 700;
+	margin-top: .2rem;
+	margin-left: .2rem;
 }
 
 .videoName{
-	color: #fff;
-	margin-top: .2rem;
-	margin-left: .2rem;
+	background: : #fff;
+
 }
