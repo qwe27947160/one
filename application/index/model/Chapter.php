@@ -8,6 +8,6 @@ class Chapter extends Model{
 		return $this->hasMany('page')
 					->where($map)
 					->field('Imgpath')
-					->order('ChapterPage ASC');
+					->order('Imgpath');
 	}
 }
