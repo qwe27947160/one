@@ -45,3 +45,6 @@ Route::rule('/mobile/video/:name', 'index/LoadView/videoChapter');
 Route::rule('/mobilevideo/page/:chapter/:page', 'index/LoadView/videoPage');
 Route::rule('/allmobilecomic', 'index/LoadView/allmobilecomic');
 Route::rule('/allMobileVideo', 'index/LoadView/allMobileVideo');
+
+/**********************usermanagement*****************************/
+Route::rule('/user/management', 'index/management/index')

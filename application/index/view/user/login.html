@@ -88,7 +88,7 @@
 					alert('请先通过滑块验证');
 				} else {
 					$.ajax({
-						url:'/user/login',
+						url:'/user/management',
 						async:true,
 						cache:false,
 						type:"POST",
@@ -103,18 +103,6 @@
 					});
 				}
 			});
-
-			
-			//监听提交
-			/*
-			form.on('submit(formDemo)', function(data) {
-				if(slider.isOk()){
-					layer.msg(JSON.stringify(data.field));
-				}else{
-					layer.msg("请先通过滑块验证");
-				}
-				return false;
-			});*/
 		})
 </script>	
 </html>
