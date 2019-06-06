@@ -23,14 +23,14 @@
 						<div class="form-group mt20">
 							<span class="col-md-3 control-label hidden-xs">用户:</span>
 							<div class="col-md-8 col-sm-12 col-xs-12">
-								<input type="text"  class="form-control" placeholder="注册使用的邮箱"  id="forgetEmail">
+								<input type="text"  class="form-control" placeholder="注册使用的邮箱"  id="user">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<span class="col-md-3 control-label hidden-xs">密码:</span>
 							<div class="col-md-8 col-sm-12 col-xs-12">
-								<input type="password"  class="form-control" placeholder="密码"  id="forgetEmail">
+								<input type="password"  class="form-control" placeholder="密码"  id="pass">
 							</div>
 						</div>
 
@@ -74,7 +74,22 @@
 					layer.msg("滑块验证通过");
 				}
 			})
+
+			$('#submit').click(function(){
+				if(!$('#user').val()) {
+					alert('帐号不能为空');
+					$('#user').focus();
+					return false;
+				} else if (!$('#pass').val()) {
+					alert('密码不能为空');
+					$('#pass').focus();
+					return false;
+				} else if (!slider.isOk()) {
+					alert('请先通过滑块验证');
+				}
+			});
 			//监听提交
+			/*
 			form.on('submit(formDemo)', function(data) {
 				if(slider.isOk()){
 					layer.msg(JSON.stringify(data.field));
@@ -82,7 +97,7 @@
 					layer.msg("请先通过滑块验证");
 				}
 				return false;
-			});
+			});*/
 		})
 </script>	
 </html>
