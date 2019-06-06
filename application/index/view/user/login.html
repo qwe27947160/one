@@ -88,6 +88,21 @@
 					alert('请先通过滑块验证');
 				}
 			});
+
+			$.ajax({
+				url:'/user/login',
+				async:true,
+				cache:false,
+				type:"POST",
+				dataType:'json',
+				data:{
+					user:$('#user').val(),
+					pass:$('#pass').val(),
+				},
+				success:function(data){
+					layer.msg(data.msg);
+				}
+			});
 			//监听提交
 			/*
 			form.on('submit(formDemo)', function(data) {
