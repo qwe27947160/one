@@ -60,32 +60,6 @@
 </div>
 </body>
 <script type="text/javascript">
-	layui.use('layer', function(){
-		var layer = layui.layer;
-		$('#submit').click(function(){
-			var myReg=/^[a-zA-Z0-9_-]+@([a-zA-Z0-9]+\.)+(com|cn|net|org)$/;
-			if(!myReg.test($('#forgetEmail').val())){
-				layer.msg("邮箱格式不对!");
-		　　　　return false;
-			}
-			
-			$.ajax({
-				url:'/findPassword',
-				async:true,
-				cache:false,
-				type:"POST",
-				dataType:'json',
-				data:{
-					email:$('#forgetEmail').val(),
-					VerificationCode:$('#forgetCaptcha').val()
-				},
-				success:function(data){
-					layer.msg(data.msg);
-				}
-			});
-		});
-	});	
-
 	layui.config({
 			base: '/static/layui/layui_exts/'
 		}).extend({
@@ -98,7 +72,7 @@
 				onOk: function(){//当验证通过回调
 					layer.msg("滑块验证通过");
 				}
-			}),
+			})
 			//监听提交
 			form.on('submit(formDemo)', function(data) {
 				if(slider.isOk()){
@@ -108,7 +82,6 @@
 				}
 				return false;
 			});
-			
 		})
 </script>	
 </html>
