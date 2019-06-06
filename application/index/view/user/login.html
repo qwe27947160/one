@@ -86,14 +86,29 @@
 		});
 	});	
 
-	var slider = sliderVerify.render({
-		elem: '#slider',
-		isAutoVerify:false,//关闭自动验证
-		bg : 'layui-bg-red',//自定义背景样式名
-		text : '滑动',
-		onOk: function(){//当验证通过回调
-			layer.msg("滑块验证通过");
-		}
-	});
+	layui.config({
+			base: '/static/layui/layui_exts/'
+		}).extend({
+			sliderVerify:'sliderVerify/sliderVerify'
+		}).use(['sliderVerify', 'jquery', 'form'], function() {
+			var sliderVerify = layui.sliderVerify,
+				form = layui.form;
+			var slider = sliderVerify.render({
+				elem: '#slider',
+				onOk: function(){//当验证通过回调
+					layer.msg("滑块验证通过");
+				}
+			})
+			//监听提交
+			form.on('submit(formDemo)', function(data) {
+				if(slider.isOk()){
+					layer.msg(JSON.stringify(data.field));
+				}else{
+					layer.msg("请先通过滑块验证");
+				}
+				return false;
+			});
+			
+		})
 </script>	
 </html>
