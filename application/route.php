@@ -47,4 +47,4 @@ Route::rule('/allmobilecomic', 'index/LoadView/allmobilecomic');
 Route::rule('/allMobileVideo', 'index/LoadView/allMobileVideo');
 
 /**********************usermanagement*****************************/
-Route::rule('/user/management', 'index/management/index')
+Route::rule('/user/management', 'index/management/index');
