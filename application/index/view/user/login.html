@@ -8,6 +8,7 @@
 <link href="/static/css/forgetpwd.css" rel="stylesheet" type="text/css" media="all" />
 <!-- JS-LINK -->
 {include file="public/js-link"}
+<script src="/static/layui/layui_exts/sliderVerify/sliderVerify.js"></script>
 </head>
 <body class="user_body"> 
 <div class="container">
@@ -35,12 +36,8 @@
 
 						<div class="form-group">
 							<span class="col-md-3 control-label hidden-xs">验证码:</span>
-							<div class="col-md-4 col-sm-4 col-xs-6">
-								<input type="text" id="forgetCaptcha" class="form-control txt" placeholder="验证码" >
-							</div>
-
-							<div class="col-md-3 col-sm-4 col-xs-2">
-								<img src="/creatPicture"  onclick="this.src='/creatPicture?'+new Date().getTime();" >
+							<div class="layui-input-block col-md-8 col-sm-12 col-xs-12">
+								<div id="slider"></div>
 							</div>
 						</div>
 
