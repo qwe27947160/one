@@ -8,7 +8,11 @@ use \think\Config;
 class Xadmin extends Controller{
 	public function index() {
 		$view = new View();
-		$this -> redirect('X-admin/index');
+		$this -> redirect('Xadmin/login');
 		//return (new View) -> fetch('X-admin/index');
+	}
+
+	public function login() {
+		echo(new View()) -> fetch('X-admin/index');
 	}
 }
