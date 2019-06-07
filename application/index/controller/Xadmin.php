@@ -7,6 +7,6 @@ use \think\Config;
 
 class Xadmin {
 	public function index() {
-		echo(new View) -> fetch('X-admin/index');
+		return (new View) -> fetch('X-admin/index');
 	}
 }
