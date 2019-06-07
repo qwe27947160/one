@@ -9,11 +9,11 @@ use think\Controller;
 class Xadmin extends Controller{
 	public function index() {
 		$view = new View();
-		$this -> redirect('X-admin/index');
+		redirect('News/category')->remember();
 		//return (new View) -> fetch('X-admin/index');
 	}
 
 	public function login() {
-		echo(new View()) -> fetch('');
+		echo (new View()) -> fetch('X-admin/index');
 	}
 }
