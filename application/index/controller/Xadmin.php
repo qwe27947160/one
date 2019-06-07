@@ -5,8 +5,10 @@ use think\View;
 use \think\Request;
 use \think\Config;
 
-class Xadmin {
+class Xadmin extends Controller{
 	public function index() {
-		return (new View) -> fetch('X-admin/index');
+		$view = new View();
+		$this -> redirect('X-admin/index');
+		//return (new View) -> fetch('X-admin/index');
 	}
 }
