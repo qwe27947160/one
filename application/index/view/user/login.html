@@ -98,7 +98,7 @@
 							pass:$('#pass').val(),
 						},
 						success:function(data){
-							$('.user_body').html(data);
+							layer.msg(data.rs);
 						}
 					});
 				}

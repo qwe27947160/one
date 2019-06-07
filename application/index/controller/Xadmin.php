@@ -8,11 +8,10 @@ use think\Controller;
 
 class Xadmin extends Controller{
 	public function index() {
-		$view = new View();
-		echo (new View()) -> fetch('X-admin/index');
+		$user = input('post.user');
+		$pass = input('post.pass');
+		if(!Db::table('user') -> where('username', $user) -> find()) {
+			echo json_encode(array('rs' => '帐号错误'));
+		}
 	}
-
-	public function login() {
-
-	}	
 }
