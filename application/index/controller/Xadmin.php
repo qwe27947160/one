@@ -13,7 +13,7 @@ class Xadmin extends Controller{
 		$pass = input('post.pass');
 		
 		try {
-			$userModel = (new User_msg) -> loginQuery(['username' => $user]);
+			$userModel = (new User_msg) -> loginQuery(['username' => $user]) -> getData();
 			if($userModel['username'] != $user) {
 				echo json_encode(array('rs' => '帐号错误'));
 			} else if ($userModel['password'] != $pass) {
