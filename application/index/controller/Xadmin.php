@@ -22,7 +22,7 @@ class Xadmin extends Controller{
 				echo json_encode(array('rs' => 'OK'));
 			}
 		} catch(\Exception $e) {
-
+			echo $e;
 		}
 	}
 }
