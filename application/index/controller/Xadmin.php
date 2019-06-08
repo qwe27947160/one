@@ -13,9 +13,9 @@ class Xadmin extends Controller{
 
 	public function _initialize() {
 		if (Session::get('time') < time()) {
-			$this->rediect('/user/login','请先登录后操作');
+			$this->redirect('/user/login','请先登录后操作');
 		} else {
-			$this->rediect('/user/admin');
+			$this->redirect('/user/admin');
 		}
 	}
 
