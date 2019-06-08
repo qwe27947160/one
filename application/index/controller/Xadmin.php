@@ -34,7 +34,7 @@ class Xadmin extends Controller{
 		} else {
 			$request = Request::instance();
 			print_r($request->ip());
-			print_r($request->->header('user-agent'));
+			print_r($request->header('user-agent'));
 
 			/*
 			Session::set('time', time() + 900);
