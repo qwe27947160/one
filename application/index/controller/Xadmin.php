@@ -15,7 +15,7 @@ class Xadmin extends Controller{
 		if (Session::get('time') < time()) {
 			
 		} else {
-			$this->redirect('/user/login');
+			$this->error('请先登录','/user/login');
 		}
 	}
 
