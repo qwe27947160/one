@@ -12,17 +12,14 @@ class Xadmin extends Controller{
 	public function index() {
 		$user = input('post.user');
 		$pass = input('post.pass');
-	
-		
-			$user = User_msg::Query(['username' => $user]);
-			//print_r($user);
-			if(!$user) {
-				echo json_encode(array('rs' => '帐号错误'));
-			} else if ($user->password != md5($pass)) {
-				echo json_encode(array('rs' => '密码错误',"xxx"=>$user->password));
-			} else {
-				echo json_encode(array('rs' => 'OK'));
-			}
-		
+		$user = User_msg::get_user($user);
+		//print_r($user);
+		if(!$user) {
+			echo json_encode(array('rs' => '帐号错误', 'code' => '0'));
+		} else if ($user->password != md5($pass)) {
+			echo json_encode(array('rs' => '密码错误', 'code' => '0'));
+		} else {
+			echo json_encode(array('rs' => '登录成功', 'code' => '1'));
+		}
 	}
 }
