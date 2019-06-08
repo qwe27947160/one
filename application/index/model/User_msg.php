@@ -1,11 +1,14 @@
 <?php
 namespace app\index\model;
 use think\Model;
-use \think\Request;
-use \think\Config;
+
 
 class User_msg extends Model {
-	function loginQuery($map) {
-		return $this -> where($map) -> find();
+	public static function Query($map) {
+		return $this -> where($map) -> field('username, password') -> find();
+	}
+
+	public static function get_user($username) {
+		return $this -> where(['username' => $user]) -> find();
 	}
 }
