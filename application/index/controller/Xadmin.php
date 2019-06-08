@@ -10,14 +10,14 @@ use app\index\model\User_msg;
 
 
 class Xadmin extends Controller{
-
+	/*
 	public function _initialize() {
 		if (Session::get('time') < time()) {
 			$this->redirect('/user/login','请先登录后操作');
 		} else {
 			$this->redirect('/user/admin');
 		}
-	}
+	}*/
 
 	public function index() {
 		$user = input('post.user');
