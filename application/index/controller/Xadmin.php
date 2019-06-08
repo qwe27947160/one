@@ -18,7 +18,7 @@ class Xadmin extends Controller{
 			print_r($user);
 			if($user->username == '') {
 				echo json_encode(array('rs' => '帐号错误'));
-			} else if ($user->getData()['password'] != md5($pass)) {
+			} else if ($user->password != md5($pass)) {
 				echo json_encode(array('rs' => '密码错误'));
 			} else {
 				echo json_encode(array('rs' => 'OK'));
