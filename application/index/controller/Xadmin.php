@@ -38,7 +38,7 @@ class Xadmin extends Controller{
 			$loginMsg -> save();
 			//返回前端 让前端重定义url
 			Session::set('time', time() + 900);
-			echo json_encode(array('code' => '1', 'rs' => '登录成功'));*/
+			echo json_encode(array('code' => '1', 'rs' => '登录成功'));
 		}
 	}
 
