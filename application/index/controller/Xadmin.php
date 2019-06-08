@@ -25,16 +25,16 @@ class Xadmin extends Controller{
 	public function validation() {
 		$user = input('post.user');
 		$pass = input('post.pass');
-		$user = User_msg::get_user($user);
+		$userQyery = User_msg::get_user($user);
 		//print_r($user);
-		if(!$user) {
+		if(!$userQyery) {
 			echo json_encode(array('code' => '0', 'rs' => '帐号错误'));
-		} else if ($user->password != md5($pass)) {
+		} else if ($userQyery->password != md5($pass)) {
 			echo json_encode(array('code' => '0', 'rs' => '密码错误'));
 		} else {
 			//写入登录人信息
 			$request = Request::instance();
-			$loginMsg = new Loginmsg(['user' => input('post.user'), 'ip' => $request->ip(), 'ua' => $request->header('user-agent'), 'time' => time()]);
+			$loginMsg = new Loginmsg(['user' => $user, 'ip' => $request->ip(), 'ua' => $request->header('user-agent'), 'time' => time()]);
 			$loginMsg -> save();
 			//返回前端 让前端重定义url
 			Session::set('time', time() + 900);
