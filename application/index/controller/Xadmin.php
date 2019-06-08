@@ -11,9 +11,9 @@ class Xadmin extends Controller{
 	public function index() {
 		$user = input('post.user');
 		$pass = input('post.pass');
-		$userModel = (new User_msg) -> loginquery(['username' => $user]);
+		$userModel = (new User_msg) -> loginQuery(['username' => $user]);
 		var_dump($userModel);
-		return;
+		
 		/*
 		if(!) {
 			echo json_encode(array('rs' => '帐号错误'));
