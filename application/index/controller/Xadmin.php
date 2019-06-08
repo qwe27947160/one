@@ -25,12 +25,12 @@ class Xadmin extends Controller{
 		$user = User_msg::get_user($user);
 		//print_r($user);
 		if(!$user) {
-			echo json_encode(array('rs' => '帐号错误'));
+			echo json_encode(array('code' => '0', 'rs' => '帐号错误'));
 		} else if ($user->password != md5($pass)) {
-			echo json_encode(array('rs' => '密码错误'));
+			echo json_encode(array('code' => '0', 'rs' => '密码错误'));
 		} else {
 			Session::set('time', time() . 3600);
-			$this->success('登录成功', url('/user/admin'));
+			echo json_encode(array('code' => '1', 'rs' => '登录成功'));
 		}
 	}
 
