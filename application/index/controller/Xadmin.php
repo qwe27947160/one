@@ -14,7 +14,7 @@ class Xadmin extends Controller{
 		$userModel = (new User_msg) -> loginquery(['username' => $user]);
 		var_dump($userModel);
 		return;
-
+		/*
 		if(!) {
 			echo json_encode(array('rs' => '帐号错误'));
 		} else if (!) {
@@ -22,5 +22,6 @@ class Xadmin extends Controller{
 		} else {
 			echo json_encode(array('rs' => 'OK'));
 		}
+		*/
 	}
 }
