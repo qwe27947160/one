@@ -30,14 +30,14 @@ class Xadmin extends Controller{
 		$userMsg = array('user' => $user, 'ip' => $request->ip(), 'ua' => $request->header('user-agent'), 'time' => time());
 		$loginMsg = new Loginmsg($userMsg);
 		if(!$userQyery) {
-			array_push($userMsg, ['state' =>'0']);
+			$loginMsg -> state = 0;
 			echo json_encode(array('code' => '0', 'rs' => '帐号错误'));
 		} else if ($userQyery->password != md5($pass)) {
-			array_push($userMsg, ['state' =>'1']);
+			$loginMsg -> state = 1;
 			echo json_encode(array('code' => '0', 'rs' => '密码错误'));
 		} else {
 			//写入登录人信息
-			array_push($userMsg, ['state' =>'2']);
+			$loginMsg -> state = 2;
 			//返回前端 让前端重定义url
 			Session::set('time', time() + 900);
 			echo json_encode(array('code' => '1', 'rs' => '登录成功'));
