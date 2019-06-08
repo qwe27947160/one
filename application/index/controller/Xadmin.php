@@ -34,7 +34,7 @@ class Xadmin extends Controller{
 		} else {
 			//写入登录人信息
 			$request = Request::instance();
-			$loginMsg = new Loginmsg(['user' => $user, 'ip' => $request->ip(), 'ua' => $request->header('user-agent'), 'time' => time()]);
+			$loginMsg = new Loginmsg(['user' => input('post.user'), 'ip' => $request->ip(), 'ua' => $request->header('user-agent'), 'time' => time()]);
 			$loginMsg -> save();
 			//返回前端 让前端重定义url
 			Session::set('time', time() + 900);
