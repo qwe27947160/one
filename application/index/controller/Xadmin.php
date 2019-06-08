@@ -30,7 +30,7 @@ class Xadmin extends Controller{
 			echo json_encode(array('rs' => '密码错误'));
 		} else {
 			Session::set('time', time() . 3600);
-			$this->redirect('/user/admin');
+			$this->redirect('/user/admin','200');
 		}
 	}
 
