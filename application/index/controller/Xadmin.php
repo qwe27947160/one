@@ -32,7 +32,7 @@ class Xadmin extends Controller{
 		} else if ($user->password != md5($pass)) {
 			echo json_encode(array('code' => '0', 'rs' => '密码错误'));
 		} else {
-			$request = request();
+			$request = Request::instance();
 			print_r($request);
 			/*
 			Session::set('time', time() + 900);
