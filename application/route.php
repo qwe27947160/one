@@ -48,3 +48,4 @@ Route::rule('/allMobileVideo', 'index/LoadView/allMobileVideo');
 
 /**********************usermanagement*****************************/
 Route::rule('/user/management', 'index/Xadmin/index');
+Route::rule('/user/admin', 'index/Xadmin/userAdmin');
