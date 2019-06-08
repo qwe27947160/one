@@ -26,8 +26,8 @@ class Xadmin extends Controller{
 		$user = input('post.user');
 		$pass = input('post.pass');
 
-		var_dump(Loginmsg::where(['user' => $user ,'state' => 1,'time' => ['>','TIMESTAMPADD(MINUTE,-30,CURRENT_TIMESTAMP())']]));
-		if(Loginmsg::where(['user' => $user ,'state' => 1,'time' => ['>','TIMESTAMPADD(MINUTE,-30,CURRENT_TIMESTAMP())']]) -> count() > 3){
+		//var_dump(Loginmsg::where(['user' => $user ,'state' => 1,'time' => ['>','TIMESTAMPADD(MINUTE,-30,CURRENT_TIMESTAMP())']]));
+		if(Loginmsg::where(['user' => $user ,'state' => 1,'time' => ['exp','> TIMESTAMPADD(MINUTE,-30,CURRENT_TIMESTAMP())']]) -> count() > 3){
 			echo json_encode(array('code' => '0', 'rs' => '此账号今天密码登录错误3次，禁止登录'));
 			return;
 		}
