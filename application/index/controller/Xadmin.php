@@ -14,7 +14,7 @@ class Xadmin extends Controller{
 		$userModel = new User_msg;
 		if(!$userModel -> loginquery(['username' => $user])) {
 			echo json_encode(array('rs' => '帐号错误'));
-		} else if (!Db::table('user_msg') -> where('password', md5($pass)) -> find()) {
+		} else if (!$userModel -> loginquery(['password' => md5($pass)])) {
 			echo json_encode(array('rs' => '密码错误'));
 		} else {
 			echo json_encode(array('rs' => 'OK'));
