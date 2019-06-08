@@ -16,7 +16,7 @@ class Xadmin extends Controller{
 		
 			$user = User_msg::Query(['username' => $user]);
 			print_r($user);
-			if($user->username == '') {
+			if(!$user) {
 				echo json_encode(array('rs' => '帐号错误'));
 			} else if ($user->password != md5($pass)) {
 				echo json_encode(array('rs' => '密码错误'));
