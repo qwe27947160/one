@@ -26,7 +26,7 @@ class Xadmin extends Controller{
 		$user = input('post.user');
 		$pass = input('post.pass');
 
-		$ss = $Loginmsg::where(['user' => $user ,'state' => 1]) -> count();
+		$ss = Loginmsg::where(['user' => $user ,'state' => 1]) -> count();
 		var_dump($ss);
 
 		$userQyery = User_msg::get_user($user);
