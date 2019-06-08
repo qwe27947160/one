@@ -27,7 +27,7 @@ class Xadmin extends Controller{
 		$pass = input('post.pass');
 		$userQyery = User_msg::get_user($user);
 		$request = Request::instance();
-		$userMsg = array('user' => $user, 'ip' => $request->ip(), 'ua' => $request->header('user-agent'), 'time' => timestamp($time));
+		$userMsg = array('user' => $user, 'ip' => $request->ip(), 'ua' => $request->header('user-agent'));
 		$loginMsg = new Loginmsg($userMsg);
 		if(!$userQyery) {
 			$loginMsg -> state = 0;
