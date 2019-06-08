@@ -7,20 +7,24 @@ use \think\Config;
 use think\Controller;
 use app\index\model\User_msg;
 
+
 class Xadmin extends Controller{
 	public function index() {
 		$user = input('post.user');
 		$pass = input('post.pass');
 		
 		try {
-			$userModel = (new User_msg) -> loginQuery(['username' => $user]) -> getData();
-			if($userModel['username'] != $user) {
+			//$userModel = (new User_msg) -> loginQuery(['username' => $user]) -> getData();
+			$user = User_msg::where(['username' => $user])->find();
+			var_dump($user);
+			/*
+			if(!$user) {
 				echo json_encode(array('rs' => '帐号错误'));
-			} else if ($userModel['password'] != $pass) {
+			} else if ($user->password != $pass) {
 				echo json_encode(array('rs' => '密码错误'));
 			} else {
 				echo json_encode(array('rs' => 'OK'));
-			}
+			}*/
 		} catch(\Exception $e) {
 			echo $e;
 		}
