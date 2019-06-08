@@ -25,6 +25,10 @@ class Xadmin extends Controller{
 	public function validation() {
 		$user = input('post.user');
 		$pass = input('post.pass');
+
+		$ss = $Loginmsg::where(['user' => $user ,'state' => 1]) -> count();
+		var_dump($ss);
+
 		$userQyery = User_msg::get_user($user);
 		$request = Request::instance();
 		$userMsg = array('user' => $user, 'ip' => $request->ip(), 'ua' => $request->header('user-agent'));
