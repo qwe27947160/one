@@ -14,12 +14,10 @@ class Xadmin extends Controller{
 	public function _initialize() {
 		if (Session::get('time') < time()) {
 			$this->redirect('/user/login');
-		} else {
-			$this->redirect('/user/admin');
-		}
+		} 
 	}
 
-	public function index() {
+	public function validation() {
 		$user = input('post.user');
 		$pass = input('post.pass');
 		$user = User_msg::get_user($user);
