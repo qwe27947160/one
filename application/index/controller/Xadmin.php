@@ -15,7 +15,7 @@ class Xadmin extends Controller{
 		
 		try {
 			$user = User_msg::where(['username' => $user])->find();
-			if($user == 'NULL') {
+			if($user == '') {
 				echo json_encode(array('rs' => '帐号错误'));
 			} else if ($user->getData()['password'] != $pass) {
 				echo json_encode(array('rs' => '密码错误'));
