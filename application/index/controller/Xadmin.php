@@ -14,17 +14,14 @@ class Xadmin extends Controller{
 		$pass = input('post.pass');
 		
 		try {
-			//$userModel = (new User_msg) -> loginQuery(['username' => $user]) -> getData();
 			$user = User_msg::where(['username' => $user])->find();
-			var_dump($user);
-			/*
-			if(!$user) {
+			if($user == 'NULL') {
 				echo json_encode(array('rs' => '帐号错误'));
-			} else if ($user->password != $pass) {
+			} else if ($user->getData()['password'] != $pass) {
 				echo json_encode(array('rs' => '密码错误'));
 			} else {
 				echo json_encode(array('rs' => 'OK'));
-			}*/
+			}
 		} catch(\Exception $e) {
 			echo $e;
 		}
