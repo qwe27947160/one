@@ -11,7 +11,7 @@ class Xadmin extends Controller{
 	public function index() {
 		$user = input('post.user');
 		$pass = input('post.pass');
-		$userModel = (new User_msg) -> loginQuery(['username' => $user]);
+		$userModel = (new User_msg) -> loginQuery(['username' => $user]) -> getData();
 		var_dump($userModel);
 		
 		/*
