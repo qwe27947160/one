@@ -7,7 +7,7 @@ use \think\Config;
 use think\Controller;
 use think\Session;
 use app\index\model\User_msg;
-
+use app\index\model\Loginmsg;
 
 class Xadmin extends Controller{
 	protected $beforeActionList = [
@@ -32,12 +32,11 @@ class Xadmin extends Controller{
 		} else if ($user->password != md5($pass)) {
 			echo json_encode(array('code' => '0', 'rs' => '密码错误'));
 		} else {
+			//写入登录人信息
 			$request = Request::instance();
-			print_r($request->ip());
-			print_r($request->header('user-agent'));
-			print_r(time());
-
-			/*
+			$loginMsg = new Loginmsg(['uesr' => $user, 'ip' => $request->ip(), 'ua' => $request->header('user-agent'), 'time' => time()]);
+			$loginMsg -> save();
+			//返回前端 让前端重定义url
 			Session::set('time', time() + 900);
 			echo json_encode(array('code' => '1', 'rs' => '登录成功'));*/
 		}
