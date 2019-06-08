@@ -13,9 +13,9 @@ class Xadmin extends Controller{
 
 	public function _initialize() {
 		if (Session::get('time') < time()) {
-			$this->redirect('/user/admin','请先登录后操作');
+			$this->redirect('/user/login','请先登录后操作');
 		} else {
-			$this->redirect('/user/login');
+			$this->redirect('/user/admin');
 		}
 	}
 
@@ -30,7 +30,7 @@ class Xadmin extends Controller{
 			echo json_encode(array('rs' => '密码错误', 'code' => '0'));
 		} else {
 			Session::set('time', time() . 3600);
-			echo json_encode(array('rs' => '登录成功', 'code' => '1'));
+			$this->redirect('/user/admin');
 		}
 	}
 
