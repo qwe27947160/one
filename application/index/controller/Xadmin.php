@@ -12,7 +12,7 @@ use app\index\model\User_msg;
 class Xadmin extends Controller{
 	
 	public function _initialize() {
-		echo(__ACTION__ );
+		echo(Request::instance()->action());
 		return;
 		if (Session::get('time') < time()) {
 			$this->redirect('/user/login');
