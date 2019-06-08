@@ -17,7 +17,9 @@ class Xadmin extends Controller{
 		//if( request()->action() == 'validation' ) return;
 		if (Session::get('time') < time()) {
 			$this->redirect('/user/login');
+			return;
 		} 
+		Session::set('time', time() + 900);
 	}
 
 	public function validation() {
@@ -30,12 +32,16 @@ class Xadmin extends Controller{
 		} else if ($user->password != md5($pass)) {
 			echo json_encode(array('code' => '0', 'rs' => '密码错误'));
 		} else {
-			Session::set('time', time() + 300);
-			echo json_encode(array('code' => '1', 'rs' => '登录成功'));
+			$request = request();
+			print_r($request);
+			/*
+			Session::set('time', time() + 900);
+			echo json_encode(array('code' => '1', 'rs' => '登录成功'));*/
 		}
 	}
 
 	public function userAdmin() {
+		
 		echo (new View) -> fetch('/X-admin/index');
 	}
 }
