@@ -25,9 +25,9 @@ class Xadmin extends Controller{
 		$user = User_msg::get_user($user);
 		//print_r($user);
 		if(!$user) {
-			echo json_encode(array('rs' => '帐号错误', 'code' => '0'));
+			echo json_encode(array('rs' => '帐号错误'));
 		} else if ($user->password != md5($pass)) {
-			echo json_encode(array('rs' => '密码错误', 'code' => '0'));
+			echo json_encode(array('rs' => '密码错误'));
 		} else {
 			Session::set('time', time() . 3600);
 			$this->redirect('/user/admin');

@@ -60,9 +60,7 @@
 </div>
 </body>
 <script type="text/javascript" charset="utf-8">
-	function jumppage(){
-		location.href="/user/admin";
-	}
+	
 
 	layui.config({
 			base: '/static/layui/layui_exts/'
@@ -102,14 +100,7 @@
 							pass:$('#pass').val(),
 						},
 						success:function(data){
-							switch (data.code) {
-								case '0':
-								layer.msg(data.rs);
-								break;
-
-								case '1':
-								layer.msg(data.rs,{offset: '140px',time:2000,end:jumppage});
-							}
+							layer.msg(data.rs);
 						}
 					});
 				}
