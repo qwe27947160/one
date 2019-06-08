@@ -11,10 +11,13 @@ class Xadmin extends Controller{
 	public function index() {
 		$user = input('post.user');
 		$pass = input('post.pass');
-		$userModel = new User_msg;
-		if(!$userModel -> loginquery(['username' => $user])) {
+		$userModel = (new User_msg) -> loginquery(['username' => $user]);
+		var_dump($userModel);
+		return;
+
+		if(!) {
 			echo json_encode(array('rs' => '帐号错误'));
-		} else if (!$userModel -> loginquery(['password' => md5($pass)])) {
+		} else if (!) {
 			echo json_encode(array('rs' => '密码错误'));
 		} else {
 			echo json_encode(array('rs' => 'OK'));
