@@ -25,8 +25,7 @@ class Xadmin extends Controller{
 	public function validation() {
 		$user = input('post.user');
 		$pass = input('post.pass');
-
-		//var_dump(Loginmsg::where(['user' => $user ,'state' => 1,'time' => ['>','TIMESTAMPADD(MINUTE,-30,CURRENT_TIMESTAMP())']]));
+		//(判断密码错误30分钟内超过3次，禁止继续登录)
 		if(Loginmsg::where(['user' => $user ,'state' => 1,'time' => ['exp','> TIMESTAMPADD(MINUTE,-30,CURRENT_TIMESTAMP())']]) -> count() > 3){
 			echo json_encode(array('code' => '0', 'rs' => '此账号密码30分钟内错误3次，禁止登录'));
 			return;
