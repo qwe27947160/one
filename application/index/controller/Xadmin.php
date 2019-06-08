@@ -13,7 +13,7 @@ class Xadmin extends Controller{
 		$user = input('post.user');
 		$pass = input('post.pass');
 	
-		try {
+		
 			$user = User_msg::Query(['username' => $user]);
 			print_r($user);
 			if($user->username == '') {
@@ -23,8 +23,6 @@ class Xadmin extends Controller{
 			} else {
 				echo json_encode(array('rs' => 'OK'));
 			}
-		} catch(\Exception $e) {
-			echo $e;
-		}
+		
 	}
 }
