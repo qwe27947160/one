@@ -33,7 +33,7 @@ class Xadmin extends Controller{
 			echo json_encode(array('code' => '0', 'rs' => '密码错误'));
 		} else {
 			$request = Request::instance();
-			print_r($request);
+			print_r($request->ip());
 			/*
 			Session::set('time', time() + 900);
 			echo json_encode(array('code' => '1', 'rs' => '登录成功'));*/
