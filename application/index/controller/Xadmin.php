@@ -5,12 +5,14 @@ use think\View;
 use \think\Request;
 use \think\Config;
 use think\Controller;
+use app\index\model\User_msg;
 
 class Xadmin extends Controller{
 	public function index() {
 		$user = input('post.user');
 		$pass = input('post.pass');
-		if(!Db::table('user_msg') -> where('username', $user) -> find()) {
+		$userModel = new User_msg;
+		if(!$userModel -> loginquery(['username' => $user])) {
 			echo json_encode(array('rs' => '帐号错误'));
 		} else if (!Db::table('user_msg') -> where('password', md5($pass)) -> find()) {
 			echo json_encode(array('rs' => '密码错误'));
