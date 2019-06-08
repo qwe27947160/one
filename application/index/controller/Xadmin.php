@@ -15,7 +15,7 @@ class Xadmin extends Controller{
 		if (Session::get('time') < time()) {
 			
 		} else {
-			$this->error('请先登录','/user/login');
+			$this->error('请先登录', url('/user/login'));
 		}
 	}
 
@@ -30,7 +30,7 @@ class Xadmin extends Controller{
 			echo json_encode(array('rs' => '密码错误'));
 		} else {
 			Session::set('time', time() . 3600);
-			$this->success('登录成功','/user/admin');
+			$this->success('登录成功', url('/user/admin'));
 		}
 	}
 
