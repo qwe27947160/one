@@ -47,5 +47,5 @@ Route::rule('/allmobilecomic', 'index/LoadView/allmobilecomic');
 Route::rule('/allMobileVideo', 'index/LoadView/allMobileVideo');
 
 /**********************usermanagement*****************************/
-Route::rule('/user/management', 'index/Xadmin/index');
+Route::rule('/user/management', 'index/Xadmin/validation');
 Route::rule('/user/admin', 'index/Xadmin/userAdmin');
