@@ -25,7 +25,7 @@ class Ni
     }
 
     public function index() {
-        first();
+        $this->first();
         $host = $_SERVER['HTTP_HOST'];
         preg_match('/(.*\.)?\w+\.\w+$/', $host, $matches);
     	$view = new View();
