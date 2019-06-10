@@ -14,9 +14,8 @@ class Ni
     protected $beforeActionList = [
         'first'
     ];
-    
+
     protected function first() {
-        echo 11111;
         if (!Session::get('uesrName')) {
             think\View::share('islogin',0);
             return;
@@ -26,7 +25,7 @@ class Ni
     }
 
     public function index() {
-        echo 444;
+        first();
         $host = $_SERVER['HTTP_HOST'];
         preg_match('/(.*\.)?\w+\.\w+$/', $host, $matches);
     	$view = new View();
