@@ -5,6 +5,7 @@ use app\index\model\Chapter;
 use app\index\model\Animationscover;
 use app\index\model\Animationsdir;
 use app\index\model\Animationspath;
+use \think\Controller;
 use \think\Db;
 use \think\View;
 use \think\Request;
