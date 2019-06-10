@@ -18,6 +18,7 @@ class Ni extends Controller
     ];
 
     protected function first() {
+        echo Session::get('userName');
         if (!Session::get('userName')) {
             \think\View::share('islogin',0);
             return;
@@ -27,7 +28,7 @@ class Ni extends Controller
     }
 
     public function index() {
-        echo Session::get('userName');
+
         //$this->first();
         $host = $_SERVER['HTTP_HOST'];
         preg_match('/(.*\.)?\w+\.\w+$/', $host, $matches);
