@@ -15,13 +15,13 @@
 					</ul>
 				</div>
 				<div class="loginBox">
-				<?php if($islogin == 0): ?>
+				{if islogin == 0 }
 					<a class="logBtn" href="/user/login">登录</a>
 					<span></span>
 					<a class="regBtn" href="/user/register">注册</a>
-				<?php else: ?>
+				{else /}
 					<a class="regBtn" href="/user/admin">{$username}</a>
-				<?php endif; ?>	
+				{/if}	
 				</div>
 			</div>
 		</div>
