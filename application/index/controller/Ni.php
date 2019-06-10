@@ -18,6 +18,7 @@ class Ni extends Controller
     ];
 
     protected function first() {
+        echo Session::get('uesrName');
         if (!Session::get('uesrName')) {
             \think\View::share('islogin',0);
             return;
