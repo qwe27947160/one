@@ -9,6 +9,7 @@ use think\Db;
 use think\View;
 use \think\Request;
 use \think\Config;
+use think\Session;
 class Ni 
 {
     protected $beforeActionList = [
