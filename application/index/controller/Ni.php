@@ -5,11 +5,11 @@ use app\index\model\Chapter;
 use app\index\model\Animationscover;
 use app\index\model\Animationsdir;
 use app\index\model\Animationspath;
-use think\Db;
-use think\View;
+use \think\Db;
+use \think\View;
 use \think\Request;
 use \think\Config;
-use think\Session;
+use \think\Session;
 class Ni 
 {
     protected $beforeActionList = [
@@ -26,7 +26,7 @@ class Ni
     }
 
     public function index() {
-        $this->first();
+        //$this->first();
         $host = $_SERVER['HTTP_HOST'];
         preg_match('/(.*\.)?\w+\.\w+$/', $host, $matches);
     	$view = new View();

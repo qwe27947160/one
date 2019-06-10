@@ -1,11 +1,11 @@
 <?php
 namespace app\index\controller;
-use think\Db;
-use think\View;
+use \think\Db;
+use \think\View;
 use \think\Request;
 use \think\Config;
-use think\Controller;
-use think\Session;
+use \think\Controller;
+use \think\Session;
 use app\index\model\User_msg;
 use app\index\model\Loginmsg;
 
