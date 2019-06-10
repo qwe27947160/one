@@ -27,7 +27,7 @@ class Ni extends Controller
     }
 
     public function index() {
-        echo Session::get('userName')
+        echo Session::get('userName');
         //$this->first();
         $host = $_SERVER['HTTP_HOST'];
         preg_match('/(.*\.)?\w+\.\w+$/', $host, $matches);
