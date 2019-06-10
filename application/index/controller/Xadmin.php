@@ -11,9 +11,9 @@ use app\index\model\Loginmsg;
 
 class Xadmin extends Controller{
 	protected $beforeActionList = [
-        'aaabbb' =>  ['except'=>'validation']
+        'first' =>  ['except'=>'validation']
     ];
-	public function aaabbb() {
+	public function first() {
 		//if( request()->action() == 'validation' ) return;
 		if (Session::get('time') < time()) {
 			$this->redirect('/user/login');
@@ -46,6 +46,7 @@ class Xadmin extends Controller{
 			$loginMsg -> state = 2;
 			//返回前端 让前端重定义url
 			Session::set('time', time() + 900);
+			Session::set('userName', $user);
 			echo json_encode(array('code' => '1', 'rs' => '登录成功'));
 		}
 		$loginMsg -> save($userMsg);

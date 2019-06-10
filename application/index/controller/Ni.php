@@ -11,6 +11,18 @@ use \think\Request;
 use \think\Config;
 class Ni 
 {
+    protected $beforeActionList = [
+        'first'
+    ];
+    public function first() {
+        if (!Session::get('uesrName')) {
+            think\View::share('IsLogin',0);
+            
+        } 
+        Session::set('time', time() + 900);
+        think\View::share('IsLogin',1);
+    }
+
     public function index() {
         $host = $_SERVER['HTTP_HOST'];
         preg_match('/(.*\.)?\w+\.\w+$/', $host, $matches);
