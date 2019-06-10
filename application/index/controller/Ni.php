@@ -10,7 +10,7 @@ use \think\View;
 use \think\Request;
 use \think\Config;
 use \think\Session;
-class Ni 
+class Ni extends Controller
 {
     protected $beforeActionList = [
         'first'
