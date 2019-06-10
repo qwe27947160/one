@@ -18,11 +18,11 @@ class Ni
 
     protected function first() {
         if (!Session::get('uesrName')) {
-            think\View::share('islogin',0);
+            \think\View::share('islogin',0);
             return;
         } 
         Session::set('time', time() + 900);
-        think\View::share('islogin',1);
+        \think\View::share('islogin',1);
     }
 
     public function index() {
