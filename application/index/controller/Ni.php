@@ -15,6 +15,7 @@ class Ni
         'first'
     ];
     public function first() {
+        echo 11111;
         if (!Session::get('uesrName')) {
             think\View::share('islogin',0);
             return;
