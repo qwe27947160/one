@@ -16,11 +16,11 @@ class Ni
     ];
     public function first() {
         if (!Session::get('uesrName')) {
-            think\View::share('IsLogin',0);
+            think\View::share('islogin',0);
             return;
         } 
         Session::set('time', time() + 900);
-        think\View::share('IsLogin',1);
+        think\View::share('islogin',1);
     }
 
     public function index() {
