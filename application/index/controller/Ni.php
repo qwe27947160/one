@@ -23,7 +23,7 @@ class Ni extends Controller
             return;
         } 
         Session::set('time', time() + 900);
-        \think\View::share('islogin',1);
+        \think\View::share(['islogin' => 1, 'userName' => Session::get('userName')]);
     }
 
     public function index() {

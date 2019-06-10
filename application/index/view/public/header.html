@@ -14,14 +14,14 @@
 						</li>
 					</ul>
 				</div>
-				<?php if($islogin == 0): ?>
 				<div class="loginBox">
+				<?php if($islogin == 0): ?>
 					<a class="logBtn" href="/user/login">登录</a>
 					<span></span>
 					<a class="regBtn" href="/user/register">注册</a>
-				</div>
 				<?php endif; ?>
-
+					<a class="regBtn" href="/user/register">{$userName}</a>
+				</div>
 			</div>
 		</div>
 	</div>
