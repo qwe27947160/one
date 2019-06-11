@@ -53,7 +53,12 @@ class Xadmin extends Controller{
 	}
 
 	public function userAdmin() {
-		
-		echo (new View) -> fetch('/X-admin/index');
+		echo (new View) -> fetch('/X-admin/index',['userName' => Session::get('userName')]);
+	}
+
+	public function exit() {
+		Session::delete('time');
+		Session::delete('userName');
+		$this->redirect('/');
 	}
 }

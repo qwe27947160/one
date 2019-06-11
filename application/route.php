@@ -49,3 +49,4 @@ Route::rule('/allMobileVideo', 'index/LoadView/allMobileVideo');
 /**********************usermanagement*****************************/
 Route::rule('/user/management', 'index/Xadmin/validation');
 Route::rule('/user/admin', 'index/Xadmin/userAdmin');
+Route::rule('user/exit', 'index/Xadmin/exit');
