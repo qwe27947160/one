@@ -144,16 +144,6 @@ ul{
 	width: 200px;
 }
 
-@media (max-width: 1000px){
-	#header{
-		background-position: center;
-		height: 150px;
-	}
-
-	.header_nav .menu_home>a{
-		font-size: 0.28rem;
-	}
-}
 
 .userHead{
 	width: 40px;
