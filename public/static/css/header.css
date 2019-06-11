@@ -145,13 +145,13 @@ ul{
 	width: 200px;
 }
 
-.userButton {
+.userButton img{
 	width: 40px;
 	height: 40px;
 	border-radius: 100px;
 }
 
-.userButton img{
+.userBox {
 	float: right;
 	line-height: 42px;
 }
