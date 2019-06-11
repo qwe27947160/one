@@ -20,8 +20,9 @@
 					<span></span>
 					<a class="regBtn" href="/user/register">注册</a>
 				{else /}
-					<a class="regBtn" href="/user/admin">{$username}
-						<img src="/static/imgs/header/userHead.gif">
+					<a class="regBtn" href="/user/admin">
+						<img class='userHead' src="/static/imgs/header/userHead.gif">
+						<span>{$username}</span>
 					</a>
 				{/if}	
 				</div>
