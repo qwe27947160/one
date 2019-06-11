@@ -151,4 +151,9 @@ ul{
 	border-radius: 100px;
 }
 
+.userBox{
+	float: right;
+	line-height: 42px;
+}
+
 
