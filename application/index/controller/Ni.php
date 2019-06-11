@@ -21,7 +21,8 @@ class Ni extends Controller
         if (!Session::get('userName')) {
             \think\View::share('islogin',0);
         } else {
-            Session::set('time', time() + 900);
+            //Session::set('time', time() + 900);
+            Session::set('time', time() + 3);
             \think\View::share(['islogin' => 1, 'username' => Session::get('userName')]);
         }
     }

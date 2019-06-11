@@ -85,11 +85,7 @@ ul{
 
 }
 
-.regBtn {
-	width: 40px;
-	height: 40px;
-	border-radius: 100px;
-}
+
 
 .loginBox a:hover{
 	color: #fff;
@@ -148,6 +144,12 @@ ul{
 
 #regPass2{
 	width: 200px;
+}
+
+.regBtn {
+	width: 40px;
+	height: 40px;
+	border-radius: 100px;
 }
 
 
