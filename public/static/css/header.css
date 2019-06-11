@@ -76,13 +76,12 @@ ul{
 	line-height: 42px;
 }
 
-.loginBox a{
+.logBtn, .regBtn{
 	color: #fff;
 	font-size: 12px;
 	display: inline-block;
 	text-align: center;
 	width: 50px;
-
 }
 
 
