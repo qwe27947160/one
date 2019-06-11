@@ -154,6 +154,7 @@ ul{
 .userBox {
 	float: right;
 	line-height: 42px;
+	margin-right: 20px;
 }
 
 .userButton span{
