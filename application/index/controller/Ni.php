@@ -5,6 +5,7 @@ use app\index\model\Chapter;
 use app\index\model\Animationscover;
 use app\index\model\Animationsdir;
 use app\index\model\Animationspath;
+use app\index\model\Watch_record;
 use \think\Controller;
 use \think\Db;
 use \think\View;
@@ -91,7 +92,13 @@ class Ni extends Controller
     }
 
     public function load_page($comicid ,$pagenum) {
-    	return view('comic/page',['comicid' => $comicid ,'pagenum' => $pagenum]);
+        if (!Session::get('userName')) {
+            $userRecord = array('status' => 1, 'user_name' => Session::get('userName'), 'comic_cover' => $comicid, 'comic_chapter' => $pagenum);
+            $record =  new Watch_record();
+            $record -> save($userRecord);
+        } else {
+            return view('comic/page',['comicid' => $comicid ,'pagenum' => $pagenum]);
+        }
     }
 
     public function query_page(){
