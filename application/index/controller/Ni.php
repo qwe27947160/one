@@ -96,9 +96,8 @@ class Ni extends Controller
             $userRecord = array('status' => 1, 'user_name' => Session::get('userName'), 'comic_cover' => $comicid, 'comic_chapter' => $pagenum);
             $record =  new Watch_record();
             $record -> save($userRecord);
-        } else {
-            return view('comic/page',['comicid' => $comicid ,'pagenum' => $pagenum]);
-        }
+        } 
+        return view('comic/page',['comicid' => $comicid ,'pagenum' => $pagenum]);
     }
 
     public function query_page(){
