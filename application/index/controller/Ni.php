@@ -93,7 +93,7 @@ class Ni extends Controller
 
     public function load_page($comicid ,$pagenum) {
         if (Session::get('userName')) {
-            $userRecord = array('status' => 1, 'user_name' => Session::get('userName'), 'comic_cover' => $comicid, 'comic_chapter' => $pagenum);
+            $userRecord = array('status' => 1, 'user_name' => Session::get('userName'), 'cover' => $comicid, 'chapter' => $pagenum);
             $record =  new Watch_record();
             $record -> save($userRecord);
         } 
@@ -178,6 +178,11 @@ class Ni extends Controller
     }
 
     public function load_vpath($cvdirid ,$dirbluesid){
+        if (Session::get('userName')) {
+            $userRecord = array('status' => 2, 'user_name' => Session::get('userName'), 'cover' => $cvdirid, 'chapter' => $dirbluesid);
+            $record =  new Watch_record();
+            $record -> save($userRecord);
+        } 
     	$query_bg = (new animationscover) -> where('ID' ,$cvdirid) -> field('title') -> find();
     	$map = array('cvdirid' => $cvdirid, 'dirbluesid' => $dirbluesid);
     	$query_src = (new animationsdir) -> where($map) ->field('videopath') -> find();
