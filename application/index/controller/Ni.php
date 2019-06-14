@@ -92,7 +92,7 @@ class Ni extends Controller
     }
 
     public function load_page($comicid ,$pagenum) {
-        if (!Session::get('userName')) {
+        if (Session::get('userName')) {
             $userRecord = array('status' => 1, 'user_name' => Session::get('userName'), 'comic_cover' => $comicid, 'comic_chapter' => $pagenum);
             $record =  new Watch_record();
             $record -> save($userRecord);
