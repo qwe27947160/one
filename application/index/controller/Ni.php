@@ -92,6 +92,7 @@ class Ni extends Controller
     }
 
     public function load_page($comicid ,$pagenum) {
+        //写入漫画观看记录
         if (Session::get('userName')) {
             $userRecord = array('status' => 1, 'user_name' => Session::get('userName'), 'cover' => $comicid, 'chapter' => $pagenum);
             $record =  new Watch_record();
@@ -178,6 +179,7 @@ class Ni extends Controller
     }
 
     public function load_vpath($cvdirid ,$dirbluesid){
+        //写入视频观看记录
         if (Session::get('userName')) {
             $userRecord = array('status' => 2, 'user_name' => Session::get('userName'), 'cover' => $cvdirid, 'chapter' => $dirbluesid);
             $record =  new Watch_record();
