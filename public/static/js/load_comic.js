@@ -44,8 +44,8 @@ function load_chapter($name){
 			}
 			console.log(rsdata.chapterData[1].pagenum);
 			*/
-			for (var x=0; x<rsdata.chapterData; x++) { 
-				console('1');
+			
+			for (var x=0; x<rsdata.chapterData.length; x++) { 
 				var cp_na = rsdata[x].pn;
 				var a = $("<a href = /page/" + rsdata[x].id +"/"+ rsdata[x].pagenum + " target=_blank>"+ cp_na +"</a>");
 				var li = $("<li></li>")
