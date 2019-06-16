@@ -97,11 +97,6 @@ class Ni extends Controller
         $L['chapterData'] = array();
         foreach($query_chapter as $data){
             $data = $data -> getData();
-            /*
-            $chapterData["id"] = $data["ComicChapter"];
-            $chapterData["pagenum"] = $data["ChapterPage"];
-            $chapterData["pn"] = $data["ChapterName"];
-            */
             array_push($L['chapterData'], array("id" => $data["ComicChapter"], "pagenum" => $data["ChapterPage"], "pn" => $data["ChapterName"]));
         }
         echo json_encode($L);
