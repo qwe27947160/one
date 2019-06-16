@@ -83,9 +83,8 @@ class Ni extends Controller
         $query_chapter = (new Comic) -> LoadChapter($map)  -> order('ChapterName') ->select();
         //观看记录查询
         if(Session::get('userName')) {
-            $map1 = array('status' => 1, 'user_name' => Session::get('userName'), 'cover' => $query_comic->getData('ComicChapter'));
-            $queryRecord = (new Watch_record) -> where($map1) -> order('id DESC') -> find();
-            var_dump($queryRecord -> data);
+            $queryRecord = (new Watch_record) -> where(['status' => 1, 'user_name' => Session::get('userName'), 'cover' => $query_comic->getData('ComicChapter')]) -> order('id DESC') -> find();
+            var_dump($queryRecord);
             if(!$queryRecord){
 
             }
