@@ -4,10 +4,23 @@ use think\View;
 use think\Db;
 use \think\Request;
 use \think\Config;
-
-
+use \think\Session;
+use \think\Request;
 
 class LoadView {
+	protected $beforeActionList = [
+        'first'
+    ];
+
+    protected function first() {
+        if (!Session::get('userName')) {
+            \think\View::share('islogin',0);
+        } else {
+            Session::set('time', time() + 900);
+            \think\View::share(['islogin' => 1, 'username' => Session::get('userName')]);
+        }
+    }
+    
 	public function forgetpwd(){
         echo (new View()) -> fetch('user/forgetpwd');
 	}
