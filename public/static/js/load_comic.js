@@ -46,8 +46,8 @@ function load_chapter($name){
 			*/
 			
 			for (var x=0; x<rsdata.chapterData.length; x++) { 
-				var cp_na = rsdata[x].pn;
-				var a = $("<a href = /page/" + rsdata[x].id +"/"+ rsdata[x].pagenum + " target=_blank>"+ cp_na +"</a>");
+				var cp_na = rsdata.chapterData[x].pn;
+				var a = $("<a href = /page/" + rsdata.chapterData[x].id +"/"+ rsdata.chapterData[x].pagenum + " target=_blank>"+ cp_na +"</a>");
 				var li = $("<li></li>")
 				li.append(a);
 				$("#add_chapter").children("ul").append(li);
