@@ -99,7 +99,7 @@ class Ni extends Controller
             $chapterData["id"] = $data["ComicChapter"];
             $chapterData["pagenum"] = $data["ChapterPage"];
             $chapterData["pn"] = $data["ChapterName"];
-            array_push($L['chapterData'], $chapterData;
+            array_push($L['chapterData'], $chapterData);
         }
         echo json_encode($L);
     }
