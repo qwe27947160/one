@@ -77,7 +77,14 @@ class Ni extends Controller
     }    
 
     public function query_chapter() {
-        $Qychapter = isset($_POST['qy'])? $_POST['qy'] : ''; 
+        $Qychapter = isset($_POST['qy'])? $_POST['qy'] : '';
+        //观看记录查询
+        if(Session::get('userName')) {
+            $map = array('status' => 1, 'user_name' => Session::get('userName'), 'cover' => $Qychapter);
+            $queryRecord = (new Watch_record) -> where($map) -> order('id DESC') -> find();
+            var_dump($queryRecord); 
+        }
+        //获取所有章节
         $query_comic = (new Comic) -> where('urlname',$Qychapter) ->field('ComicChapter') ->find();
         $map['ComicChapter'] = $query_comic->getData('ComicChapter');
         $query_chapter = (new Comic) -> LoadChapter($map)  -> order('ChapterName') ->select();
@@ -213,7 +220,7 @@ class Ni extends Controller
         $SearchResult =  (new Animationscover)->where($where)->select();
         $h5_statements = ' ';
         $Serch_Msg = ' ';
-    	if(empty($SearchResult)){
+    	if(empty($SearchResult)) {
     		$RandResult = (new Animationscover) -> order('rand()') -> limit(1) -> select();
     		foreach ($RandResult as $data) {
                 $data = $data -> getData();
