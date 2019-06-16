@@ -78,23 +78,20 @@ class Ni extends Controller
 
     public function query_chapter() {
         $Qychapter = isset($_POST['qy'])? $_POST['qy'] : '';
-        var_dump($Qychapter);
+        $query_comic = (new Comic) -> where('urlname',$Qychapter) ->field('ComicChapter') ->find();
+        $map['ComicChapter'] = $query_comic->getData('ComicChapter');
+        $query_chapter = (new Comic) -> LoadChapter($map)  -> order('ChapterName') ->select();
         //观看记录查询
         if(Session::get('userName')) {
-            $map1 = array('status' => 1, 'user_name' => Session::get('userName'), 'cover' => $Qychapter);
+            $map1 = array('status' => 1, 'user_name' => Session::get('userName'), 'cover' => $query_comic->getData('ComicChapter'));
             $queryRecord = (new Watch_record) -> where($map1) -> order('id DESC') -> find();
             var_dump($queryRecord);
             if(!$queryRecord){
 
             }
         }
-     
         //获取所有章节
-        $query_comic = (new Comic) -> where('urlname',$Qychapter) ->field('ComicChapter') ->find();
-        $map['ComicChapter'] = $query_comic->getData('ComicChapter');
-        $query_chapter = (new Comic) -> LoadChapter($map)  -> order('ChapterName') ->select();
         $L = array();
-     
         foreach($query_chapter as $data){
             $data = $data -> getData();
             array_push($L,array("id" => $data["ComicChapter"] ,"pagenum" => $data["ChapterPage"] ,"pn" => $data["ChapterName"]));
