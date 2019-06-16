@@ -41,7 +41,7 @@ function load_chapter($name){
 			if (rsdata.hasOwnProperty('popStatus')) {
 				
 			}
-			console.log(rsdata.chapterData);
+			console.log(rsdata.chapterData[1]);
 			for(var x=0; x<rsdata.chapterData; x++){
 				var cp_na = rsdata[x].pn;
 				var a = $("<a href = /page/" + rsdata[x].id +"/"+ rsdata[x].pagenum + " target=_blank>"+ cp_na +"</a>");
