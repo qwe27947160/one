@@ -80,8 +80,8 @@ class Ni extends Controller
         $Qychapter = isset($_POST['qy'])? $_POST['qy'] : '';
         //观看记录查询
         if(Session::get('userName')) {
-            $map = array('status' => 1, 'user_name' => Session::get('userName'), 'cover' => $Qychapter);
-            $queryRecord = (new Watch_record) -> where($map) -> order('id DESC') -> find();
+            $map1 = array('status' => 1, 'user_name' => Session::get('userName'), 'cover' => $Qychapter);
+            $queryRecord = (new Watch_record) -> where($map1) -> order('id DESC') -> find();
             var_dump($queryRecord); 
         }
         //获取所有章节
