@@ -37,19 +37,14 @@ function load_chapter($name){
 		type:'POST',
 		dataType:"json",
 		data:{qy:$name},
-		success:function(rsdata){
-			/*
+		success:function(rsdata) {
+			//上次观看记录弹窗
 			if (rsdata.hasOwnProperty('popStatus')) {
 				
 			}
-			console.log(rsdata.chapterData[1].pagenum);
-			*/
-			
-			for (var x=0; x<rsdata.chapterData.length; x++) { 
-				var cp_na = rsdata.chapterData[x].pn;
-				var a = $("<a href = /page/" + rsdata.chapterData[x].id +"/"+ rsdata.chapterData[x].pagenum + " target=_blank>"+ cp_na +"</a>");
-				var li = $("<li></li>")
-				li.append(a);
+			//加载章节
+			for (var x=0; x<rsdata.chapterData.length; x++) {
+				var li = $("<li><a href = /page/" + rsdata.chapterData[x].id + "/" + rsdata.chapterData[x].pagenum + " target=_blank>" + rsdata.chapterData[x].pn + "</a></li>");
 				$("#add_chapter").children("ul").append(li);
 			}
 		}
