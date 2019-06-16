@@ -84,7 +84,7 @@ class Ni extends Controller
         //观看记录查询
         if(Session::get('userName')) {
             $queryRecord = (new Watch_record) -> where(['status' => 1, 'user_name' => Session::get('userName'), 'cover' => $query_comic->getData('ComicChapter')]) -> order('id DESC') -> find();
-            var_dump($queryRecord -> data);
+            var_dump($queryRecord -> data());
             if(!$queryRecord){
 
             }
