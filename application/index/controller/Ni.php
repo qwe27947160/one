@@ -96,7 +96,10 @@ class Ni extends Controller
         //获取所有章节
         foreach($query_chapter as $data){
             $data = $data -> getData();
-            array_push($L['chapterData'],array($chapterData["id"] => $data["ComicChapter"] , $chapterData["pagenum"] => $data["ChapterPage"] , $chapterData["pn"] => $data["ChapterName"]));
+            $chapterData["id"] = $data["ComicChapter"];
+            $chapterData["pagenum"] = $data["ChapterPage"];
+            $chapterData["pn"] = $data["ChapterName"];
+            array_push($L['chapterData'], $chapterData;
         }
         echo json_encode($L);
     }
