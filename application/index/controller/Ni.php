@@ -81,21 +81,24 @@ class Ni extends Controller
         $query_comic = (new Comic) -> where('urlname',$Qychapter) ->field('ComicChapter') ->find();
         $map['ComicChapter'] = $query_comic->getData('ComicChapter');
         $query_chapter = (new Comic) -> LoadChapter($map)  -> order('ChapterName') ->select();
+        $L = array();
         //观看记录查询
         if(Session::get('userName')) {
             $queryRecord = (new Watch_record) -> where(['status' => 1, 'user_name' => Session::get('userName'), 'cover' => $query_comic->getData('ComicChapter')]) -> order('id DESC') -> find();
             if($queryRecord){
-                var_dump($queryRecord->getData());
+                $queryRecord = $queryRecord->getData();
+                $L['popStatus'] = '1';
+                $L['popData'] = array('cover' => $queryRecord['cover'], 'chapter' => $queryRecord['chapter']);
+            } else {
+                $L['popStatus'] = '0';
             }
         }
         //获取所有章节
-        $L = array();
         foreach($query_chapter as $data){
             $data = $data -> getData();
-            array_push($L,array("id" => $data["ComicChapter"] ,"pagenum" => $data["ChapterPage"] ,"pn" => $data["ChapterName"]));
+            array_push($L['chapterData'],array("id" => $data["ComicChapter"] ,"pagenum" => $data["ChapterPage"] ,"pn" => $data["ChapterName"]));
         }
         echo json_encode($L);
-        
     }
 
     public function load_page($comicid ,$pagenum) {
