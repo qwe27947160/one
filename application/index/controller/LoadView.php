@@ -5,7 +5,7 @@ use think\Db;
 use \think\Request;
 use \think\Config;
 use \think\Session;
-
+use \think\Controller;
 
 class LoadView extends Controller {
 	protected $beforeActionList = [
