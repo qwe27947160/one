@@ -38,10 +38,12 @@ function load_chapter($name){
 		dataType:"json",
 		data:{qy:$name},
 		success:function(rsdata){
+			/*
 			if (rsdata.hasOwnProperty('popStatus')) {
 				
 			}
 			console.log(rsdata.chapterData[1].pagenum);
+			*/
 			for(var x=0; x<rsdata.chapterData; x++){
 				var cp_na = rsdata[x].pn;
 				var a = $("<a href = /page/" + rsdata[x].id +"/"+ rsdata[x].pagenum + " target=_blank>"+ cp_na +"</a>");
