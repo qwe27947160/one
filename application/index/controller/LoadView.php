@@ -7,7 +7,7 @@ use \think\Config;
 use \think\Session;
 
 
-class LoadView {
+class LoadView extends Controller {
 	protected $beforeActionList = [
         'first'
     ];
