@@ -85,7 +85,7 @@ class Ni extends Controller
         if(Session::get('userName')) {
             $map1 = array('status' => 1, 'user_name' => Session::get('userName'), 'cover' => $query_comic->getData('ComicChapter'));
             $queryRecord = (new Watch_record) -> where($map1) -> order('id DESC') -> find();
-            var_dump($queryRecord -> data['user_name']);
+            var_dump($queryRecord -> data);
             if(!$queryRecord){
 
             }
