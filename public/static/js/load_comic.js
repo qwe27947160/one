@@ -114,7 +114,7 @@
 						$(this).children(".vdcvmask").css("opacity","1");
 					},function(){
 				    	$(this).children(".vdcvmask").css("opacity","0");
-					});
+					});;
 				}
 				$("img[data-original]").lazyload({effect: "fadeIn"});
 				$(document).pjax('a[data-pjax]', 'body',{timeout:5000,fragment:'body'});
