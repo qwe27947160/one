@@ -33,8 +33,11 @@
 					//上次观看记录弹窗
 					if (rsdata.hasOwnProperty('popStatus')) {
 						layer.open({
-							content:'需要跳转到上次观看地方吗',
-							btn: ['需要', '不需要']
+							content: '需要跳转到上次观看地方吗',
+							btn: ['需要', '不需要'],
+							yes: function(){
+								window.open('/page/' + rsdata.popData['cover'] + '/' + rsdata.popData['chapter']);
+							}
 						});
 					}
 					//加载章节
