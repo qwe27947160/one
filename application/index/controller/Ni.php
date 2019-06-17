@@ -89,9 +89,7 @@ class Ni extends Controller
                 $queryRecord = $queryRecord->getData();
                 $L['popStatus'] = '1';
                 $L['popData'] = array('cover' => $queryRecord['cover'], 'chapter' => $queryRecord['chapter']);
-            } else {
-                $L['popStatus'] = '0';
-            }
+            } 
         }
         //获取所有章节
         $L['chapterData'] = array();
