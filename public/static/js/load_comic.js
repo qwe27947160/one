@@ -93,7 +93,6 @@
 						},function(){
 					    	$(this).find(".vdcvmask").css("opacity","0");
 						});
-					
 					$("#vdcv").append(li);
 				}
 				$("img[data-original]").lazyload({effect: "fadeIn"});
@@ -101,8 +100,6 @@
 			}
 		});
 	}
-
-
 
 	function Ld_Vdir(associated){
 		$.ajax({
