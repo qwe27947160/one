@@ -113,7 +113,7 @@
 						$(this).children(".vdcvmask").css("opacity","1");
 						},function(){
 					    	$(this).children(".vdcvmask").css("opacity","0");
-						});
+						});;
 					$("#vdcv").append(li);
 				}
 				$("img[data-original]").lazyload({effect: "fadeIn"});
