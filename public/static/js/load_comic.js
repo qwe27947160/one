@@ -73,7 +73,7 @@
 					
 					$("#page_main").children("ul").append(li);
 				}
-				$("img[data-original]").lazyload({threshold:200});
+				$("img[data-original]").lazyload();
 			}
 		});
 	}
