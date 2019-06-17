@@ -56,7 +56,6 @@
 		var chnum = (window.location.toString().split('//')[1]).split('/')[2];
 		var nexturl = '/page/' + chnum +'/'+(parseInt(pgum)+1);
 		$("#mexta").attr("href",nexturl);
-
 		$.ajax({
 			url:"/load_page",
 			async:true,
@@ -88,6 +87,7 @@
 			dataType:"json",
 			success:function(rsdata){
 				for(var x=0; x<rsdata.length; x++){
+					/*
 					var li = $("<li class=vdcvli></li>");
 					var a1 = $("<a data-pjax href=\"" + rsdata[x].src + "\" title="+'"'+rsdata[x].ti+'"'+" target=_self class=vdcvimg></a>").hover(function(){
 						$(this).children(".vdcvmask").css("opacity","1");
@@ -108,7 +108,13 @@
 					div.append(p);
 					li.append(a1);
 					li.append(div);
-					$("#vdcv").append(li);
+					*/
+					var li = $('<li class="vdcvli"><a data-pjax="" href="' + rsdata[x].src +'" title="' + rsdata[x].ti + '" target="_self" class="vdcvimg"><img class="vdcvloading" data-original="' + rsdata[x].cv + '" alt="' + rsdata[x].ti + '" style="display: inline;"><span class="vdcvmask"><i class="glyphicon glyphicon-play-circle glyphiconL"></i></span></a><div class="vdcvinfo"><a data-pjax="" href="' + rsdata[x].src + '">' + rsdata[x].ti + '</a><p><span class="vdcvf1">' + rsdata[x].cotdir + '</span></p></div></li>');
+					$("#vdcv").append(li).hover(function(){
+						$(this).children(".vdcvmask").css("opacity","1");
+					},function(){
+				    	$(this).children(".vdcvmask").css("opacity","0");
+					});
 				}
 				$("img[data-original]").lazyload({effect: "fadeIn"});
 				$(document).pjax('a[data-pjax]', 'body',{timeout:5000,fragment:'body'});
