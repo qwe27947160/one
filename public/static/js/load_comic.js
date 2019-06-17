@@ -8,22 +8,7 @@
 			dataType:"json",
 			success:function(rsdata){
 				for(var x=0; x<rsdata.length; x++){
-					/*
-					var li = $("<li></li>");
-					var p = $("<p"+" class=cover"+"></p>")			
-					var a1 = $("<a data-pjax href = chapter/" + rsdata[x].cn + " class=pic></a>");
-					var a2 = $("<a data-pjax href = chapter/" + rsdata[x].cn + " class=pic2></a>");
-					var img = $("<img data-original=" + '"'+ rsdata[x].cv +'"'+ " alt= " + rsdata[x].ti +">");
-					var span = $("<span>" + rsdata[x].ti +"</span>");
-					li.append(a1);
-					a1.append(img);
-					li.append(p);
-					p.append(a2);
-					a2.append(span);
-					*/
-					var li = $('<li><a data-pjax href="chapter/' + rsdata[x].cn + '" class="pic"><img data-original="' + rsdata[x].cv + '" alt="' + 
-						rsdata[x].ti + '"></a><p class="cover"><a data-pjax href="chapter/' + rsdata[x].cn + '" class="pic2"><span>' + rsdata[x].ti + 
-						'</span></a></p></li>');
+					var li = $('<li><a data-pjax href="chapter/' + rsdata[x].cn + '" class="pic"><img data-original="' + rsdata[x].cv + '" alt="' + rsdata[x].ti + '"></a><p class="cover"><a data-pjax href="chapter/' + rsdata[x].cn + '" class="pic2"><span>' + rsdata[x].ti + '</span></a></p></li>');
 					$("#ccover").append(li);
 				}
 				//懒加载
