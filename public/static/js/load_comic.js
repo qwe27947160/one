@@ -22,7 +22,7 @@
 					a2.append(span);
 					*/
 					var li = $('<li><a data-pjax href="' + rsdata[x].cn + ' class="pic"><img data-original="' + rsdata[x].cv + 'alt="' + 
-						rsdata[x].ti + '></a><p class="cover"><a data-pjax href="chapter/' + rsdata[x].cn ' class="pic2"><span>' + rsdata[x].ti + 
+						rsdata[x].ti + '></a><p class="cover"><a data-pjax href="chapter/' + rsdata[x].cn + ' class="pic2"><span>' + rsdata[x].ti + 
 						'</span></a></p></li>');
 					$("#ccover").append(li);
 				}
