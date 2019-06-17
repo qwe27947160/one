@@ -69,11 +69,14 @@
 					alert("没有下一章拉");
 				}
 				for(var x=0; x<rsdata.length; x++){
+					/*
 					var img = $("<img width=1000 height=1200 data-original="+ '"' +rsdata[x].ad+ '"' + ">");
 					var li  = $("<li style=width:1000px;height:1200px;></li>");
 					var span = $("<span class=comic-sp>"+(x+1)+"/"+rsdata.length+"</span>");
 					li.append(img);
 					li.append(span);
+					*/
+					var li = $('<li style="width:1000px;height:1200px;"><img width="1000" height="1200" data-original="' + rsdata[x].ad + '"><span class="comic-sp">' + (x+1)+ "/" + rsdata.length + '</span></li>');
 					$("#page_main").children("ul").append(li);
 				}
 				$("img[data-original]").lazyload({threshold:200});
