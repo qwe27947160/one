@@ -69,11 +69,11 @@
 					alert("没有下一章拉");
 				}
 				for(var x=0; x<rsdata.length; x++){
-					var li = $('<li style="width:1000px;height:1200px;"><img class="lazy" width="1000" height="1200" data-original="' + rsdata[x].ad + '"><span class="comic-sp">' + (x+1)+ "/" + rsdata.length + '</span></li>');
+					var li = $('<li style="width:1000px;height:1200px;"><img width="1000" height="1200" data-original="' + rsdata[x].ad + '"><span class="comic-sp">' + (x+1)+ "/" + rsdata.length + '</span></li>');
 					
 					$("#page_main").children("ul").append(li);
 				}
-				$("img.lazy").lazyload({threshold:200});
+				$("img[data-original]").lazyload({threshold:200});
 			}
 		});
 	}
