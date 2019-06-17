@@ -1,3 +1,5 @@
+layui.use('layer', function(){
+	var layer = layui.layer;
 function load_comic(){
 	$("#ccover").empty();
 	$.ajax({
@@ -40,7 +42,10 @@ function load_chapter($name){
 		success:function(rsdata) {
 			//上次观看记录弹窗
 			if (rsdata.hasOwnProperty('popStatus')) {
-				
+				layer.open({
+					content:'需要跳转到上次观看地方吗',
+					btn: ['需要', '不需要']
+				});
 			}
 			//加载章节
 			for (var x=0; x<rsdata.chapterData.length; x++) {
@@ -136,4 +141,5 @@ function Ld_Vdir(associated){
 			}
 		}
 	});
-}	
+}
+}); 	
