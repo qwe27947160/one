@@ -112,9 +112,9 @@
 					
 					var li = $('<li class="vdcvli"><a data-pjax="" href="' + rsdata[x].src +'" title="' + rsdata[x].ti + '" target="_self" class="vdcvimg"><img class="vdcvloading" data-original="' + rsdata[x].cv + '" alt="' + rsdata[x].ti + '" style="display: inline;"><span class="vdcvmask"><i class="glyphicon glyphicon-play-circle glyphiconL"></i></span></a><div class="vdcvinfo"><a data-pjax="" href="' + rsdata[x].src + '">' + rsdata[x].ti + '</a><p><span class="vdcvf1">更新至' + rsdata[x].cotdir + '集</span></p></div></li>');
 					li.hover(function(){
-							$(".vdcvmask").css("opacity","1");
+							$(this).(".vdcvmask").css("opacity","1");
 						},function(){
-					    	$(".vdcvmask").css("opacity","0");
+					    	$(this).(".vdcvmask").css("opacity","0");
 						});
 					
 					$("#vdcv").append(li);
