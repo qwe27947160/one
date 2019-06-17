@@ -87,7 +87,7 @@
 			dataType:"json",
 			success:function(rsdata){
 				for(var x=0; x<rsdata.length; x++){
-					
+					/*
 					var li = $("<li class=vdcvli></li>");
 					var a1 = $("<a data-pjax href=\"" + rsdata[x].src + "\" title="+'"'+rsdata[x].ti+'"'+" target=_self class=vdcvimg></a>").hover(function(){
 						$(this).children(".vdcvmask").css("opacity","1");
@@ -108,15 +108,15 @@
 					div.append(p);
 					li.append(a1);
 					li.append(div);
+					*/
 					
-					/*
 					var li = $('<li class="vdcvli"><a data-pjax="" href="' + rsdata[x].src +'" title="' + rsdata[x].ti + '" target="_self" class="vdcvimg"><img class="vdcvloading" data-original="' + rsdata[x].cv + '" alt="' + rsdata[x].ti + '" style="display: inline;"><span class="vdcvmask"><i class="glyphicon glyphicon-play-circle glyphiconL"></i></span></a><div class="vdcvinfo"><a data-pjax="" href="' + rsdata[x].src + '">' + rsdata[x].ti + '</a><p><span class="vdcvf1">更新至' + rsdata[x].cotdir + '集</span></p></div></li>');
 					li.hover(function(){
 						$(this).children(".vdcvmask").css("opacity","1");
 						},function(){
 					    	$(this).children(".vdcvmask").css("opacity","0");
 						});
-					*/	
+					
 					$("#vdcv").append(li);
 				}
 				$("img[data-original]").lazyload({effect: "fadeIn"});
