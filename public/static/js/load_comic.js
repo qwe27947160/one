@@ -93,7 +93,7 @@
 						$(this).children(".vdcvmask").css("opacity","1");
 					},function(){
 				    	$(this).children(".vdcvmask").css("opacity","0");
-					}); ;
+					}); 
 					var img = $("<img class=vdcvloading data-original="+rsdata[x].cv+" alt="+'"'+rsdata[x].ti+'"'+" style=display:inline;>");
 					var div = $("<div class=vdcvinfo></div>");
 					var a2 = $("<a data-pjax href="+rsdata[x].src+">"+rsdata[x].ti+"</a>");
