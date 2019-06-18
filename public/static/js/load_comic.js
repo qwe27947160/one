@@ -117,7 +117,7 @@
 							content: '需要跳转到上次观看地方吗',
 							btn: ['需要', '不需要'],
 							yes: function(){
-								window.open('/page/' + rsdata.popData['cover'] + '/' + rsdata.popData['chapter']);
+								window.open('/animation/' + rsdata.popData['cover'] + '/' + rsdata.popData['chapter']);
 							}
 						});
 					}
