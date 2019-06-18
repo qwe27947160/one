@@ -102,28 +102,31 @@
 	}
 
 	function Ld_Vdir(associated){
-		$.ajax({
-			url:"/load_Vdor/"+associated,
-			async:true,
-			cache:false,
-			type:'GET',
-			dataType:"json",
-			success:function(rsdata){
-				//上次观看记录弹窗
-				if (rsdata.hasOwnProperty('popStatus')) {
-					layer.open({
-						content: '需要跳转到上次观看地方吗',
-						btn: ['需要', '不需要'],
-						yes: function(){
-							window.open('/page/' + rsdata.popData['cover'] + '/' + rsdata.popData['chapter']);
-						}
-					});
+		layui.use('layer', function(){
+		var layer = layui.layer;
+			$.ajax({
+				url:"/load_Vdor/"+associated,
+				async:true,
+				cache:false,
+				type:'GET',
+				dataType:"json",
+				success:function(rsdata){
+					//上次观看记录弹窗
+					if (rsdata.hasOwnProperty('popStatus')) {
+						layer.open({
+							content: '需要跳转到上次观看地方吗',
+							btn: ['需要', '不需要'],
+							yes: function(){
+								window.open('/page/' + rsdata.popData['cover'] + '/' + rsdata.popData['chapter']);
+							}
+						});
+					}
+						//加载章节
+					for(var x=0; x<rsdata.chapterData.length; x++){
+						var a = $("<a target=_blank href=/animation/"+rsdata.chapterData[x].cvid+"/"+rsdata.chapterData[x].dirid+" title="+rsdata.chapterData[x].dirname+">"+rsdata.chapterData[x].dirname+"</a>");
+						$("#player_list").append(a);
+					}
 				}
-					//加载章节
-				for(var x=0; x<rsdata.chapterData.length; x++){
-					var a = $("<a target=_blank href=/animation/"+rsdata.chapterData[x].cvid+"/"+rsdata.chapterData[x].dirid+" title="+rsdata.chapterData[x].dirname+">"+rsdata.chapterData[x].dirname+"</a>");
-					$("#player_list").append(a);
-				}
-			}
-		});
+			});
+		});	
 	}
