@@ -219,7 +219,6 @@ class Ni extends Controller
         $view = new View();
         $view -> assign(['empty' => $h5_statements, 'cvdirid' => $cvdirid, 'dirbluesid' => $dirbluesid, 'src' => $query_src['videopath'], 'title' => $query_bg['title']]);
         echo $view -> fetch('comic/video_page');
-        
     }
 
     public function search_video(){
