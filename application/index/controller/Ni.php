@@ -12,6 +12,7 @@ use \think\View;
 use \think\Request;
 use \think\Config;
 use \think\Session;
+
 class Ni extends Controller
 {
     protected $beforeActionList = [
@@ -176,12 +177,23 @@ class Ni extends Controller
         echo $view->fetch('comic/video_directory');
     }
 
-    public function query_vdir($name){
-        $query_vdir = (new Animationsdir) -> where('cvdirid' ,$name) -> order('dirbluesid desc') -> select();
+    public function query_vdir($name) {
         $L = array();
+        //观看记录查询
+        if(Session::get('userName')) {
+            $queryRecord = (new Watch_record) -> where(['status' => 2, 'user_name' => Session::get('userName'), 'cover' => $name]) -> order('id DESC') -> find();
+            if($queryRecord){
+                $queryRecord = $queryRecord->getData();
+                $L['popStatus'] = '1';
+                $L['popData'] = array('cover' => $queryRecord['cover'], 'chapter' => $queryRecord['chapter']);
+            } 
+        }
+        //获取所有章节
+        $L['chapterData'] = array();
+        $query_vdir = (new Animationsdir) -> where('cvdirid' ,$name) -> order('dirbluesid desc') -> select();
         foreach ($query_vdir as $data) {
             $data  = $data -> getData();
-            array_push($L,array("cvid" => $data["cvdirid"], "dirid" => $data["dirbluesid"], "dirname" => $data["dirname"]));
+            array_push($L['chapterData'],array("cvid" => $data["cvdirid"], "dirid" => $data["dirbluesid"], "dirname" => $data["dirname"]));
         }
         echo json_encode($L);
     }
@@ -227,7 +239,6 @@ class Ni extends Controller
                 $data = $data -> getData();
     			$cotdir = (new animationsdir) -> where('cvdirid',$data["ID"]) -> count('cvdirid');
     			$h5_statements .= '<ul class=vdcv id=vdcv><li class=vdcvli><a data-pjax href=' . $data["src"] . ' title=' . $data["title"] . ' target=_self class=vdcvimg><img class=vdcvloading data-original=' .  $data["cover"] . 'alt=' . $data["title"] . 'style=display:inline src=' . $data["cover"] . '><span class=vdcvmask style=opacity:0;><i class=glyphicon glyphicon-play-circle glyphiconL></i></span></a><div class=vdcvinfo><a data-pjax href=' . $data["src"] . '>' . $data["title"] . '</a><p><span class=vdcvf1>更新至' . $cotdir . '集</span></p></div></li></ul>';
-
     			$Serch_Msg = '<h3 class=serach_font>找不到您需要的影视，为您推荐下面的影视 :</h3>';
     		}
     	}else{
@@ -235,7 +246,6 @@ class Ni extends Controller
                  $data = $data -> getData();
     			$cotdir = (new Animationsdir) -> where('cvdirid',$data["ID"]) -> count('cvdirid');
     			$h5_statements .= '<ul class=vdcv id=vdcv><li class=vdcvli><a data-pjax href=' . $data["src"] . ' title=' . $data["title"] . ' target=_self class=vdcvimg><img class=vdcvloading data-original=' .  $data["cover"] . 'alt=' . $data["title"] . 'style=display:inline src=' . $data["cover"] . '><span class=vdcvmask style=opacity:0;><i class=glyphicon glyphicon-play-circle glyphiconL></i></span></a><div class=vdcvinfo><a data-pjax href=' . $data["src"] . '>' . $data["title"] . '</a><p><span class=vdcvf1>更新至' . $cotdir . '集</span></p></div></li></ul>';
-
     			$Serch_Msg = '<h3 class=serach_font>为您找到如下影视 :</h3>';
     		}
     	}
