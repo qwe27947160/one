@@ -17,7 +17,7 @@ class Ni extends Controller
 {
     protected $beforeActionList = [
         'first',
-        'second' => ['only'=>'load_chapter']
+        'second' => ['only'=>'load_chapter,load_vdir']
     ];
 
     protected function first() {
