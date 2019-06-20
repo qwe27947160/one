@@ -31,7 +31,7 @@ class Ni extends Controller
 
     protected function second() {
         if (!Session::get('userName')) {
-            $this -> redirect('/user/login');
+            $this -> redirect('/user/login',302);
             return;
         }
     }
