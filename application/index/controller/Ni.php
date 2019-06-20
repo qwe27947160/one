@@ -17,7 +17,7 @@ class Ni extends Controller
 {
     protected $beforeActionList = [
         'first',
-        'second' => ['except'=>'index, load_comic, query_chapter']
+        'second' => ['except'=>'index,load_comic,query_chapter']
     ];
 
     protected function first() {
