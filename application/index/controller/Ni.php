@@ -36,7 +36,7 @@ class Ni extends Controller
             }else{
                 $this -> redirect('/user/login');
             }
-            return;
+            exit;
         }
     }
 
