@@ -16,17 +16,24 @@ use \think\Session;
 class Ni extends Controller
 {
     protected $beforeActionList = [
-        'first' => ['except'=>'index']
+        'first',
+        'second' => ['except'=>'index']
     ];
 
     protected function first() {
         if (!Session::get('userName')) {
-            //\think\View::share('islogin', 0);
+            \think\View::share('islogin', 0);
             $this -> redirect('/user/login');
-            return;
         } else {
             Session::set('time', time() + 900);
             \think\View::share(['islogin' => 1, 'username' => Session::get('userName')]);
+        }
+    }
+
+    protected function second() {
+        if (!Session::get('userName')) {
+            $this -> redirect('/user/login');
+            return;
         }
     }
 
