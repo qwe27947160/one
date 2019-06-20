@@ -21,7 +21,7 @@ class Ni extends Controller
 
     protected function first() {
         if (!Session::get('userName')) {
-            \think\View::share('islogin',0);
+            //\think\View::share('islogin', 0);
             $this -> redirect('/user/login');
             return;
         } else {
