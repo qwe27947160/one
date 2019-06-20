@@ -32,7 +32,7 @@ class Ni extends Controller
     protected function second() {
         if (!Session::get('userName')) {
             if (Request::instance()->isPjax()){
-                echo "<script>location.href=\"" . '/user/login' . "\"</script>"
+                echo "<script>location.href=\"" . '/user/login' . "\";</script>";
             }else{
                 $this -> redirect('/user/login');
             }
