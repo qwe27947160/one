@@ -34,9 +34,9 @@ class Ni extends Controller
             if (Request::instance()->isPjax()){
                 //echo "<script>location.href=\"" . '/user/login' . "\";</script>";
                 header("X-PJAX-URL: /user/login");
+            }else{
+                $this -> redirect('/user/login');
             }
-            $this -> redirect('/user/login');
-            
             exit;
         }
     }
