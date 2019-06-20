@@ -16,7 +16,7 @@ use \think\Session;
 class Ni extends Controller
 {
     protected $beforeActionList = [
-        'first'
+        'first' => ['except'=>'index']
     ];
 
     protected function first() {
