@@ -28,6 +28,7 @@ class Ni extends Controller
             \think\View::share(['islogin' => 1, 'username' => Session::get('userName')]);
         }
         $musicResult = Db::table('comic')  -> select();
+        var_dump($musicResult);
         $musicMsg = '';
         foreach ($musicResult as $data) {
             $musicMsg .= '{name:' . $data['name'] . ',artist:' . $data['artist'] . ',url:' . $data['path'] . ',cover:' . $data['cover'] . '},';
