@@ -1,4 +1,8 @@
-
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<div id="aplayer"></div>
 <div id="header">
 	<div id="page_top">
 		<div id="bg-wrap">
@@ -84,7 +88,12 @@
 	});
 
 
-	
+	const ap = new APlayer({
+	    container: document.getElementById('aplayer'),
+	   	fixed:true,
+	   	mini: true,
+	    audio: [{$musicMsg}]
+	});
 </script>
 
 <style type="text/css">
