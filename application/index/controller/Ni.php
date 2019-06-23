@@ -30,7 +30,7 @@ class Ni extends Controller
         $musicResult = Db::table('music')  -> select();
         $musicMsg = '';
         foreach ($musicResult as $data) {
-            $musicMsg .= '{name:' . $data['name'] . ',artist:' . $data['artist'] . ',url:' . $data['path'] . ',cover:' . $data['cover'] . '},';
+            $musicMsg .= '{name:"' . $data['name'] . '",artist:"' . $data['artist'] . '",url:"' . $data['path'] . '",cover:"' . $data['cover'] . '"},';
         }
         \think\View::share(['musicMsg' => $musicMsg]);
     }
