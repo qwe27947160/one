@@ -29,6 +29,7 @@ class Ni extends Controller
         }
         $musicResult = Db::table('comic')  -> select();
         var_dump($musicResult);
+        exit();
         $musicMsg = '';
         foreach ($musicResult as $data) {
             $musicMsg .= '{name:' . $data['name'] . ',artist:' . $data['artist'] . ',url:' . $data['path'] . ',cover:' . $data['cover'] . '},';
