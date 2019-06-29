@@ -5,6 +5,6 @@ use think\Model;
 
 class User_msg extends Model {
 	public static function get_user($user) {
-		return self::where(['username' => $user]) -> find();
+		return self::whereOr(['username' => $user, 'email' => $user]) -> find();
 	}
 }
