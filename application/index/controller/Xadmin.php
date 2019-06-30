@@ -8,6 +8,7 @@ use \think\Controller;
 use \think\Session;
 use app\index\model\User_msg;
 use app\index\model\Loginmsg;
+use app\index\model\Watch_record;
 
 class Xadmin extends Controller{
 	protected $beforeActionList = [
@@ -63,6 +64,8 @@ class Xadmin extends Controller{
 	}
 
 	public function comicRecord($name) {
-
+		$result = (new Watch_record) -> where(['status' => '1', 'user_name' => $name]) -> select();
+		$result = $result -> gerData();
+		echo($result);
 	}
 }
