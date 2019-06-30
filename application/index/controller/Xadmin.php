@@ -65,7 +65,7 @@ class Xadmin extends Controller{
 
 	public function comicRecord($name) {
 		$result = (new Watch_record) -> where(['status' => '1', 'user_name' => $name]) -> select();
-		$result = $result -> gerData();
+		$result = $result -> getData();
 		echo($result);
 	}
 }
