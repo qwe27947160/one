@@ -9,6 +9,7 @@ use \think\Session;
 use app\index\model\User_msg;
 use app\index\model\Loginmsg;
 use app\index\model\Watch_record;
+use \think\Request;
 
 class Xadmin extends Controller{
 	protected $beforeActionList = [
