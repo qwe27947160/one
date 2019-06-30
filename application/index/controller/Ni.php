@@ -202,7 +202,7 @@ class Ni extends Controller
         if(Session::get('userName')) {
             $queryRecord = (new Watch_record) -> where(['status' => 2, 'user_name' => Session::get('userName'), 'cover' => $name]) -> order('id DESC') -> find();
             if($queryRecord){
-                $queryRecord = $queryRecord->getData();
+                $queryRecord = $queryRecord -> getData();
                 $L['popStatus'] = '1';
                 $L['popData'] = array('cover' => $queryRecord['cover'], 'chapter' => $queryRecord['chapter']);
             } 
