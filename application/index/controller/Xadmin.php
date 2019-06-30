@@ -62,7 +62,7 @@ class Xadmin extends Controller{
 		$this->redirect('/');
 	}
 
-	public function comicRecord() {
-		
+	public function comicRecord($name) {
+
 	}
 }
