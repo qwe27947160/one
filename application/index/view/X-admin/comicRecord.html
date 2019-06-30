@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+{include file="public/meta"}	
+<title>米谷 米谷</title>
+<!-- CSS-LINK -->
+{include file="public/css-link"}
+<!-- JS-LINK -->
+{include file="public/js-link"}
+<script src="/static/layui/layui_exts/sliderVerify/sliderVerify.js"></script>
+</head>
+	
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function(){
+		$.ajax({
+			url:'/user/management',
+			async:true,
+			cache:false,
+			type:"POST",
+			dataType:'json',
+			data:{
+				user:$('#user').val(),
+				pass:$('#pass').val(),
+			},
+			success:function(data){
+				switch (data.code) {
+					case '0':
+						layer.msg(data.rs);
+						break;
+					case '1':
+						layer.msg(data.rs ,{offset: '140px',time:500,end:jumppage});
+						break;
+				}
+			}
+		});
+	});
+	
+</script>	
+</html>
