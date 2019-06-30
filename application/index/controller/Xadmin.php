@@ -61,4 +61,8 @@ class Xadmin extends Controller{
 		Session::delete('userName');
 		$this->redirect('/');
 	}
+
+	public function comicRecord() {
+		
+	}
 }
