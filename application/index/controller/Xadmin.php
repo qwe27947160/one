@@ -66,9 +66,13 @@ class Xadmin extends Controller{
 
 	public function comicRecord($name) {
 		$result = (new Watch_record) -> where(['status' => '1', 'user_name' => $name]) -> distinct(true) -> field('cover') -> select();
+		$comicH5 = '';
 		foreach ($result as $data) {
 			$data = $data -> getData();
-			var_dump($data);
+			$comicResult = Db::table('comic')  -> where('ComicChapter' => $data['cover']) ->find();
+			
+			$videoH5 .= '<li><a data-pjax href="chapter/' .  $comicResult["urlname"] . '" class="pic"><img data-original="' . $comicResult["cover"] . '" alt="' . $comicResult["title"] . '"></a><p class="cover"><a data-pjax href="chapter/' .  $comicResult["urlname"] . '" class="pic2"><span>' . $comicResult["title"]) . '</span></a></p></li>'
 		}
+		echo $view -> fetch('X-admin/comicRecord', ['comicH5' => $comicH5]); 
 	}
 }
