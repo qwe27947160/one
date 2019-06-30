@@ -69,7 +69,7 @@ class Xadmin extends Controller{
 		$comicH5 = '';
 		foreach ($result as $data) {
 			$data = $data -> getData();
-			$comicResult = Db::table('comic')  -> where('ComicChapter' => $data['cover']) ->find();
+			$comicResult = Db::table('comic')  -> where(['ComicChapter' => $data['cover']]) -> find();
 			
 			$videoH5 .= '<li><a data-pjax href="chapter/' .  $comicResult["urlname"] . '" class="pic"><img data-original="' . $comicResult["cover"] . '" alt="' . $comicResult["title"] . '"></a><p class="cover"><a data-pjax href="chapter/' .  $comicResult["urlname"] . '" class="pic2"><span>' . $comicResult["title"]) . '</span></a></p></li>'
 		}
