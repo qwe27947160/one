@@ -19,6 +19,12 @@ class LoadView extends Controller {
             Session::set('time', time() + 900);
             \think\View::share(['islogin' => 1, 'username' => Session::get('userName')]);
         }
+        $musicResult = Db::table('music')  -> select();
+        $musicMsg = '';
+        foreach ($musicResult as $data) {
+            $musicMsg .= '{name:"' . $data['name'] . '",artist:"' . $data['artist'] . '",url:"' . $data['path'] . '",cover:"' . $data['cover'] . '"},';
+        }
+        \think\View::share(['musicMsg' => $musicMsg]);
     }
 
 	public function forgetpwd(){
