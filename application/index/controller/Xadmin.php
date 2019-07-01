@@ -75,4 +75,17 @@ class Xadmin extends Controller{
 		}
 		echo (new view) -> fetch('X-admin/comicRecord', ['comicH5' => $comicH5]); 
 	}
+
+	public function videoRecord($name) {
+		$result = (new Watch_record) -> where(['status' => '2', 'user_name' => $name]) -> distinct(true) -> field('cover') -> select();
+		$videoH5 = '';
+		foreach ($result as $data) {
+			$data = $data -> getData();
+			$videoResult = Db::table('animationscover') -> where(['ID' => $data['cover']]) -> find();
+			$lastChapter = Db::table('animationsdir') -> where('cvdirid', $videoResult['ID']) -> field('dirname') -> order('dirbluesid desc') -> limit(1) -> find();
+
+			$videoH5 .= '<li class="comicItem"><a href="/mobile' . $data['src'] . '" class="comicLink" title="' . $data['title'] . '"><div class="itemPic" data-original="' . $data['cover'] . '" style="background-image:url(\'' . $data['cover'] . '\');"><div class="videoDuration">更新到' . $lastChapter['dirname'] . '</div></div><div class="videoCon"><h2 class="videotit ellipsis1" style="text-align:center;">'. $data['title'] . '</h2></div></a></li>';
+		}
+		echo (new view) -> fetch('X-admin/videoRecord', ['videoH5' => $videoH5]);
+	}
 }
