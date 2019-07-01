@@ -82,9 +82,9 @@ class Xadmin extends Controller{
 		foreach ($result as $data) {
 			$data = $data -> getData();
 			$videoResult = Db::table('animationscover') -> where(['ID' => $data['cover']]) -> find();
-			$lastChapter = Db::table('animationsdir') -> where('cvdirid', $videoResult['ID']) -> field('dirname') -> order('dirbluesid desc') -> limit(1) -> find();
+			$cotdir = Db::table('animationsdir')-> where('cvdirid',$data["ID"]) -> count('cvdirid');
 
-			$videoH5 .= '<li class="comicItem"><a href="/mobile' . $videoResult['src'] . '" class="comicLink" title="' . $videoResult['title'] . '"><div class="itemPic" data-original="' . $videoResult['cover'] . '" style="background-image:url(\'' . $videoResult['cover'] . '\');"><div class="videoDuration">更新到' . $lastChapter['dirname'] . '</div></div><div class="videoCon"><h2 class="videotit ellipsis1" style="text-align:center;">'. $videoResult['title'] . '</h2></div></a></li>';
+			$videoH5 .= '<ul class=vdcv id=vdcv><li class=vdcvli><a data-pjax href=' . $videoResult["src"] . ' title=' . $videoResult["title"] . ' target=_self class=vdcvimg><img class=vdcvloading data-original=' .  $videoResult["cover"] . 'alt=' . $videoResult["title"] . 'style=display:inline src=' . $videoResult["cover"] . '><span class=vdcvmask style=opacity:0;><i class=glyphicon glyphicon-play-circle glyphiconL></i></span></a><div class=vdcvinfo><a data-pjax href=' . $videoResult["src"] . '>' . $videoResult["title"] . '</a><p><span class=vdcvf1>更新至' . $cotdir . '集</span></p></div></li></ul>';
 		}
 		echo (new view) -> fetch('X-admin/videoRecord', ['videoH5' => $videoH5]);
 	}
