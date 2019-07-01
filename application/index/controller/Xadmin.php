@@ -82,7 +82,7 @@ class Xadmin extends Controller{
 		foreach ($result as $data) {
 			$data = $data -> getData();
 			$videoResult = Db::table('animationscover') -> where(['ID' => $data['cover']]) -> find();
-			$cotdir = Db::table('animationsdir')-> where('cvdirid',$data["ID"]) -> count('cvdirid');
+			$cotdir = Db::table('animationsdir')-> where('cvdirid', $videoResult["ID"]) -> count('cvdirid');
 
 			$videoH5 .= '<ul class=vdcv id=vdcv><li class=vdcvli><a data-pjax href=' . $videoResult["src"] . ' title=' . $videoResult["title"] . ' target=_self class=vdcvimg><img class=vdcvloading data-original=' .  $videoResult["cover"] . 'alt=' . $videoResult["title"] . 'style=display:inline src=' . $videoResult["cover"] . '><span class=vdcvmask style=opacity:0;><i class=glyphicon glyphicon-play-circle glyphiconL></i></span></a><div class=vdcvinfo><a data-pjax href=' . $videoResult["src"] . '>' . $videoResult["title"] . '</a><p><span class=vdcvf1>更新至' . $cotdir . '集</span></p></div></li></ul>';
 		}
