@@ -253,3 +253,11 @@
 		<!--face end-->
 	</div>
 </div>
+
+<script type="text/javascript">
+	//点击小图片，显示表情
+	$(".bq").click(function (e) {
+		$(".face").slideDown(); //慢慢向下展开
+		e.stopPropagation(); //阻止冒泡事件
+	});
+</script>
