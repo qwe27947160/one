@@ -175,7 +175,7 @@
 	<div class="message" contentEditable='true' id="edit"></div>
 	<div class="But">
 		<img src="/static/imgs/images/bba_thumb.gif" class='bq' />
-		<span class='submit'>发表</span>
+		<span class='submit' id='submit'>发表</span>
 		<!--face begin-->
 		<div class="face">
 			<ul>
@@ -273,6 +273,13 @@
 		$(".message").append(simg); //将表情添加到输入框
 	});
 
-
+	$("#submit").click(function() {
+		var txt = $(".message").html();
+		if(!txt) {
+			alert('内容不能为空');
+			$('.message').focus(); 
+			return;
+		}
+	});
 
 </script>
