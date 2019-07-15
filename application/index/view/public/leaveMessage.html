@@ -288,7 +288,7 @@
 			type:'POST',
 			dataType:"json",
 			data:{
-				userName:{$username},
+				userName:'{$username}',
 				id:{$associated},
 				msg:$(".message").html()
 			},
