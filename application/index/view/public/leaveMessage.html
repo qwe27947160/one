@@ -280,20 +280,23 @@
 			$('.message').focus(); 
 			return;
 		}
-		console.log({$associated});
-		/*
+		
 		$.ajax({
-			url:"/addLeaveMessage",
+			url:"/addVideoLeaveMessage",
 			async:true,
 			cache:false,
 			type:'POST',
 			dataType:"json",
-			data:,
+			data:{
+				userName:
+				id:{$associated},
+				msg:$(".message").html()
+			},
 			success:function(rsdata) {
 			
 			}
 		});
-		*/
+		
 	});
 
 </script>

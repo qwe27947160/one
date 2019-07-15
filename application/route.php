@@ -52,3 +52,6 @@ Route::rule('/user/admin', 'index/Xadmin/userAdmin');
 Route::rule('user/exit', 'index/Xadmin/exit');
 Route::rule('/user/comicRecord/:name', 'index/Xadmin/comicRecord');
 Route::rule('/user/videoRecord/:name', 'index/Xadmin/videoRecord');
+
+
+/***************************leavemsg*************************/
