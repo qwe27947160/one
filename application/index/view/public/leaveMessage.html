@@ -280,6 +280,19 @@
 			$('.message').focus(); 
 			return;
 		}
+		console.log({$associated});
+
+		$.ajax({
+			url:"/addLeaveMessage",
+			async:true,
+			cache:false,
+			type:'POST',
+			dataType:"json",
+			data:{qy:$name},
+			success:function(rsdata) {
+			
+			}
+		});
 	});
 
 </script>
