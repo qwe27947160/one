@@ -7,7 +7,7 @@ use \think\Request;
 use \think\Config;
 use \think\Session;
 
-class LeaveMsg extends Controller {
+class UserLeaveMsg extends Controller {
 
 	public function addVideoLeaveMessage() {
 		echo('arg1');
