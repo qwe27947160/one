@@ -55,4 +55,4 @@ Route::rule('/user/videoRecord/:name', 'index/Xadmin/videoRecord');
 
 
 /***************************leavemsg*************************/
-Route::rule('/addVideoLeaveMessage','index/leaveMsg/addVideoLeaveMessage')
+Route::rule('/addVideoLeaveMessage','index/leaveMsg/addVideoLeaveMessage');
