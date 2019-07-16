@@ -277,7 +277,7 @@
 		var url = document.location.toString();
 		var arrUrl = url.split("//");
 		var relUrl = arrUrl[1].substring(arrUrl[1].indexOf("/"));
-		var a = relUrl.split('/');
+		var a = url.split('/');
 		console.log(a);
 		var txt = $(".message").html();
 		if(!txt) {
