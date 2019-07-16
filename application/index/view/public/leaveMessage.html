@@ -274,18 +274,22 @@
 	});
 
 	$("#submit").click(function() {
-		var url = document.location.toString();
-		var arrUrl = url.split("//");
-		var relUrl = arrUrl[1].substring(arrUrl[1].indexOf("/"));
-		var a = url.split('/');
-		console.log(a[3]);
+	
 		var txt = $(".message").html();
 		if(!txt) {
 			alert('内容不能为空');
 			$('.message').focus(); 
 			return;
 		}
-		
+		//获取url的第一个路径参数
+		var url = document.location.toString();
+		var par1 = url.split('/');
+		var type1 ;
+		if (par1 == 'video') {
+			type1 = 2
+		} else if (par1 == 'chapter') {
+			type1 = 1
+		}
 		$.ajax({
 			url:"/addVideoLeaveMessage",
 			async:true,
@@ -293,6 +297,7 @@
 			type:'POST',
 			dataType:"json",
 			data:{
+				type:type1,
 				userName:'{$username}',
 				id:{$associated},
 				msg:$(".message").html()
