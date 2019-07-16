@@ -285,11 +285,11 @@
 		var url = document.location.toString();
 		var par1 = url.split('/');
 		var type1;
-		if (par1 == 'video') {
+		if (par1[4] == 'video') {
 			console.log('123');
-			type1 = '2'
+			type1 = 2
 		} else if (par1 == 'chapter') {
-			type1 = '1'
+			type1 = 1
 		}
 		$.ajax({
 			url:"/addVideoLeaveMessage",
