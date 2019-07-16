@@ -277,7 +277,8 @@
 		var url = document.location.toString();
 		var arrUrl = url.split("//");
 		var start = arrUrl[1].indexOf("/");
-		console.log(start);
+		var relUrl = arrUrl[1].substring(start);
+		console.log(relUrl);
 		var txt = $(".message").html();
 		if(!txt) {
 			alert('内容不能为空');
