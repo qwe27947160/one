@@ -16,7 +16,7 @@ class UserLeaveMsg extends Controller {
 	
 		$addMsg -> data([
 			'userName' => input('post.userName'),
-			'type' => input('post.type'),
+			'type' => input('post.type1'),
 			'index' => input('post.id'),
 			'msg' => input('post.msg'),
 			'ip' => $request->ip(),
