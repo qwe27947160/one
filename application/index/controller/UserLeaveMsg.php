@@ -20,6 +20,7 @@ class UserLeaveMsg extends Controller {
 			'ip' => $request->ip(),
 			'ua' => $request->header('user-agent')
 		]);
-		$addMsg -> save();
+		$result = $addMsg -> save();
+		echo($result);
 	}
 }
