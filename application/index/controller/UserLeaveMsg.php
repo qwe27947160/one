@@ -6,10 +6,19 @@ use \think\View;
 use \think\Request;
 use \think\Config;
 use \think\Session;
+use app\index\model\LeaveMsg;
 
 class UserLeaveMsg extends Controller {
 
 	public function addVideoLeaveMessage() {
-		echo('arg1');
+		$request = Request::instance();
+		$addMsg = new LeaveMsg([
+			'type' => 2,
+			'index' => input('post.id'),
+			'msg' => input('post.msg'),
+			'ip' => $request->ip(),
+			'ua' => $request->header('user-agent')
+		]);
+		$addMsg -> save();
 	}
 }
