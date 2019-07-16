@@ -286,9 +286,9 @@
 		var par1 = url.split('/');
 		var type1;
 		if (par1 == 'video') {
-			type1 = 2
+			type1 = '2'
 		} else if (par1 == 'chapter') {
-			type1 = 1
+			type1 = '1'
 		}
 		$.ajax({
 			url:"/addVideoLeaveMessage",
@@ -297,7 +297,7 @@
 			type:'POST',
 			dataType:"json",
 			data:{
-				type1:'type1',
+				type1:type1,
 				userName:'{$username}',
 				id:{$associated},
 				msg:$(".message").html()
