@@ -276,7 +276,8 @@
 	$("#submit").click(function() {
 		var url = document.location.toString();
 		var arrUrl = url.split("//");
-		console.log(arrUrl);
+		var start = arrUrl[1].indexOf("/");
+		console.log(start);
 		var txt = $(".message").html();
 		if(!txt) {
 			alert('内容不能为空');
