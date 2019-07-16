@@ -6,7 +6,7 @@ use \think\View;
 use \think\Request;
 use \think\Config;
 use \think\Session;
-use app\index\model\LeaveMsg;
+use app\index\model\Leave_Msg;
 
 class UserLeaveMsg extends Controller {
 
