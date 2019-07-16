@@ -284,7 +284,7 @@
 		//获取url的第一个路径参数
 		var url = document.location.toString();
 		var par1 = url.split('/');
-		var type1 ;
+		var type1;
 		if (par1 == 'video') {
 			type1 = 2
 		} else if (par1 == 'chapter') {
@@ -297,7 +297,7 @@
 			type:'POST',
 			dataType:"json",
 			data:{
-				type1:type1,
+				type1:'type1',
 				userName:'{$username}',
 				id:{$associated},
 				msg:$(".message").html()
