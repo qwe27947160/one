@@ -12,8 +12,9 @@ class UserLeaveMsg extends Controller {
 
 	public function addVideoLeaveMessage() {
 		$request = Request::instance();
-		$addMsg = new Leave_msg([
-			'serName' => input('post.userName'),
+		$addMsg = new Leave_msg;
+		$addMsg -> data([
+			'userName' => input('post.userName'),
 			'type' => 2,
 			'index' => input('post.id'),
 			'msg' => input('post.msg'),
@@ -21,6 +22,14 @@ class UserLeaveMsg extends Controller {
 			'ua' => $request->header('user-agent')
 		]);
 		$result = $addMsg -> save();
-		echo($result);
+		if ($result == 1) {
+
+		} else {
+			echo('发表失败');
+		}
+	}
+
+	public function queryLeaveMessage() {
+
 	}
 }
