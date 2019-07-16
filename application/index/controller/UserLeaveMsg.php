@@ -12,7 +12,7 @@ class UserLeaveMsg extends Controller {
 
 	public function addVideoLeaveMessage() {
 		$request = Request::instance();
-		$addMsg = new LeaveMsg([
+		$addMsg = new Leave_msg([
 			'type' => 2,
 			'index' => input('post.id'),
 			'msg' => input('post.msg'),
