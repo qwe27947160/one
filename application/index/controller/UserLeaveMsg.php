@@ -10,7 +10,7 @@ use app\index\model\Leave_msg;
 
 class UserLeaveMsg extends Controller {
 
-	public function addVideoLeaveMessage() {
+	public function addLeaveMessage() {
 		$request = Request::instance();
 		$addMsg = new Leave_msg;
 		$addMsg -> data([
@@ -23,13 +23,22 @@ class UserLeaveMsg extends Controller {
 		]);
 		$result = $addMsg -> save();
 		if ($result == 1) {
-
+			$ss = $this -> queryLeaveMessage(input('post.type1'),input('post.id'));
+			print($ss);
 		} else {
 			echo('发表失败');
 		}
 	}
 
-	public function queryLeaveMessage() {
-
+	/**  
+	* 查询留言
+	* @access public 
+	* @param $arg1 留言type
+	* @param $arg2 留言index 
+	* @return array 返回类型
+	*/ 
+	public function queryLeaveMessage($arg1, $arg2) {
+		$queryMsg = new Leave_msg;
+		return $qyeryMsg -> where(['type' => $arg1, 'index' => $arg2]) -> select();
 	}
 }
