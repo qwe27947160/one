@@ -286,7 +286,7 @@
 		var par1 = url.split('/');
 		//设置留言属于的类别
 		var type1;
-		if (par1[3] == 'video') {
+		if (par1[2] == 'video') {
 			type1 = 2
 		} else if (par1 == 'chapter') {
 			type1 = 1
@@ -299,7 +299,7 @@
 			type:'POST',
 			dataType:"json",
 			data:{
-				type1:type1,
+				type1:type1=&type2=1,
 				userName:'{$username}',
 				id:{$associated},
 				msg:$(".message").html()
