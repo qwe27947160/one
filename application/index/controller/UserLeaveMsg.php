@@ -39,6 +39,6 @@ class UserLeaveMsg extends Controller {
 	*/ 
 	public function queryLeaveMessage($arg1, $arg2) {
 		$queryMsg = new Leave_msg;
-		return $qyeryMsg -> where(['type' => $arg1, 'index' => $arg2]) -> select();
+		return $queryMsg -> where(['type' => $arg1, 'index' => $arg2]) -> select();
 	}
 }
