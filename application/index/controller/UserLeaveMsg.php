@@ -24,18 +24,13 @@ class UserLeaveMsg extends Controller {
 		$result = $addMsg -> save();
 		if ($result == 1) {
 			$rsQuery = $this -> queryLeaveMessage(input('post.type1'),input('post.id'));
+			$L = array();
 			foreach ($rsQuery as $data) {
 				$data = $data -> getData();
-				var_dump($data);
+				array_push($L, $data);
+				echo json_encode($L);
 			}
-			
-			/*
-			foreach($ss as $s){
-				var_dump($s);
-			}
-			*/
-			
-			//var_dump($ss[0] -> data('id'));
+		
 		} else {
 			echo('发表失败');
 		}
