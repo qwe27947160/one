@@ -25,7 +25,7 @@ class UserLeaveMsg extends Controller {
 		if ($result == 1) {
 			$ss = $this -> queryLeaveMessage(input('post.type1'),input('post.id'));
 			//var_dump($ss);
-			var_dump($ss[0] -> data());
+			var_dump($ss);
 		} else {
 			echo('发表失败');
 		}
