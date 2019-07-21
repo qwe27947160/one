@@ -23,8 +23,12 @@ class UserLeaveMsg extends Controller {
 		]);
 		$result = $addMsg -> save();
 		if ($result == 1) {
-			$ss = $this -> queryLeaveMessage(input('post.type1'),input('post.id'));
-			var_dump($ss[0]->id);
+			$rsQuery = $this -> queryLeaveMessage(input('post.type1'),input('post.id'));
+			foreach ($rsQuery as $data) {
+				$data = $data -> getData();
+				var_dump($data);
+			}
+			
 			/*
 			foreach($ss as $s){
 				var_dump($s);
