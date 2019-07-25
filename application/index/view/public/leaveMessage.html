@@ -276,14 +276,12 @@
 				cache:false,
 				type:'POST',
 				dataType:"json",
-				if(msg == '') {
-					data:{
+				data:{
 					type1:type1,
 					userName:'{$username}',
 					id:{$associated},
 					msg:$(".message").html()
-				}
-		
+				},
 				success:function(rsdata) {
 					layer.msg('发表成功');
 					$(".msgCon").html = '';
