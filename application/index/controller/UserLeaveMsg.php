@@ -46,4 +46,8 @@ class UserLeaveMsg extends Controller {
 		$queryMsg = new Leave_msg;
 		return $queryMsg -> where(['type' => $arg1, 'index' => $arg2]) -> field('userName, msg, time') -> select();
 	}
+
+	public function firstquery() {
+		
+	}
 }
