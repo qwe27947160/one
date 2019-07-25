@@ -28,9 +28,8 @@ class UserLeaveMsg extends Controller {
 			foreach ($rsQuery as $data) {
 				$data = $data -> getData();
 				array_push($L, $data);
-				echo json_encode($L);
 			}
-		
+			echo json_encode($L);
 		} else {
 			echo('发表失败');
 		}
