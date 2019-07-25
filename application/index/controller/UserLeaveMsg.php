@@ -48,6 +48,12 @@ class UserLeaveMsg extends Controller {
 	}
 
 	public function firstquery() {
-		
+		$rsQuery = $this -> queryLeaveMessage(input('post.type1'),input('post.id'));
+		$L = array();
+			foreach ($rsQuery as $data) {
+				$data = $data -> getData();
+				array_push($L, $data);
+			}
+		echo json_encode($L);
 	}
 }
