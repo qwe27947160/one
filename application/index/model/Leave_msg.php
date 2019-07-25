@@ -12,6 +12,6 @@ class Leave_msg extends Model{
 	* @return array 返回类型
 	*/ 
 	public function queryLeaveMessage($arg1, $arg2) {
-		return $queryMsg -> where(['type' => $arg1, 'index' => $arg2]) -> field('userName, msg, time') -> select();
+		return $this -> where(['type' => $arg1, 'index' => $arg2]) -> field('userName, msg, time') -> select();
 	}
 }
