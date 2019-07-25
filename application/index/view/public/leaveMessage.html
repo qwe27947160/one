@@ -254,6 +254,8 @@
 		<!--face end-->
 	</div>
 </div>
+<!--msgCon begin-->
+<div class="msgCon"></div>
 
 <script type="text/javascript">
 	//点击小图片，显示表情
@@ -274,7 +276,6 @@
 	});
 
 	$("#submit").click(function() {
-	
 		var txt = $(".message").html();
 		if(!txt) {
 			alert('内容不能为空');
@@ -305,10 +306,12 @@
 				msg:$(".message").html()
 			},
 			success:function(rsdata) {
-			
+				rsdata.forEach( list=>{
+						console.log(list);
+					}
+				)
 			}
 		});
-		
 	});
 
 </script>
