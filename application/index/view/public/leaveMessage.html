@@ -308,7 +308,18 @@
 			success:function(rsdata) {
 				console.log('11');
 				rsdata.forEach( list=>{
-						console.log(list);
+						`<div class='msgBox'>
+							<div class="headUrl">
+								<img src='images/tx.jpg' width='50' height='50'>
+								<div>
+									<span class="title">${list.userName}</span>
+									<span class="time">${list.time}</span>
+								</div>
+							</div>
+							<div class='msgTxt'>
+								${list.msg}
+							</div>
+						</div>`
 					}
 				)
 			}
