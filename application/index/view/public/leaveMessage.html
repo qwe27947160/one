@@ -306,7 +306,7 @@
 				msg:$(".message").html()
 			},
 			success:function(rsdata) {
-				console.log('11');
+				$(".msgCon").html = '';
 				rsdata.forEach( list=>{
 						`<div class='msgBox'>
 							<div class="headUrl">
@@ -320,6 +320,7 @@
 								${list.msg}
 							</div>
 						</div>`
+						$(".msgCon").prepend(str);
 					}
 				)
 			}
