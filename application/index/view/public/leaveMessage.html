@@ -258,7 +258,7 @@
 <div class="msgCon"></div>
 
 <script type="text/javascript">
-	function queryLeaveMsg(vurl) {
+	function queryLeaveMsg(vurl, tag) {
 		//获取url的第一个路径参数
 		var url = document.location.toString();
 		var par1 = url.split('/');
@@ -283,7 +283,9 @@
 					msg:$(".message").html()
 				},
 				success:function(rsdata) {
-					layer.msg('发表成功');
+					if (tag == 0){
+						layer.msg('发表成功');
+					}
 					$(".msgCon").html = '';
 					rsdata.forEach( list=>{
 							let str = `<div class='msgBox'>
@@ -307,7 +309,7 @@
 	}
 
 	$(document).ready(function(){
-		queryLeaveMsg('/firstquery');
+		queryLeaveMsg('/firstquery', 1);
 	});
 
 
@@ -336,7 +338,7 @@
 			$('.message').focus(); 
 			return;
 		}
-		queryLeaveMsg("/addLeaveMessage",)
+		queryLeaveMsg("/addLeaveMessage", 0)
 	});
 
 </script>
