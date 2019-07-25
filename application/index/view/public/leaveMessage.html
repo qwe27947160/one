@@ -276,55 +276,59 @@
 	});
 
 	$("#submit").click(function() {
-		var txt = $(".message").html();
-		if(!txt) {
-			alert('内容不能为空');
-			$('.message').focus(); 
-			return;
-		}
-		//获取url的第一个路径参数
-		var url = document.location.toString();
-		var par1 = url.split('/');
-		//设置留言属于的类别
-		var type1;
-		if (par1[3] == 'video') {
-			type1 = 2
-		} else if (par1 == 'chapter') {
-			type1 = 1
-		}
-		
-		$.ajax({
-			url:"/addLeaveMessage",
-			async:true,
-			cache:false,
-			type:'POST',
-			dataType:"json",
-			data:{
-				type1:type1,
-				userName:'{$username}',
-				id:{$associated},
-				msg:$(".message").html()
-			},
-			success:function(rsdata) {
-				$(".msgCon").html = '';
-				rsdata.forEach( list=>{
-						let str = `<div class='msgBox'>
-							<div class="headUrl">
-								<img src='/static/imgs/header/userHead.gif' width='50' height='50'>
-								<div>
-									<span class="title">${list.userName}</span>
-									<span class="time">${list.time}</span>
-								</div>
-							</div>
-							<div class='msgTxt'>
-								${list.msg}
-							</div>
-						</div>`
-						$(".msgCon").prepend(str);
-					}
-				)
+		layui.use('layer', function(){
+			var layer = layui.layer;
+			var txt = $(".message").html();
+			if(!txt) {
+				alert('内容不能为空');
+				$('.message').focus(); 
+				return;
 			}
-		});
+			//获取url的第一个路径参数
+			var url = document.location.toString();
+			var par1 = url.split('/');
+			//设置留言属于的类别
+			var type1;
+			if (par1[3] == 'video') {
+				type1 = 2
+			} else if (par1 == 'chapter') {
+				type1 = 1
+			}
+			
+			$.ajax({
+				url:"/addLeaveMessage",
+				async:true,
+				cache:false,
+				type:'POST',
+				dataType:"json",
+				data:{
+					type1:type1,
+					userName:'{$username}',
+					id:{$associated},
+					msg:$(".message").html()
+				},
+				success:function(rsdata) {
+					layer.msg('发表成功');
+					$(".msgCon").html = '';
+					rsdata.forEach( list=>{
+							let str = `<div class='msgBox'>
+								<div class="headUrl">
+									<img src='/static/imgs/header/userHead.gif' width='50' height='50'>
+									<div>
+										<span class="title">${list.userName}</span>
+										<span class="time">${list.time}</span>
+									</div>
+								</div>
+								<div class='msgTxt'>
+									${list.msg}
+								</div>
+							</div>`
+							$(".msgCon").prepend(str);
+						}
+					)
+				}
+			});
+		});	
 	});
 
 </script>
