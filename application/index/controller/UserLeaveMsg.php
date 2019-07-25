@@ -23,7 +23,7 @@ class UserLeaveMsg extends Controller {
 		]);
 		$result = $addMsg -> save();
 		if ($result == 1) {
-			$rsQuery = $this -> queryLeaveMessage(input('post.type1'),input('post.id'));
+			$rsQuery = (new Leave_msg) -> queryLeaveMessage(input('post.type1'),input('post.id'));
 			$L = array();
 			foreach ($rsQuery as $data) {
 				$data = $data -> getData();
@@ -35,20 +35,8 @@ class UserLeaveMsg extends Controller {
 		}
 	}
 
-	/**  
-	* 查询留言
-	* @access public 
-	* @param $arg1 留言type
-	* @param $arg2 留言index 
-	* @return array 返回类型
-	*/ 
-	public function queryLeaveMessage($arg1, $arg2) {
-		$queryMsg = new Leave_msg;
-		return $queryMsg -> where(['type' => $arg1, 'index' => $arg2]) -> field('userName, msg, time') -> select();
-	}
-
 	public function firstquery() {
-		$rsQuery = $this -> queryLeaveMessage(input('post.type1'),input('post.id'));
+		$rsQuery = (new Leave_msg) -> queryLeaveMessage(input('post.type1'),input('post.id'));
 		$L = array();
 			foreach ($rsQuery as $data) {
 				$data = $data -> getData();
