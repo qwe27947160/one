@@ -292,17 +292,17 @@
 						layer.msg('发表成功');
 					}
 					$(".msgCon").html = '';
-					rsdata.forEach( list=>{
+					rsdata.msgDate.forEach( list=>{
 							let str = `<div class='msgBox'>
 								<div class="headUrl">
 									<img src='/static/imgs/header/userHead.gif' width='50' height='50'>
 									<div>
-										<span class="title">${list.msgData.userName}</span>
-										<span class="time">${list.msgData.time}</span>
+										<span class="title">${list.userName}</span>
+										<span class="time">${list.time}</span>
 									</div>
 								</div>
 								<div class='msgTxt'>
-									${list.msgData.msg}
+									${list.msg}
 								</div>
 							</div>`
 							$(".msgCon").prepend(str);
