@@ -36,12 +36,13 @@ class UserLeaveMsg extends Controller {
 	}
 
 	public function firstquery() {
-		list($rsQuery, $sum) = (new Leave_msg) -> queryLeaveMessage(input('post.type1'),input('post.id'));
-		var_dump($sum);
 		$L = array();
+		list($rsQuery, $sum) = (new Leave_msg) -> queryLeaveMessage(input('post.type1'),input('post.id'));
+		$L['msgSum'] = $sum;
+		$L['msgData'] = array();
 			foreach ($rsQuery as $data) {
 				$data = $data -> getData();
-				array_push($L, $data);
+				array_push($L['msgData'], $data);
 			}
 		echo json_encode($L);
 	}
