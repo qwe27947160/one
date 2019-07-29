@@ -297,12 +297,12 @@
 								<div class="headUrl">
 									<img src='/static/imgs/header/userHead.gif' width='50' height='50'>
 									<div>
-										<span class="title">${list.userName}</span>
-										<span class="time">${list.time}</span>
+										<span class="title">${list.msgData.userName}</span>
+										<span class="time">${list.msgData.time}</span>
 									</div>
 								</div>
 								<div class='msgTxt'>
-									${list.msg}
+									${list.msgData.msg}
 								</div>
 							</div>`
 							$(".msgCon").prepend(str);
