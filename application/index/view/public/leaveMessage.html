@@ -256,7 +256,7 @@
 </div>
 <!--msgCon begin-->
 <div class="msgCon"></div>
-
+<div class="bottomPage"></div>
 <script type="text/javascript">
 	/**
     * @功能 查询留言
@@ -308,8 +308,10 @@
 							$(".msgCon").prepend(str);
 						}
 					)
-					console.log(rsdata.msgSum);
-					console.log(Math.ceil(rsdata.msgSum/5));
+					for(let i = 1, i<Math.ceil(rsdata.msgSum/5), i++) {
+						var buttomStr += '<a href="" class="number">' + i + '</a>'
+					}
+					$(".bottomPage").append(buttomStr);
 				}
 			});
 		});	
