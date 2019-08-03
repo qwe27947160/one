@@ -308,7 +308,7 @@
 							$(".msgCon").prepend(str);
 						}
 					)
-					for(let i = 1, i<Math.ceil(rsdata.msgSum/5), i++) {
+					for(var i = 1, i<Math.ceil(rsdata.msgSum/5), i++) {
 						var buttomStr += '<a href="" class="number">' + i + '</a>'
 					}
 					$(".bottomPage").append(buttomStr);
