@@ -308,8 +308,9 @@
 							$(".msgCon").prepend(str);
 						}
 					)
+					var buttomStr = '';
 					for(var i = 1; i < Math.ceil(rsdata.msgSum/5); i++) {
-						var buttomStr += '<a href="" class="number">' + str(i) + '</a>';
+						buttomStr += '<a href="" class="number">' + str(i) + '</a>';
 					}
 					$(".bottomPage").append(buttomStr);
 				}
