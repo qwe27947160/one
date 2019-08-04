@@ -300,7 +300,7 @@
     * @vurl 请求url
     * @tag 判断是否成功弹出msg
     */
-	function queryLeaveMsg(vurl, tag) {
+	function queryLeaveMsg(vurl, tag, page=0) {
 		//获取url的第一个路径参数
 		var url = document.location.toString();
 		var par1 = url.split('/');
@@ -363,6 +363,9 @@
 		queryLeaveMsg('/firstquery', 1);
 	});
 
+	$(".number").click(function(this){
+		console.log(this.text());
+	});
 
 	//点击小图片，显示表情
 	$(".bq").click(function (e) {
