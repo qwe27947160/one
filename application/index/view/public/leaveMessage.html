@@ -167,6 +167,11 @@
 		color: transparent;
 		background-image: linear-gradient(to right, #778899 0%, #333 100%);
 	}
+
+	.bottomPage {
+		width: 1000px;
+		margin:0 auto;
+	}
 </style>
 
 
@@ -310,7 +315,11 @@
 					)
 					var buttomStr = '';
 					for(var i = 1; i < Math.ceil(rsdata.msgSum/5); i++) {
-						buttomStr += '<a href="" class="number">' + i + '</a>';
+						if(rsdata.queryPage == i) {
+							buttomStr +* '<span class="nowNumber">' + i + '</span>';
+						} else {
+							buttomStr += '<a href="" class="number">' + i + '</a>';
+						}
 					}
 					$(".bottomPage").append(buttomStr);
 				}
