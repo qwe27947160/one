@@ -329,7 +329,8 @@
 					if (tag == 0){
 						layer.msg('发表成功');
 					}
-					$(".msgCon").html = '';
+					$(".msgCon").empty();
+					$(".bottomPage").empty();
 					rsdata.msgData.forEach( list=>{
 							let str = `<div class='msgBox'>
 								<div class="headUrl">
