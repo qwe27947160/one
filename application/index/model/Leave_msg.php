@@ -13,7 +13,9 @@ class Leave_msg extends Model{
 	* @return array 返回类型
 	*/ 
 	public function queryLeaveMessage($arg1, $arg2, $limitStart, $limitEnd) {
-		$data[] = $this -> where(['type' => $arg1, 'index' => $arg2]) -> field('userName, msg, time') ->  order('id desc') -> limit($limitStart, $limitEnd) -> select();
+		//$data[] = $this -> where(['type' => $arg1, 'index' => $arg2]) -> field('userName, msg, time') ->  order('id desc') -> limit($limitStart, $limitEnd) -> select();
+
+		$data[] = $this -> where(['type' => $arg1, 'index' => $arg2]) -> field('userName, msg, time') ->  order('id desc') -> select();
 		$data[] = $this -> where(['type' => $arg1, 'index' => $arg2]) -> count();
 		return $data;
 	}
